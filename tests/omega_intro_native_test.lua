@@ -1,44 +1,53 @@
-# Embedded Ascendant Entry Card · Omega continuation
-
-One shared intro after confirmed New Game / Continue, after the cartridge boot cinema.
-Embedded in both owners; game-scoped ownership deduplicates KASC + VASC. No external
-startup mod is required. Supports the owners' six games: Red/Blue/Yellow/Gold/Silver/Crystal.
-No platform gate: desktop, iOS, Android and NX use the same LOVE drawing/input path.
-
-The native callback adopts the save only after the first displayed card frame.
-Hidden gameplay/dialogue is paused. Gen1 ContinuePreparation and the real renderer
-warm their existing region, geometry, light, shader and scenery resources. Gen2
-Continue waits for the actual map/neighbor mesh receipts; Gen2 New Game preloads
-native introduction and start-map textures, preserving Oak/name/clock/gender order.
-No shadow World is created. Mandatory preparation can outlast the music; the final Omega logo
-remains until readiness. Skip shortens only the animation.
-Optional failed jobs are recorded and native validation dialogs retain priority.
-A fresh entry reuses native caches without suppressing required readiness checks.
-
-Eevee's static prepared pose lacked the poser quadruped walk. The atlas now bakes a
-24-frame diagonal gait and 20-frame breathing/ear/tail idle. The independent animation
-clock continues while native preparation completes.
-Assets are released on completion/cancellation. Audio obeys SFX volume/splash mute.
-
-Limits: initial engine/mod code loading before the menu is outside this hook.
-Later travel or changed assets/settings may still require preparation. Gen3 is not
-a supported generation of either parent mod. Physical mobile/NX validation remains
-necessary; native Mac tests do not certify device-specific graphics/audio drivers.
-
-The original Roxas2712 opening is retained. At 9.8 seconds the Lugia cry
-plays; baked Cobblemon Lugia flies across and sweeps the original logo and
-characters away. The continuation credit uses OASC's existing Omega Dias
-wordmark. At 15.9 seconds the Eye Omega animation appears below the wordmark,
-white on black, with the replacement caption “Omega Ascendant Team”. It runs
-once, synchronized to the complete 7.235918-second GameCube startup sound.
-All cues share the SFX/mute/skip lifecycle and stop on cancellation.
-
-`OmegaEye.lua` retains the GIF's frame timing; the draw shader inverts its
-colors and the frame quads exclude the old caption. No live 3D renderer is
-initialized by the intro. Asset source URLs and hashes are recorded in
-`assets/omega-intro-sources.json`.
-
-Native regression test: run a LOVE host whose main.lua loads
-`tests/omega_intro_native_test.lua`, with INTRO_ROOT set to the mod source.
-It covers asset/audio decoding, cue timing, hold deduplication, mute, skip
-volume, slow-frame resynchronization, portrait drawing and resource cleanup.
+local root=os.getenv('INTRO_ROOT')or '.'
+local function read(p)local f=assert(io.open(root..'/integrated/ascendant_startup/'..p,'rb'));local s=f:read('*a');f:close();return s end
+function love.load()
+ io.stdout:setvbuf('no')
+ local Scene=assert(loadstring(read('IntroScene.lua')))()
+ local Eye=assert(loadstring(read('OmegaEye.lua')))()
+ assert(Eye.frameAt(.351)==8 and Eye.frameAt(.705)==17,'eye construction follows opening notes')
+ assert(Eye.frameAt(1.219)==24,'triangle completes on the next strong note')
+ assert(Eye.frameAt(3.813)==71 and Eye.frameAt(4.327)==74,'final logo resolves on the chord')
+ for _,t in ipairs{5.2,6.4,7.235918367,40}do assert(Eye.frameAt(t)==74,'terminal logo must not clear or restart')end
+ local previous=-1
+ for i=0,724 do local frame=Eye.frameAt(i/100);assert(frame>=previous and frame<=74);previous=frame end
+ local scene=Scene.new(read);local count=0
+ for name,s in pairs(scene.sounds)do assert(s:getDuration('seconds')>0,name);count=count+1 end
+ assert(count==4,'all four real audio assets decode');assert(math.abs(scene.sounds.gamecube:getDuration('seconds')-Scene.eyeSeconds)<.01,'animation and GameCube audio duration match');scene:release()
+ local original=love.audio.newSource;local sources={}
+ love.audio.newSource=function(fd)
+  local s={name=fd:getFilename(),count=0,volume=0}
+  function s:setVolume(v)self.volume=v end
+  function s:play()self.count=self.count+1;self.playing=true end
+  function s:isPlaying()return self.playing end
+  function s:getDuration()return 30 end
+  function s:seek(t)self.seekAt=t end
+  function s:stop()self.playing=false end
+  function s:release()assert(not self.playing);self.released=true end
+  sources[#sources+1]=s;return s
+ end
+ scene=Scene.new(read);scene:play(.5)
+ scene:draw(0,1280,720,0);assert(sources[1].count==1 and sources[2].count==0)
+ scene:draw(9.79,1280,720,9.79);assert(sources[2].count==0)
+ scene:draw(9.8,1280,720,9.8);assert(sources[2].count==1)
+ scene:draw(10.65,1280,720,10.65);assert(sources[3].count==1)
+ scene:syncAudio(11);assert(math.abs(sources[2].seekAt-1.2)<.0001)
+ scene:draw(Scene.eyeAt-.01,1280,720,Scene.eyeAt-.01);assert(sources[4].count==0)
+ scene:draw(Scene.eyeAt,1280,720,Scene.eyeAt);assert(sources[4].count==1)
+ for _,t in ipairs{23.14,24,24.4,40}do scene:draw(Scene.duration-.6,1280,720,t)end
+ for _,s in ipairs(sources)do assert(s.count==1,'hold must never loop audio')end
+ -- A slower render clock must follow the actual audible sample position.
+ scene.eyeAudioTime=nil;sources[4].tell=function()return 3.813 end
+ assert(math.abs(scene:eyeTime(Scene.eyeAt+1)-3.813)<.0001,'audible cursor drives the logo')
+ sources[4].tell=function()return 2 end
+ assert(scene:eyeTime(Scene.eyeAt+1)==3.813,'resync must not rewind the logo')
+ sources[4].tell=nil
+ scene:setVolume(0);for _,s in ipairs(sources)do assert(s.volume==0,'skip/mute affects every cue')end
+ scene:release();scene:release();for _,s in ipairs(sources)do assert(s.released)end
+ sources={};scene=Scene.new(read);scene:play(0)
+ for _,t in ipairs{0,10,12,24}do scene:draw(t,720,1280,t)end
+ for _,s in ipairs(sources)do assert(s.count==0,'splashMute stays silent')end
+ scene:release();love.audio.newSource=original
+ print('PASS audio-aligned poses and terminal hold, real rendering, all audio decode, cue timing, single playback on holds, mute, skip volume, resync, portrait and cleanup')
+ love.event.quit()
+end
+function love.errorhandler(err)print(debug.traceback(err));return function()love.event.quit(1)end end
