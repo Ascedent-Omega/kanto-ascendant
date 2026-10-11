@@ -7,6 +7,15 @@ local function remove(stack,state)
 end
 function M.attach(mod,prefix)
  prefix=prefix or ''
+ -- Resolve at display time: either mod can own the card, before Universal boots.
+ -- Pending preferences must not change UI language until the next restart.
+ local function text(en,de)
+  if type(mod.find)~='function'then return en end
+  local ok,handle=pcall(mod.find,'translation-german-universal')
+  if not ok or type(handle)~='table'then ok,handle=pcall(mod.find,mod,'translation-german-universal')end
+  local exports=ok and type(handle)=='table'and handle.exports
+  return type(exports)=='table'and exports.bootLanguage=='de'and de or en
+ end
  local function read(path)return mod:read(prefix..path)end
  local Scene=load(read,'IntroScene.lua');local Queue=load(read,'PreloadQueue.lua')
  local registrations={};local requirements={};local shared
@@ -60,24 +69,24 @@ function M.attach(mod,prefix)
    local previous=game.draw;local wrapped
    local function elapsed()return started and love.timer.getTime()-started or 0 end
    local function skip()if elapsed()>.2 and not skipAt then skipAt=love.timer.getTime()end end
-   state.progress='Preparing game'
+   state.progress=text('Preparing game','Spiel vorbereiten')
    local lastPhase,lastReport,lastDraw
    local function progress()
-    local phase=not entered and 'Preparing game' or 'Preparing world and graphics'
+    local phase=not entered and text('Preparing game','Spiel vorbereiten') or text('Preparing world and graphics','Welt und Grafik vorbereiten')
     for _,s in ipairs(game.stack.states)do
      if s.vascContinue then
-      if s.stage=='save'then phase='Restoring saved game'
+      if s.stage=='save'then phase=text('Restoring saved game','Spielstand laden')
       elseif s.region then
        local r=s.region
        local total=r.phase=='scenery'and #r.order or #r.plan.ids
-       local label=r.phase=='plan'and 'Finding nearby areas' or r.phase=='scenery'and 'Preparing nearby buildings' or 'Preparing nearby areas'
+       local label=r.phase=='plan'and text('Finding nearby areas','Umgebung ermitteln') or r.phase=='scenery'and text('Preparing nearby buildings','Gebäude vorbereiten') or text('Preparing nearby areas','Umgebung vorbereiten')
        phase=label..' '..tostring(math.min(total,math.max(0,r.index-1)))..' / '..tostring(total)
       end
       break
      end
     end
-    if state.reportPending then phase='Save validation needs attention'
-    elseif state.queue:ready()and not state.nativePending and entered then phase='Preparation complete' end
+    if state.reportPending then phase=text('Save validation needs attention','Spielstandprüfung benötigt Aufmerksamkeit')
+    elseif state.queue:ready()and not state.nativePending and entered then phase=text('Preparation complete','Vorbereitung abgeschlossen') end
     state.progress=phase
     local now=love.timer.getTime()
     if phase~=lastPhase or not lastReport or now-lastReport>=10 then
@@ -118,7 +127,7 @@ function M.attach(mod,prefix)
      self.prepared=entered and not self.reportPending and self.queue:ready()and not self.nativePending
     end
     local now=love.timer.getTime();local t=animationTime
-    if skipAt and scene.sound then scene.sound:setVolume((self.volume or 0)*math.max(0,1-(now-skipAt)/.09))end
+    if skipAt and scene.setVolume then scene:setVolume((self.volume or 0)*math.max(0,1-(now-skipAt)/.09))end
     if (self.reportPending or(self.queue:ready()and not self.nativePending))and (skipAt or t>=Scene.duration-.6)then finishAt=finishAt or now end
     -- Required native preparation has no elapsed-time escape: slower devices
     -- keep the logo until the actual destination is ready. Optional jobs own
@@ -146,7 +155,7 @@ function M.attach(mod,prefix)
      -- Long synchronous engine work must not skip the walk/turn sequence.
      animationTime=animationTime+math.min(.1,math.max(0,gap))
      state.maxFrameSeconds=math.max(state.maxFrameSeconds or 0,gap)
-     if gap>.25 and scene.sound then pcall(scene.sound.seek,scene.sound,animationTime,'seconds')end
+     if gap>.25 and scene.syncAudio then pcall(scene.syncAudio,scene,animationTime)end
      if gap>.25 then record('[Ascendant entry] slow frame '..string.format('%.3fs',gap)..' phase='..tostring(state.progress))end
     end
     lastDraw=now
