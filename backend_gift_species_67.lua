@@ -335,7 +335,10 @@ return function(mod, opts)
           local steps=math.max(0,math.floor(tonumber(mon._kascRioluBondSteps) or 0))+1
           mon._kascRioluBondSteps=steps%64
           if steps>=64 then
-            mon.johtoBond=math.min(255,math.max(0,tonumber(mon.johtoBond) or 0)+1)
+            local balls=mod.exports and mod.exports.seviiBalls
+            if not(balls and balls.gainFriendship and balls.gainFriendship(game,mon,1))then
+              mon.johtoBond=math.min(255,math.max(0,tonumber(mon.johtoBond) or 0)+1)
+            end
           end
         end
       end

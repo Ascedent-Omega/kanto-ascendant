@@ -33,9 +33,40 @@ return function(mod,opts)
     return p end
   local function profileCaught()local ok,p=pcall(journey.profile)
     return ok and type(p)=="table"and type(p.secretUnlocks)=="table"and p.secretUnlocks[J.FLAG]==true end
+  local function runToken(game)
+    local history=opts.legendHistory
+    return history and type(history.runId)=='function'and history.runId(game)or'original'
+  end
+  local function runCapture(game,create)
+    local save=game and game.save;local localMod=save and save.modData and save.modData[mod.id]
+    if not localMod then return nil end
+    local token=runToken(game);local receipt=localMod.hoennJirachiRunCapture
+    if type(receipt)~='table'or receipt.runId~=token then
+      if not create then return nil end
+      receipt={runId=token,caught=false};localMod.hoennJirachiRunCapture=receipt
+    end
+    return receipt
+  end
   function J.caught(game)local p=persistent(game and game.save,false)
+    local history=opts.legendHistory
+    if runToken(game)~='original'and history and history.ownedThisRun then
+      return history.ownedThisRun(game,'JIRACHI')==true
+    end
     return p and p.secretUnlocks and p.secretUnlocks[J.FLAG]==true or profileCaught()or false end
   function J.available(game)return option(game)and dex.report(game).jirachiDexReady==true end
+  function J.bindLegendHistory(history)opts.legendHistory=assert(history)end
+  function J.priorOwnership(game)
+    if not opts.legendHistory then return false end
+    local h=opts.legendHistory
+    return (h.ownedThisRun or h.owned)(game,'JIRACHI')
+  end
+  function J.witnessed(game)
+    if runToken(game)~='original'then return false end
+    local flag='KA_LEGEND_WITNESS_JIRACHI';local p=persistent(game and game.save,false)
+    local ok,profile=pcall(journey.profile)
+    return p and p.secretUnlocks and p.secretUnlocks[flag]==true
+      or ok and type(profile)=='table'and type(profile.secretUnlocks)=='table'and profile.secretUnlocks[flag]==true or false
+  end
   local function show(game,text,done,boxOpts)game.stack:push(
     require("src.render.TextBox").new(game,text,done,boxOpts));return true end
   local Certificate={};Certificate.__index=Certificate;Certificate.isOpaque=true
@@ -63,7 +94,15 @@ return function(mod,opts)
       local ok=mod.world:warpTo(mapId,p.x,p.y,p.facing);if ok then return true end end
     local ow=game and game.overworld;if not(ow and type(ow.startWarpTo)=="function")then return false end
     ow:startWarpTo(mapId,p.x,p.y,p.facing);return true end
-  function J.enter(game)if not J.available(game)then return false,"unavailable"end;writeSave(game);if opts.accessReturn then opts.accessReturn.clear(game.save)end;return warp(game,J.MAP,J.ENTRY)end
+  local function convergenceOnly()
+    return type(opts.convergenceOnly)=="function" and opts.convergenceOnly()==true
+  end
+  function J.enter(game)
+    if convergenceOnly()then return false,"convergence-door-only"end
+    if not J.available(game)then return false,"unavailable"end
+    writeSave(game);if opts.accessReturn then opts.accessReturn.clear(game.save)end
+    return warp(game,J.MAP,J.ENTRY)
+  end
   function J.leave(game)
     local back=opts.accessReturn and opts.accessReturn.point(game.save,J.MAP)
     local target=back or J.RETURN;local ok=warp(game,target.map,target)
@@ -72,22 +111,63 @@ return function(mod,opts)
   end
   local function fallback(game,ow,npc,done)if type(originalCaptain)=="function"then return originalCaptain(game,ow,npc,done)end
     if done then done()end;return false end
-  function J.captainTalk(game,ow,npc,done)if not J.available(game)then return fallback(game,ow,npc,done)end
-    if J.caught(game)then return show(game,tr("CAPTAIN: Your Hoenn certificate is ready.",
+  function J.captainTalk(game,ow,npc,done)
+    if convergenceOnly()or not J.available(game)then return fallback(game,ow,npc,done)end
+    if J.caught(game)or J.witnessed(game)then return show(game,tr("CAPTAIN: Your Hoenn certificate is ready.",
       "KAPITÄN: Dein Hoenn-Zertifikat ist bereit."),function()J.openCertificate(game,done)end)end
     return show(game,tr("CAPTAIN: The complete Hoenn record reveals a wish beyond Birth Island.\fSail now?",
       "KAPITÄN: Das vollständige Hoenn-Archiv zeigt einen Wunsch jenseits der Entstehungsinsel.\fJetzt segeln?"),nil,
       {defaultNo=true,choice=function(yes)if yes then J.enter(game)elseif done then done()end end})end
   local function stored(save,mon)for _,m in ipairs(save and save.party or{})do if m==mon then return true end end
     for _,box in ipairs(save and save.boxes or{})do for _,m in ipairs(box)do if m==mon then return true end end end;return false end
-  function J.recordCatch(game,mon)if not(game and game.save and stored(game.save,mon))then return false,"not-stored"end
-    local p=persistent(game.save,true);if p.secretUnlocks[J.FLAG]==true then return false,"recorded"end
+  function J.recordCatch(game,mon)if not(game and game.save and mon and mon.species=='JIRACHI'and stored(game.save,mon))then return false,"not-stored"end
+    local p=persistent(game.save,true);local run=runToken(game)
+    local current=run~='original'and runCapture(game,true)
+    if current and current.caught or run=='original'
+        and p.secretUnlocks[J.FLAG]==true then return false,"recorded"end
+    if current then current.caught=true end
     p.secretUnlocks[J.FLAG]=true;dex.record(game,"JIRACHI");pcall(journey.syncHevoPersistent,game.save)
     local s=state();s.caught={map=J.MAP,level=tonumber(mon.level)or J.LEVEL};s.certificate=true;persist(s);writeSave(game)
     return true,s.caught end
-  function J.challenge(game,ow,npc,done)if J.caught(game)then return show(game,tr("The wish has been granted.",
+  function J.recordWitness(game)
+    if not(J.available(game)and game.overworld and game.overworld.map.id==J.MAP)then return false,'unavailable'end
+    if J.caught(game)or J.witnessed(game)then return false,'recorded'end
+    local owned,why=J.priorOwnership(game);if not owned then return false,why or'unowned'end
+    local p=persistent(game.save,true);local flag='KA_LEGEND_WITNESS_JIRACHI'
+    local previous=p.secretUnlocks[flag];local s=state();local previousCertificate=s.certificate
+    p.secretUnlocks[flag]=true;s.certificate=true;persist(s)
+    if writeSave(game)==false then p.secretUnlocks[flag]=previous;s.certificate=previousCertificate;persist(s);return false,'save'end
+    pcall(journey.syncHevoPersistent,game.save)
+    return true
+  end
+  function J.challenge(game,ow,npc,done)
+    if not J.available(game)then return show(game,tr("The Hoenn research is not complete yet.",
+      "Die Hoenn-Forschung ist noch nicht vollstaendig."),done)end
+    if J.caught(game)or J.witnessed(game)then return show(game,tr("The wish has been granted.",
       "Der Wunsch wurde erfüllt."),function()J.openCertificate(game,done)end)end
-    local function start()local BattleState=opts.battleState or require("src.battle.BattleState")
+    local owned,historyError=J.priorOwnership(game)
+    if owned then
+      local save=game.save
+      return show(game,tr("Your wish is already part of your journey. Record this bond and receive the certificate?",
+        "Dein Wunsch gehoert bereits zu deiner Reise. Die Bindung bestaetigen und das Zertifikat erhalten?"),nil,
+        {defaultNo=true,choice=function(yes)
+          if game.save~=save then if done then done()end;return end
+          if yes then local ok,why=J.recordWitness(game)
+            if not ok and why~='recorded'then return show(game,tr("The record could not be saved. Try again.",
+              "Der Beleg wurde nicht gespeichert. Versuch es erneut."),done)end
+            return J.openCertificate(game,done)
+          end
+          if done then done()end
+        end})
+    end
+    if historyError then return show(game,tr("The ownership archive is unavailable. Try again later.",
+      "Das Besitzarchiv ist nicht lesbar. Versuche es spaeter erneut."),done)end
+    local save=game.save
+    local function start()
+      if game.save~=save then if done then done()end;return end
+      local prior,err=J.priorOwnership(game)
+      if prior or err or not J.available(game)then return J.challenge(game,ow,npc,done)end
+      local BattleState=opts.battleState or require("src.battle.BattleState")
       local battle=BattleState.newWild(game,"JIRACHI",J.LEVEL,{encounterSource="jirachi_wish",randomizerProtected=true})
       battle.kaJirachiFinale=true;battle.onFinish=function(result)local captured=false
         if result=="caught"then captured=J.recordCatch(game,battle.enemy and battle.enemy.mon)==true end

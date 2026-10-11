@@ -293,7 +293,7 @@ return function(mod, opts)
 
   local function normalizeLedger(value)
     if value == nil then
-      return { version = LEDGER_VERSION, claimed = {}, pending = {},
+      return { version = LEDGER_VERSION, claimed = {}, pending = {}, suspended = {},
         unsynced = {}, attemptGuard = freshAttemptGuard() }
     end
     if type(value) ~= "table" or value.version ~= LEDGER_VERSION
@@ -302,13 +302,14 @@ return function(mod, opts)
     end
     local guard, guardErr = normalizeAttemptGuard(value.attemptGuard)
     if not guard then return nil, guardErr end
-    local normalized = { version = LEDGER_VERSION, claimed = {}, pending = {},
+    local normalized = { version = LEDGER_VERSION, claimed = {}, pending = {}, suspended = {},
       unsynced = {}, attemptGuard = guard }
     local pending = type(value.pending) == "table" and value.pending or {}
     local unsynced = type(value.unsynced) == "table" and value.unsynced or {}
-    for index, bucket in ipairs({ value.claimed, pending, unsynced }) do
+    if value.suspended~=nil and type(value.suspended)~='table'then return nil,'corrupt suspended gifts'end
+    for index, bucket in ipairs({ value.claimed, pending, unsynced, value.suspended or{} }) do
       local destination = ({ normalized.claimed, normalized.pending,
-        normalized.unsynced })[index]
+        normalized.unsynced, normalized.suspended })[index]
       for digest, receipt in pairs(bucket) do
         local clean = publicReceipt(receipt, digest)
         if not digestShape(digest) or not clean then
@@ -466,6 +467,38 @@ return function(mod, opts)
     return outcome("config_error", tr(
       "This Gift Code prize\nis incomplete in this build.\fThe code was not claimed.",
       "Dieser Code-Preis ist\nin diesem Build unvollständig.\fDer Code wurde nicht eingelöst."))
+  end
+
+  local function acquisitionBlocked(game,receipt,ledger)
+    if not eventArchive.acquisitionAllowed or ledger and ledger.claimed[receipt.digest]
+        or eventArchive.findGiftReceipt(game,receipt.digest)then return false end
+    if not eventArchive.profile(receipt.profileId)then return false end
+    return eventArchive.acquisitionAllowed(game,receipt.profileId)==false
+  end
+  local function acquisitionOutcome(game,receipt)
+    local why
+    if game and receipt and eventArchive.acquisitionAllowed then
+      local _;_,why=eventArchive.acquisitionAllowed(game,receipt.profileId)
+    end
+    if why=='legend_owned'then return outcome('legend_owned',tr(
+      'This legendary Pokemon\nwas already obtained in\nthis Legacy lineage.\fNo second copy is issued.\nExisting Pokemon and gift\nreceipts are retained.',
+      'Dieses legendaere Pokemon\nwurde in diesem Vermaechtnis\nbereits erhalten.\fEs gibt kein zweites Exemplar.\nVorhandene Pokemon und\nGeschenkbelege bleiben erhalten.'))end
+    if why=='legend_history_unavailable'then return outcome('archive_error',tr(
+      'Legendary ownership could\nnot be checked. Retry when\nthe archive is available.\fNo new gift was reserved.',
+      'Der Legendenbesitz konnte\nnicht geprueft werden. Versuche\nes mit verfuegbarem Archiv erneut.\fKein neues Geschenk\nwurde reserviert.'))end
+    return outcome('story_reserved',tr(
+      'This Pokemon remains part\nof the Sevii story and is\nnot distributed.\fExisting Pokemon and\nreceipts are retained. Other\ngifts remain available.',
+      'Dieses Pokemon bleibt Teil\nder Sevii-Handlung und wird\nnicht ausgegeben.\fVorhandene Pokemon und\nBelege bleiben erhalten.\nAndere Geschenke sind verfuegbar.'))
+  end
+  local function suspendBlocked(game,root,ledger)
+    local receipt=ledger.pendingReceipt
+    if not receipt or not acquisitionBlocked(game,receipt,ledger)then return true end
+    local previous=ledger.suspended[receipt.digest]
+    ledger.suspended[receipt.digest]=copy(receipt);ledger.pendingReceipt=nil
+    if persistLocal(root,game)then return true end
+    ledger.pendingReceipt=receipt;ledger.suspended[receipt.digest]=previous
+    eventArchive.persist(root)
+    return false
   end
 
   local function validationMessage(reason)
@@ -759,6 +792,10 @@ return function(mod, opts)
         "This reserved gift is\nnot available in this build.\fNothing was changed.",
         "Dieses reservierte\nGeschenk fehlt in diesem Build.\fNichts wurde geändert."))
     end
+    if acquisitionBlocked(game,receipt,ledger)then
+      if not suspendBlocked(game,root,ledger)then return stateErrorOutcome()end
+      return acquisitionOutcome(game,receipt)
+    end
     local spriteReady, spriteOutcome = requireSpriteContent(game, receipt)
     if not spriteReady then return spriteOutcome end
     if not profileReady(game, receipt) then
@@ -883,6 +920,8 @@ return function(mod, opts)
         "This Gift Code is not\nknown to this event build.",
         "Dieser Geschenkcode ist\ndiesem Event-Build nicht bekannt."))
     end
+    if acquisitionBlocked(game,receipt,ledger)then return acquisitionOutcome(game,receipt)end
+    if not suspendBlocked(game,root,ledger)then return stateErrorOutcome()end
     local recorded, recordFailure = recordAcceptedAttempt(
       root, ledger, game, attemptAt)
     if not recorded then return recordFailure end
@@ -991,6 +1030,20 @@ return function(mod, opts)
     if not enabled() then return false, "disabled" end
     local root, ledger = localState()
     if not root then return false end
+    if not suspendBlocked(game,root,ledger)then return false end
+    -- Retained reservations can resume when the acquisition policy allows them.
+    if not ledger.pendingReceipt then
+      for digest,receipt in pairs(ledger.suspended)do
+        if not acquisitionBlocked(game,receipt,ledger)then
+          ledger.pendingReceipt=copy(receipt);ledger.suspended[digest]=nil
+          if not persistLocal(root,game)then
+            ledger.suspended[digest]=receipt;ledger.pendingReceipt=nil;eventArchive.persist(root)
+            return false
+          end
+          break
+        end
+      end
+    end
     reconcileUnsynced(game, root, ledger)
     local receipt = ledger.pendingReceipt
     if not (receipt and game) then return true end
@@ -1053,6 +1106,9 @@ return function(mod, opts)
           rows[#rows + 1] = { label = tr("CLAIM RESERVED", "PREIS ABHOLEN"),
             right = tr("WAITING", "WARTET"), value = "pending" }
         end
+        local _,ledger=localState()
+        if ledger and next(ledger.suspended)then rows[#rows+1]={
+          label=tr('HELD RESERVATIONS','ZURUECKGESTELLT'),value='suspended'}end
         return (mod.ui.KantoListMenu or mod.ui.ListMenu).new(game,
           tr("GIFT CODES", "GESCHENKCODES"), rows, {
             onChoose = function(item)
@@ -1060,6 +1116,9 @@ return function(mod, opts)
               if item.value == "enter" then G.openInput(game)
               elseif item.value == "pending" then
                 showOutcome(game, G.claimPending(game))
+              elseif item.value=='suspended'then showOutcome(game,outcome('suspended',tr(
+                'These gift receipts are\nretained. A prize may belong\nto the story, already be owned,\nor await an archive check.\fOther gifts remain available.\nLoad your save to retry the\nretained reservations.',
+                'Diese Geschenkbelege bleiben\nerhalten. Ein Preis kann zur\nHandlung gehoeren, bereits\nbesessen sein oder auf eine\nArchivpruefung warten.\fAndere Geschenke bleiben\nverfuegbar. Lade den Spielstand,\num die Belege erneut zu pruefen.')))
               end
             end,
           })

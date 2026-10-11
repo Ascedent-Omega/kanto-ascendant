@@ -1224,15 +1224,15 @@ return function(mod, opts)
     return requested
   end
 
-  local function protectedJohtoFrontY(owner,mon,image,dy)
+  local function protectedCrystalFrontY(owner,mon,image,dy)
     local dex=owner and tonumber(owner.dex)
     if not (owner and owner.source=='crystal' and dex and dex>151
-        and dex<=251 and owner.requestedScale==nil and mon
+        and (dex<=251 or guestDexes[dex]) and owner.requestedScale==nil and mon
         and not mon._ascMegaForm and not mon.ascMegaForm) then return dy end
     local ok,w,h=pcall(image.getDimensions,image)
     if not (ok and type(w)=='number' and type(h)=='number'
         and w>0 and w<=56 and h>0 and h<=56) then return dy end
-    -- These protected cards use native scale, not the later-species fit.
+    -- Johto and registered guests (including HEVO) use native scale here.
     -- Retain their existing track where possible, but never move a complete
     -- 56px card above row zero. No crop, resize, palette or frame replacement.
     local originY=8*(7-math.max(1,math.min(7,math.floor(h/8))))
@@ -1274,10 +1274,10 @@ return function(mod, opts)
       -- The authored card fits rows 0..51, leaving rows 52..55 clear before
       -- the player's name. battleScale applies the matching height cap.
       if frontNeedsClearance(ownedRow,mon) and classic2DConnector.enabled() then dy=dy+4 end
-      return dx,protectedJohtoFrontY(ownedRow,mon,enemy.sprite,dy)
+      return dx,protectedCrystalFrontY(ownedRow,mon,enemy.sprite,dy)
     end
     return owned and -8 or 0,
-      protectedJohtoFrontY(ownedRow,mon,enemy.sprite,owned and -8 or 0)
+      protectedCrystalFrontY(ownedRow,mon,enemy.sprite,owned and -8 or 0)
   end
 
   -- Translate the whole Lati front at composition time, preserving the

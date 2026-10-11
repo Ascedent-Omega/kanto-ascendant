@@ -106,6 +106,8 @@ return function(mod,opts)
       if key=='specialAttack'or key=='specialDefense'then value=value or base.special end
       if not integer(value,1,999)then return nil end
       local trained=(key=='specialAttack'or key=='specialDefense')and'special'or key
+      if epoch>=3 and key=='specialDefense'and mon.statExp
+          and type(mon.statExp.specialDefense)=='number'then trained='specialDefense'end
       local exp=math.max(0,tonumber(mon.statExp and mon.statExp[trained])or 0)
       local training=math.floor(math.min(255,math.ceil(math.sqrt(exp)))/4)
       out[key]=math.floor((value*2+ivs[key]+training)*level/100)+(key=='hp'and level+10 or 5)

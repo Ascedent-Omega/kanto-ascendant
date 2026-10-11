@@ -1,8 +1,7 @@
 -- KASC 6.7 optional character-locked Hoenn legend portal card.
 --
--- Extends the existing black HEVO door only after the 130-species foundation
--- is complete. RED/Groudon, BLUE/Kyogre and GREEN/Rayquaza remain separate;
--- capture receipts are monotonic Legacy-lineage evidence for Birth Island.
+-- Weather legends now answer on Sevii after the own HEVO door visit and the
+-- 130-species foundation. Capture receipts remain monotonic Legacy evidence.
 
 return function(mod,opts)
   opts=opts or{}
@@ -26,7 +25,8 @@ return function(mod,opts)
       text="TEXT_KA_HEVO_RAYQUAZA_CAPTURE",returnX=27},
   }
   P.byMap={};for _,row in pairs(P.rows)do P.byMap[row.map]=row end
-  local activeGame,shared,originalDoor
+  local activeGame,shared,originalDoor,seviiSites,seviiLevel
+  local liveBattles=setmetatable({},{__mode='k'})
   local function option(game)
     local bucket=game and game.mods and game.mods.modOptions
       and game.mods.modOptions[mod.id]
@@ -55,9 +55,28 @@ return function(mod,opts)
     local ok,value=pcall(journey.profile)
     return ok and type(value)=="table"and value.secretUnlocks or{}
   end
+  local function runToken(game)
+    local history=opts.legendHistory
+    return history and type(history.runId)=='function'and history.runId(game)or'original'
+  end
+  local function runCaptures(game,create)
+    local save=game and game.save;local localMod=save and save.modData and save.modData[mod.id]
+    if not localMod then return nil end
+    local token=runToken(game)
+    local state=localMod.hoennLegendPortalRunCaptures
+    if type(state)~='table'or state.runId~=token then
+      if not create then return nil end
+      state={runId=token,caught={}};localMod.hoennLegendPortalRunCaptures=state
+    end
+    return state
+  end
   function P.caught(game,row)
     row=type(row)=="table"and row or P.rows[row]
     if not row then return false end
+    local history=opts.legendHistory
+    if runToken(game)~='original'and history and history.ownedThisRun then
+      return history.ownedThisRun(game,row.species)==true
+    end
     local p=persistent(game and game.save,false)
     return p and p.secretUnlocks and p.secretUnlocks[row.flag]==true
       or profileReceipts()[row.flag]==true or false
@@ -75,7 +94,68 @@ return function(mod,opts)
   function P.available(game,character)
     character=character or currentCharacter(game)
     return option(game)and P.rows[character]~=nil and sealValid(game,character)
+      and type(journey.currentHevoDoorVisit)=="function"
+      and journey.currentHevoDoorVisit(game and game.save,character)==true
       and dex.report(game).portalReady==true
+  end
+  function P.bindSeviiSites(sites,levelProvider)
+    assert(type(sites)=="table","Sevii legend sites missing")
+    seviiSites=sites
+    if levelProvider~=nil then
+      assert(type(levelProvider)=="function","Sevii level provider must be callable")
+      seviiLevel=levelProvider
+    end
+    return true
+  end
+  function P.seviiLevel(game)
+    return seviiLevel and seviiLevel(game,P.LEVEL)or P.LEVEL
+  end
+  function P.atSeviiSite(game,row)
+    if not seviiSites then return false end
+    local site=seviiSites[row.character]
+    local ow=game and game.overworld;local player=ow and ow.player
+    return site and ow.map and ow.map.id==site.map and player
+      and math.abs(player.cellX-site.x)+math.abs(player.cellY-site.y)==1 or false
+  end
+  function P.canCapture(game,battle,species)
+    local live=game and liveBattles[game]
+    if not(live and live.battle==battle and live.save==game.save
+        and live.row.species==species and not live.finished
+        and battle.game==game and battle.kind=='wild'
+        and battle.enemy and battle.enemy.mon.species==species
+        and P.available(game,live.row.character)
+        and P.atSeviiSite(game,live.row))then return false end
+    for _,screen in ipairs(game.stack and game.stack.states or{})do
+      if screen==battle then return true end
+    end
+    return false
+  end
+  function P.bindLegendHistory(history)opts.legendHistory=assert(history)end
+  function P.priorOwnership(game,row)
+    if not opts.legendHistory then return false end
+    local h=opts.legendHistory
+    return (h.ownedThisRun or h.owned)(game,row.species)
+  end
+  function P.witnessed(game,row)
+    if runToken(game)~='original'then return false end
+    local flag='KA_LEGEND_WITNESS_'..row.species
+    local p=persistent(game and game.save,false)
+    return p and p.secretUnlocks and p.secretUnlocks[flag]==true or profileReceipts()[flag]==true or false
+  end
+  function P.recordWitness(game,row)
+    if not(row and P.rows[row.character]==row and P.available(game,row.character)
+        and (not seviiSites or P.atSeviiSite(game,row)))then return false,'unavailable'end
+    if P.caught(game,row)or P.witnessed(game,row)then return false,'recorded'end
+    local owned,why=P.priorOwnership(game,row);if not owned then return false,why or'unowned'end
+    local p=persistent(game.save,true);local flag='KA_LEGEND_WITNESS_'..row.species
+    local previous=p.secretUnlocks[flag];p.secretUnlocks[flag]=true
+    if type(game.writeSave)=='function'and game:writeSave()==false then
+      p.secretUnlocks[flag]=previous;return false,'save'
+    end
+    -- No synthetic capture seal. This separate research witness preserves
+    -- the original character/130-species gate when the Pokemon is banked.
+    pcall(journey.syncHevoPersistent,game.save)
+    return true
   end
   local function stored(save,mon)
     for _,candidate in ipairs(save and save.party or{})do if candidate==mon then return true end end
@@ -86,11 +166,14 @@ return function(mod,opts)
   end
   function P.recordCatch(game,row,mon)
     row=type(row)=="table"and row or P.rows[row]
-    if not(row and game and game.save and stored(game.save,mon))then
+    if not(row and game and game.save and mon and mon.species==row.species and stored(game.save,mon))then
       return false,"not-stored"
     end
     local p=persistent(game.save,true)
-    if p.secretUnlocks[row.flag]==true then return false,"recorded"end
+    local run=runToken(game);local current=run~='original'and runCaptures(game,true)
+    if current and current.caught[row.species]or run=='original'
+        and p.secretUnlocks[row.flag]==true then return false,"recorded"end
+    if current then current.caught[row.species]=true end
     p.secretUnlocks[row.flag]=true
     dex.record(game,row.species)
     local ok,result=pcall(journey.syncHevoPersistent,game.save)
@@ -109,6 +192,7 @@ return function(mod,opts)
     ow:startWarpTo(mapId,x,y,facing);return true
   end
   function P.enter(game,row)
+    if seviiSites then return false,"moved-to-sevii"end
     if not P.available(game,row.character)then return false,"unavailable"end
     if type(game.writeSave)=="function"and game:writeSave()==false then
       return false,"save"
@@ -126,37 +210,48 @@ return function(mod,opts)
     return warp(game,shared.ID,row.returnX,20,"down")
   end
   function P.doorInteraction(game,ow,npc,done)
-    game=game or activeGame
-    local character=currentCharacter(game)
-    if not(character and P.available(game,character))then
-      return originalDoor(game,ow,npc,done)
-    end
-    local row=P.rows[character]
-    if P.caught(game,row)then
-      return show(game,tr(
-        row.species.."'s captured seal shines across every Legacy Journey.",
-        "Das Fangsiegel von "..row.species.." leuchtet durch jede Vermächtnis-Reise."),done)
-    end
-    return show(game,tr(
-      "The complete Hoenn foundation opens "..row.species.."'s portal.\fSave and enter now?",
-      "Das Hoenn-Fundament öffnet das Portal zu "..row.species..".\fJetzt speichern und eintreten?"),nil,{
-        defaultNo=true,choice=function(yes)
-          if yes then
-            local ok=P.enter(game,row)
-            if not ok then show(game,tr("The save or portal failed. You remain here.",
-              "Speichern oder Portal fehlgeschlagen. Du bleibst hier."),done)end
-          elseif done then done()end
-        end})
+    -- The black door retains its original HEVO journey and Jirachi's own
+    -- convergence route. Weather legends answer only at their Sevii sites.
+    return originalDoor(game or activeGame,ow,npc,done)
   end
   function P.challenge(game,ow,npc,done,row)
+    if not P.available(game,row.character)
+        or (seviiSites and not P.atSeviiSite(game,row))then return show(game,tr(
+      "This research seal is not open yet.","Dieses Forschungssiegel ist noch nicht offen."),done)end
     if P.caught(game,row)then return show(game,tr("The capture seal is complete.",
       "Das Fangsiegel ist vollständig."),done)end
+    if P.witnessed(game,row)then return show(game,tr("Your bond has already been witnessed here.",
+      "Deine Bindung wurde hier bereits bestaetigt."),done)end
+    local owned,historyError=P.priorOwnership(game,row)
+    if owned then
+      local save=game.save
+      return show(game,tr("The seal recognizes your bond. Confirm this research without another capture?",
+        "Das Siegel erkennt deine Bindung. Forschung ohne einen weiteren Fang bestaetigen?"),nil,
+        {defaultNo=true,choice=function(yes)
+          if game.save~=save then if done then done()end;return end
+          if yes then local ok,why=P.recordWitness(game,row)
+            if not ok and why~='recorded'then return show(game,tr("The record could not be saved. Try again.",
+              "Der Beleg wurde nicht gespeichert. Versuch es erneut."),done)end
+          end
+          if done then done()end
+        end})
+    end
+    if historyError then return show(game,tr("The ownership archive is unavailable. Try again later.",
+      "Das Besitzarchiv ist nicht lesbar. Versuche es spaeter erneut."),done)end
+    local save=game.save
     local function start()
+      if game.save~=save then if done then done()end;return end
+      local prior,err=P.priorOwnership(game,row)
+      if prior or err or not P.available(game,row.character)then return P.challenge(game,ow,npc,done,row)end
       local BattleState=opts.battleState or require("src.battle.BattleState")
-      local battle=BattleState.newWild(game,row.species,P.LEVEL,{
+      local battle=BattleState.newWild(game,row.species,P.seviiLevel(game),{
         encounterSource="hoenn_legend_portal",randomizerProtected=true})
       battle.kaHoennLegendPortal=row.character
+      local live={battle=battle,save=save,row=row,finished=false}
+      liveBattles[game]=live
       battle.onFinish=function(result)
+        live.finished=true
+        if liveBattles[game]==live then liveBattles[game]=nil end
         if result=="caught"then P.recordCatch(game,row,battle.enemy and battle.enemy.mon)end
         if ow and type(ow.afterBattle)=="function"then ow:afterBattle(result,battle)end
         if done then done()end

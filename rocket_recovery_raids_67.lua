@@ -329,6 +329,30 @@ return function(mod, opts)
     return copy(row)
   end
 
+  -- Re-check pending encounters after a reload or a source migration. Keep
+  -- unrelated entries in a multi-rescue queue and never invent a catch receipt.
+  function R.reconcileCaptures(game)
+    local s=state(false);local changed=false
+    if s.status~="capture"then return true,false end
+    local instance=data.instances[s.instance]
+    if not instance then return false,"raid_instance_invalid"end
+    while s.pendingCaptures[s.captureIndex]do
+      local pending=s.pendingCaptures[s.captureIndex]
+      if captureReady(game,s,pending,instance.id)then break end
+      s.captureIndex=s.captureIndex+1;changed=true
+    end
+    if not s.pendingCaptures[s.captureIndex]then
+      s.pendingCaptures={};s.captureIndex=0;changed=true
+      local advanced,why=advanceInstance(game,s)
+      if not advanced then return false,why end
+    end
+    if changed then
+      mod.save:set(R.stateKey,s)
+      if not flush(game)then return false,"capture_defer_save_failed"end
+    end
+    return true,changed
+  end
+
   function R.resolveCapture(game,result)
     local s=state(false)
     if s.status~="capture" then return false,"raid_capture_not_active" end
@@ -418,16 +442,9 @@ return function(mod, opts)
     -- receipt and its pending rescue. Never strand the Rocket campaign on a
     -- species that is no longer registered: defer it, advance normally, and
     -- let a later matching repeat relay surface it after the provider returns.
-    if s.status=="capture"then
-      local pending=s.pendingCaptures[s.captureIndex]
-      if type(pending)=="table"and not captureReady(game,s,pending,s.instance)then
-        s.pendingCaptures={};s.captureIndex=0
-        local advanced,why=advanceInstance(game,s)
-        if not advanced then return false,why end
-        mod.save:set(R.stateKey,s)
-        if not flush(game)then return false,"capture_defer_save_failed"end
-      end
-    end
+    local reconciled,why=R.reconcileCaptures(game)
+    if not reconciled then return false,why end
+    s=state(false)
     if s.status~="active"and s.status~="capture"then
       local released,why=sources.release(game,"orphan_recovery")
       if not released then return false,why end
@@ -435,6 +452,16 @@ return function(mod, opts)
     return true
   end
   if mod.events and type(mod.events.on)=="function" then
+    mod.events:on("save.loaded",function(ev)
+      -- CONTINUE adopts its slot after game.ready; initial installation alone
+      -- cannot reconcile that selected slot's pending captures or custody.
+      local game=ev and ev.game or R.game
+      if not(game and ev and game.save==ev.save)then return end
+      local ok,why=R.install(game)
+      if not ok and mod.log and type(mod.log.warn)=="function"then
+        mod.log:warn("Rocket rescue recovery pending: "..tostring(why))
+      end
+    end,3385)
     mod.events:on("mod.options_changed",function(ev)
       if not (ev and ev.mod==mod.id and ev.key=="rocket_raids"
           and ev.value==false and R.game) then return end

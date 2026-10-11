@@ -369,8 +369,11 @@ return function(mod, opts)
       not active or puzzleActive and not p.upperPlugCleared)
     setGroup(game,V.MAP,V.SUMMIT_BLOCK_NAMES,
       not active or puzzleActive and not p.summitUnlocked)
+    local owned,historyError=V.priorOwnership(game)
     setObjectVisible(game,V.MAP,"KA_MOLTRES_VOLCANO",
-      puzzleActive)
+      puzzleActive and not owned and not historyError)
+    setObjectVisible(game,V.MAP,"KA_MOLTRES_MEMORY",
+      puzzleActive and (owned or historyError~=nil))
     return p.summitUnlocked
   end
 
@@ -569,6 +572,31 @@ return function(mod, opts)
         end})
   end
 
+  function V.bindLegendHistory(history)
+    assert(history);opts.legendHistory=function()return history end
+  end
+  function V.priorOwnership(game)
+    if not opts.legendHistory then return false end -- unchanged standalone card
+    local history=opts.legendHistory()
+    if not history then return false,"legend_history_unavailable" end
+    return (history.ownedThisRun or history.owned)(game,"MOLTRES")
+  end
+  function V.recordWitness(game)
+    if not V.available(game) or not V.puzzleSolved(game) then return false,"unfinished" end
+    if eventComplete(game) then return false,"recorded" end
+    if not V.priorOwnership(game) then return false,"unowned" end
+    if not runEvents then return false,"run_owner_unavailable" end
+    local run=runEvents.state(game,true)
+    local ok,why=runEvents.mark(game,"MOLTRES",{map=V.MAP,level=V.LEVEL,
+      battleResult="witnessed",captured=false})
+    if not ok then return false,why end
+    -- The route seal belongs to this run; ownership remains in its own ledger.
+    -- A failed write must leave this ceremony retryable.
+    if writeSave(game)==false then
+      run.completed.MOLTRES=nil;V.syncVisibility(game);return false,"save"
+    end
+    V.syncVisibility(game);return true
+  end
   function V.challenge(game,ow,npc,done)
     if not V.available(game)then return show(game,tr(
       "This expedition is currently inactive.",
@@ -578,7 +606,31 @@ return function(mod, opts)
     if not V.puzzleSolved(game)then return show(game,tr(
       "The final rock wall still seals the crater.",
       "Die letzte Felswand versperrt noch den Krater."),done)end
+    local owned,historyError=V.priorOwnership(game)
+    if owned then
+      local save=game.save
+      return show(game,tr(
+        "A glowing feather recalls your bond with MOLTRES.\fThe cleared vents calm the crater. Record this expedition without another capture?",
+        "Eine glühende Feder erinnert an deine Verbindung mit LAVADOS.\fDie freien Schlote beruhigen den Krater. Expedition ohne weiteren Fang abschließen?"),nil,{
+        defaultNo=true,choice=function(yes)
+          if game.save~=save then if done then done()end;return end
+          if yes then
+            local ok,why=V.recordWitness(game)
+            if not ok and why~="recorded" then return show(game,tr(
+              "The expedition could not be saved. Try again.",
+              "Die Expedition wurde nicht gespeichert. Versuch es erneut."),done)end
+          end
+          if done then done()end
+        end})
+    end
+    if historyError then return show(game,tr(
+      "The ownership archive is unavailable. Return when it can be read.",
+      "Das Besitzarchiv ist nicht lesbar. Komm wieder, wenn es erreichbar ist."),done)end
+    local save=game.save
     local function start()
+      if game.save~=save then if done then done()end;return end
+      local prior,err=V.priorOwnership(game)
+      if prior or err then return V.challenge(game,ow,npc,done)end
       local BattleState=opts.battleState or require("src.battle.BattleState")
       local battle=BattleState.newWild(game,"MOLTRES",V.LEVEL,{
         encounterSource="moltres_volcano",randomizerProtected=true})
@@ -650,6 +702,7 @@ return function(mod, opts)
   local function summitObjects()
     local rows={}
     addObject(rows,"KA_MOLTRES_VOLCANO","SPRITE_BIRD",8,4,V.MOLTRES_TEXT,"DOWN")
+    addObject(rows,"KA_MOLTRES_MEMORY","SPRITE_POKE_BALL",8,4,V.MOLTRES_TEXT,"DOWN")
     addWall(rows,V.SUMMIT_BLOCK_NAMES,5,V.SUMMIT_DRILL_TEXT,4)
     addObject(rows,V.PASSAGE_NAMES[4],"SPRITE_BOULDER",8,15,V.PASSAGE_TEXTS[4])
     return rows

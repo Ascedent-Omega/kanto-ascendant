@@ -1,3 +1,15 @@
+# Kanto Ascendant 6.7.32 – Sevii-Integration in Prüfung
+
+Dieser getrennte Entwicklungsstand übernimmt die Sevii-Arbeiten auf den
+aktuellen öffentlichen KASC-Tag `v6.7.32`. Die früheren Sevii-Nachweise
+gelten nicht automatisch für diese Zusammenführung. Die lokale importierte
+Inselgrafik bleibt außerhalb des Git-Pakets. Dieser Stand ist weder ein
+veröffentlichtes Update noch für einen Spielstandwechsel freigegeben.
+
+---
+
+Öffentliche Release-Dokumentation:
+
 # Kanto Ascendant 6.7.32 — narrower Pyro volcano platform
 
 Pyro/Blaine's suspended court is now 14 rather than 18 cells wide, centered on the same Pokéball marking. This leaves more of the surrounding lava visible with the matching VASC MAP battle view.

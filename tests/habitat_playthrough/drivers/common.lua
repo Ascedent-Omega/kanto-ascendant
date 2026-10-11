@@ -1,13 +1,36 @@
 return function(game)
  local U=require('tests.drivers.util');local Q={U=U,game=game,root=assert(os.getenv('HABITAT_QA_ROOT'))}
  function Q.tap(b)U.tap(game,b);U.wait(3)end
+ local sceneRuntime
+ local function runtime(fn,seen)
+  if type(fn)~='function'then return end;seen=seen or{};if seen[fn]then return end;seen[fn]=true
+  for i=1,200 do local k,v=debug.getupvalue(fn,i);if not k then break end;if k=='V'then return v end end
+  for i=1,200 do local k,v=debug.getupvalue(fn,i);if not k then break end;local found=runtime(v,seen);if found then return found end end
+ end
+ function Q.sceneReady()
+  if require('src.render.Pipelines').level('voxel')==0 then return true end
+  local facade=game.mods.exports.VOXEL_ASCENDANT
+  if not facade then return true end
+  sceneRuntime=sceneRuntime or assert(runtime(facade.lib.require('VoxelScene').render),'native VASC runtime')
+  return not sceneRuntime.require('WorldSceneHold').loading(game.overworld)
+   and not sceneRuntime.require('VoxelScene').pendingReason
+   and not sceneRuntime.require('LoadingCompanion').status().visible
+ end
  function Q.settle()
-  for i=1,1200 do
+  local stable=0
+  for i=1,3000 do
    local t=game.stack:top()
-   if t==game.overworld and not game.overworld.transitioning and not game.overworld.player.moving and not(game.overworld.runner and game.overworld.runner:isRunning())then U.wait(3);return end
-   if t.isTextBox or t.pages then Q.tap('a')elseif t.items then Q.tap('b')else U.wait(1)end
+   if t==game.overworld and not game.overworld.transitioning and not game.overworld.player.moving and not(game.overworld.runner and game.overworld.runner:isRunning())and Q.sceneReady()then
+    stable=stable+1;if stable>=3 then return end;U.wait(1)
+   else
+    stable=0
+    if t.isTextBox or t.pages then Q.tap('a')
+    elseif t.items or t.screenId=='PartyMenu'
+        or t.__pokemonUiHostV1 and t.__pokemonUiHostV1.surface=='pc_box'then Q.tap('b')
+    else U.wait(1)end
+   end
   end
-  error('UI did not return to overworld')
+  error('UI or native world scene did not settle')
  end
  function Q.choose(match)
   local t=game.stack:top();local n
@@ -15,6 +38,27 @@ return function(game)
   if not n then for k,v in pairs(t)do if type(v)~='function'and type(v)~='table'then print('MENU_MISSING_FIELD',k,v)end end;for i,v in ipairs(t.items or{})do print('MENU_MISSING_ROW',i,v.label,v.value)end end;assert(n,'menu row missing: '..tostring(t.title))
   for i=1,60 do if (t.submenu and t.subIndex or t.index)==n then Q.tap('a');return end;Q.tap('down')end
   error('menu selection stuck')
+ end
+ -- Native text and menu presentation is asynchronous in current hosts.
+ function Q.menuReady()
+  for _=1,1800 do
+   local t=game.stack:top();if t.items then return t end
+   assert(t~=game.overworld,'interaction ended before menu')
+   if t.isTextBox or t.pages then Q.tap('a')else U.wait(1)end
+  end
+  error('native menu did not appear')
+ end
+ function Q.answerChoice(yes)
+  for _=1,1800 do
+   local t=game.stack:top()
+   if t.labels and t.onChoose then
+    local wanted=yes and 1 or 2
+    if t.pending~=nil then U.wait(1)
+    elseif t.index~=wanted then Q.tap('down')
+    else Q.tap('a');return end
+   elseif t.isTextBox or t.pages then Q.tap('a')else U.wait(1)end
+  end
+  error('native YES/NO choice did not appear')
  end
  function Q.bag(item)
   Q.settle();Q.tap('start');Q.choose(function(v)return v.label=='ITEM'or v.label=='BAG'or v.label=='BEUTEL'end);U.wait(5)
@@ -31,7 +75,8 @@ return function(game)
  function Q.shot(n)assert(U.shot(game,Q.root..'/evidence/'..n..'.png'))end
  function Q.field(move)
   Q.settle();Q.tap('start');Q.choose(function(v)return v.label and(v.label:upper():find('MON',1,true))end);Q.tap('a');U.wait(5)
-  Q.choose(function(v)return v.label==move or v.value==move end);Q.settle()
+  local localized={SURF='SURFER',FLY='FLIEGEN',STRENGTH='STAERKE',CUT='ZERSCHNEIDER'}
+  Q.choose(function(v)return v.label==move or v.value==move or v.label==localized[move]end);Q.settle()
  end
  function Q.yes()
   local last
@@ -48,20 +93,39 @@ return function(game)
   local pairs=(game.data.field.tilePairs or{})[(map:isWaterCell(sx,sy)and not map:isWalkableCell(sx,sy))and'water'or'land']or{}
   local a,b=map:cellTile(sx,sy),map:cellTile(tx,ty)
   for _,v in ipairs(pairs)do if v.tileset==map.def.tileset and(v.a==a and v.b==b or v.b==a and v.a==b)then return false end end
+  local owner=Q.K or game.mods.exports.kanto_ascendant
+  local elevation=owner and owner.seviiExpedition and owner.seviiExpedition.sourceElevation
+  if elevation and map:isWalkableCell(sx,sy)and map:isWalkableCell(tx,ty)then
+   return elevation.allow(true,{map=map,fromX=sx,fromY=sy,toX=tx,toY=ty,mover={surfing=map:isWaterCell(sx,sy)}})
+  end
   return true
  end
  function Q.reachable(sx,sy,gx,gy)
   local m=game.overworld.map;local queue={{sx,sy}};local seen={[sx..','..sy]=true};local at=1
   while queue[at]do local p=queue[at];at=at+1;if p[1]==gx and p[2]==gy then return true end
    for _,v in ipairs{{0,1},{0,-1},{1,0},{-1,0}}do local x,y=p[1]+v[1],p[2]+v[2];local key=x..','..y
-    if not seen[key]and m:inBounds(x,y)and((x==gx and y==gy)or not m:warpAtCell(x,y))and(m:isWalkableCell(x,y)or m:isWaterCell(x,y))and Q.pairClear(m,p[1],p[2],x,y)and not require('src.world.Collision').occupied(game.overworld.entities,x,y,game.overworld.player)then seen[key]=true;queue[#queue+1]={x,y}end
+    if not seen[key]and m:inBounds(x,y)and((x==gx and y==gy)or (not m:warpAtCell(x,y)and not(Q.extraWarpAt and Q.extraWarpAt(m,x,y))))and(m:isWalkableCell(x,y)or m:isWaterCell(x,y))and Q.pairClear(m,p[1],p[2],x,y)and not require('src.world.Collision').occupied(game.overworld.entities,x,y,game.overworld.player)then seen[key]=true;queue[#queue+1]={x,y}end
    end
   end;return false
  end
  function Q.faceObject(x,y)
   local p=game.overworld.player
   for _,v in ipairs{{0,1,'up'},{-1,0,'right'},{1,0,'left'},{0,-1,'down'}}do
-   if Q.reachable(p.cellX,p.cellY,x+v[1],y+v[2])then Q.walkTo(x+v[1],y+v[2]);U.hold(game,v[3],1);return end
+   local ax,ay=x+v[1],y+v[2]
+   if Q.reachable(p.cellX,p.cellY,ax,ay)then
+    Q.walkTo(ax,ay);Q.settle()
+    if p.facing==v[3]then return end
+    if not require('src.world.Collision').canMove(game.overworld.map,game.overworld.entities,p,v[3])then
+     U.hold(game,v[3],1);return
+    end
+    -- Facing a passable actor with another forward press would walk onto
+    -- it. Approach the adjacent cell from behind through real movement.
+    local bx,by=x+2*v[1],y+2*v[2];local m=game.overworld.map
+    if m:inBounds(bx,by)and not m:warpAtCell(bx,by)and not(Q.extraWarpAt and Q.extraWarpAt(m,bx,by))
+     and Q.reachable(p.cellX,p.cellY,bx,by)then
+     Q.walkTo(bx,by);Q.walkTo(ax,ay);Q.settle();assert(p.facing==v[3],'native approach faces passable actor');return
+    end
+   end
   end
   error('object has no accessible interaction cell '..x..','..y)
  end
@@ -75,7 +139,7 @@ return function(game)
      local dir,dx,dy=v[1],v[2],v[3];local x,y=q.x+dx,q.y+dy
      if ow.map.def.tileset=='OVERWORLD'then for _,l in ipairs(game.data.field.ledges or{})do if l.facing==dir and ow.map:cellTile(q.x,q.y)==l.standingTile and ow.map:inBounds(x,y)and ow.map:cellTile(x,y)==l.ledgeTile then x,y=x+dx,y+dy;break end end end
      local k=key(x,y)
-     if not seen[k]and not blocked[key(q.x,q.y)..'>'..k]and ow.map:inBounds(x,y)and((x==gx and y==gy)or not ow.map:warpAtCell(x,y))and Q.pairClear(ow.map,q.x,q.y,x,y)and(ow.map:isWalkableCell(x,y)or ow.map:isWaterCell(x,y))and not require('src.world.Collision').occupied(ow.entities,x,y,p)then
+     if not seen[k]and not blocked[key(q.x,q.y)..'>'..k]and ow.map:inBounds(x,y)and((x==gx and y==gy)or (not ow.map:warpAtCell(x,y)and not(Q.extraWarpAt and Q.extraWarpAt(ow.map,x,y))))and Q.pairClear(ow.map,q.x,q.y,x,y)and(ow.map:isWalkableCell(x,y)or ow.map:isWaterCell(x,y))and not require('src.world.Collision').occupied(ow.entities,x,y,p)then
       local n={x=x,y=y,dir=dir,prev=q};seen[k]=true;queue[#queue+1]=n
      end
     end
@@ -99,18 +163,20 @@ return function(game)
    end
   end
  end
- function Q.catch(species,alreadyStarted)
+ function Q.catch(species,alreadyStarted,bagDirection)
   game.save.inventory.MASTER_BALL=20
   if not alreadyStarted then Q.tap('a')end;local battle
   for i=1,1800 do local t=game.stack:top();if t.enemy and t.enemy.mon and t.phase=='menu'then battle=t;break end;Q.tap('a')end
   assert(battle,'battle menu missing '..species);assert(battle.enemy.mon.species==species,'wrong encounter');Q.shot(species..'-battle');print('PHYSICAL_BATTLE_STARTED',species)
-  Q.tap('left');assert(battle.menuIndex==3,'bag navigation');Q.tap('a');U.wait(40)
+  -- The public native controller opens the real Bag in every HUD layout.
+  -- Arrow/index assertions describe only the classic HUD, not ORAS.
+  assert(battle:chooseMenu('item'),'native Bag action');U.wait(40)
   for pocket=1,8 do local t=game.stack:top();local found=false;for _,v in ipairs(t.items or{})do if v.value=='MASTER_BALL'then found=true end end
    if found then Q.choose(function(v)return v.value=='MASTER_BALL'end);break end;Q.tap('right')end
   U.wait(10);local t=game.stack:top();if t.items then Q.choose(function(v)return v.label=='USE'or v.value=='use'end)end
   for i=1,3000 do local t=game.stack:top();if t==game.overworld then Q.settle();print('PHYSICAL_BATTLE_FINISHED',species);return end
    if t.def and t.def.id==species and not t.enemy then Q.tap('b')
-   elseif t.labels and t.onChoose then local wanted=(game.save.inventory.MASTER_BALL or 0)==20 and 1 or 2;if t.pending~=nil then U.wait(1)elseif t.index~=wanted then Q.tap('down')else Q.tap('a')end else Q.tap('a')end
+   elseif t.labels and t.onChoose then local wanted=(game.save.inventory.MASTER_BALL or 0)==20 and 1 or 2;if t.pending~=nil then U.wait(1)elseif t.index~=wanted then Q.tap(wanted==1 and'up'or'down')else Q.tap('a')end else Q.tap('a')end
   end
   error('capture did not finish '..species)
  end

@@ -28,6 +28,15 @@ return function(opts)
   local witness = filename .. ".tmp"
   local rollback = directory .. "/" .. edition .. "_rollback.lua"
   local VERSION = 9
+  local LIFETIME_LEGEND_DEX = {
+    [144]=true,[145]=true,[146]=true,[150]=true,[151]=true,
+    [243]=true,[244]=true,[245]=true,[249]=true,[250]=true,[251]=true,
+    [377]=true,[378]=true,[379]=true,[380]=true,[381]=true,
+    [382]=true,[383]=true,[384]=true,[385]=true,[386]=true,
+    [480]=true,[481]=true,[482]=true,[483]=true,[484]=true,
+    [485]=true,[486]=true,[488]=true,[489]=true,[490]=true,
+    [491]=true,[492]=true,[493]=true,
+  }
   local VAULT_BINDING_VERSION = 1
   local HANDOFF_VERSION = 1
   local STORAGE_BINDING_VERSION = 1
@@ -501,7 +510,7 @@ return function(opts)
         secretUnlocks = {}, hiddenAccessReceipts = {},
         starterDiscoveryUnlocks = {},
         hoennCharacterPacks = {}, hoennDiscoveryUnlocks = {},
-        hoennDexOwned = {},
+        hoennDexOwned = {}, seviiLegendOwned = {},
       },
       -- Johto Masters is a cross-journey campaign record.  Keep the
       -- authoritative controller bucket here, but never copy transient map
@@ -551,7 +560,7 @@ return function(opts)
           secretUnlocks = {}, hiddenAccessReceipts = {},
           starterDiscoveryUnlocks = {},
           hoennCharacterPacks = {}, hoennDiscoveryUnlocks = {},
-          hoennDexOwned = {},
+          hoennDexOwned = {}, seviiLegendOwned = {},
         }
       end
       a.version = 3
@@ -815,7 +824,7 @@ return function(opts)
       "permanentItems", "firstGrants", "pendingItems", "dex",
       "questionIds", "secretUnlocks", "hiddenAccessReceipts",
       "starterDiscoveryUnlocks", "hoennCharacterPacks",
-      "hoennDiscoveryUnlocks", "hoennDexOwned" }) do
+      "hoennDiscoveryUnlocks", "hoennDexOwned", "seviiLegendOwned" }) do
       a.hevoPersistent[key] = type(a.hevoPersistent[key]) == "table"
         and a.hevoPersistent[key] or {}
     end
@@ -876,6 +885,14 @@ return function(opts)
       if id and id ~= "" and owned == true then cleanHoennDex[id] = true end
     end
     a.hevoPersistent.hoennDexOwned = cleanHoennDex
+    local cleanSeviiLegends = {}
+    for key, owned in pairs(a.hevoPersistent.seviiLegendOwned) do
+      local dex = tonumber(key)
+      if owned == true and dex and dex % 1 == 0 and LIFETIME_LEGEND_DEX[dex] then
+        cleanSeviiLegends[tostring(dex)] = true
+      end
+    end
+    a.hevoPersistent.seviiLegendOwned = cleanSeviiLegends
     -- RC23 preview saves recorded the three optional Mega caches as if path
     -- completion itself had found them.  The explicit secret ledger is now
     -- authoritative; this migration removes only those unverifiable flags
@@ -2324,7 +2341,7 @@ return function(opts)
     if type(source) == "table" then
       for _, key in ipairs({ "packageUnlocks", "evolutionUnlocks",
         "permanentItems", "firstGrants", "dex", "questionIds",
-        "secretUnlocks", "hoennCharacterPacks", "hoennDexOwned" }) do
+        "secretUnlocks", "hoennCharacterPacks", "hoennDexOwned", "seviiLegendOwned" }) do
         mergeSet(persistent[key], source[key])
       end
       for id, receipt in pairs(type(source.hiddenAccessReceipts) == "table"
@@ -3741,6 +3758,22 @@ return function(opts)
     local archive, err = readArchiveView()
     return copy(type(archive.hevoPersistent) == "table"
       and archive.hevoPersistent or {}), err
+  end
+
+  -- Ownership evidence for new Sevii legend paths. No bank withdrawals or
+  -- lease reconciliation are performed by this projection.
+  function A.seviiLegendView()
+    local archive, err = readArchiveView()
+    if err or A.readOnly then return nil, err or A.readOnlyReason end
+    return {
+      owned = copy(archive.hevoPersistent and archive.hevoPersistent.seviiLegendOwned or {}),
+      hoennDexOwned = copy(archive.hevoPersistent and archive.hevoPersistent.hoennDexOwned or {}),
+      secretUnlocks = copy(archive.hevoPersistent and archive.hevoPersistent.secretUnlocks or {}),
+      bankAuthority = archive.bankAuthority,
+      bank = copy(archive.bank or {}),
+      quarantine = copy(archive.quarantine and archive.quarantine.bank or {}),
+      claimedGifts = copy(archive.giftCodes and archive.giftCodes.claimed or {}),
+    }
   end
 
   -- Access and discovery receipts are monotonic Legacy-lineage facts. Their

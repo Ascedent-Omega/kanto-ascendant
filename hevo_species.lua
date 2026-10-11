@@ -14,6 +14,8 @@ return function(mod, opts)
     return i18n and i18n.text and i18n.text(en, de) or en
   end
   local H = {
+    OWNER = 'kasc.hevo-species/v1',
+    presentationBySpecies = {},
     order = {
       "AMBIPOM", "MISMAGIUS", "HONCHKROW", "WEAVILE", "MAGNEZONE",
       "LICKILICKY", "RHYPERIOR", "TANGROWTH", "ELECTIVIRE", "MAGMORTAR",
@@ -629,6 +631,9 @@ return function(mod, opts)
     local inches = math.floor(row.heightM * 39.3700787 + 0.5)
     mod.content.pokemon:register(species, {
       id = species, name = tr(row.name, row.de), dex = row.dex,
+      -- Presentation metadata is namespaced: general field-cinematic
+      -- sourceDex readers must retain their established Kanto behavior.
+      hevoSourceDex = row.sourceDex,
       types = copy(row.types), baseStats = copy(row.stats),
       catchRate = row.catchRate, baseExp = row.baseExp,
       growthRate = row.growthRate,
@@ -650,6 +655,7 @@ return function(mod, opts)
     })
     mod.content.icons:register(species,
       iconForType[row.types[1]] or "MON")
+    H.presentationBySpecies[species] = { dex=row.dex, sourceDex=row.sourceDex }
   end
 
   -- Preserve every existing branch and append only registry-authored HEVO

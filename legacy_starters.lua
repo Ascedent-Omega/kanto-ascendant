@@ -104,6 +104,10 @@ return function(mod, opts)
   }
   local LEGACY_ELITE_IDS = {}
   for _, id in ipairs(LEGACY_ELITE_ORDER) do LEGACY_ELITE_IDS[id] = true end
+  local function legendHistory()
+    local sevii = mod.exports and mod.exports.seviiExpedition
+    return sevii and sevii.legendPolicy and sevii.legendPolicy.history
+  end
 
   -- A selected capstone partner still starts at level 5, but receives four
   -- deterministic moves drawn only from its effective level-up/TM/HM/tutor
@@ -518,6 +522,12 @@ return function(mod, opts)
 
   local function canonicalRows(game, mode)
     local rows = {}
+    local eliteUnlocked = mode == "free" and durableThreePathsComplete()
+    local history = eliteUnlocked and legendHistory() or nil
+    local ownedLegends, historyError
+    if history then ownedLegends, historyError = history.collect(game)
+    elseif eliteUnlocked then historyError = 'legend_history_unavailable' end
+    if history and not ownedLegends then historyError = 'legend_history_unavailable' end
     for dex, id in ipairs(CANONICAL_ORDER) do
       local def = game.data.pokemon and game.data.pokemon[id]
       local drawable = false
@@ -529,7 +539,8 @@ return function(mod, opts)
           and math.floor(tonumber(def.dex) or 0) == dex
           and dex <= partnerDexMax(game.save)
           and drawable
-          and (not LEGACY_ELITE_IDS[id] or durableThreePathsComplete())
+          and (not LEGACY_ELITE_IDS[id] or eliteUnlocked and not historyError
+            and not ownedLegends[tostring(dex)])
           and (mode == "free" or BALANCED_PARTNER_IDS[id]) then
         rows[#rows + 1] = { id = id, def = def, dex = dex }
       end
@@ -747,8 +758,15 @@ return function(mod, opts)
     if dex >= 152 and dex <= 251 and partnerDexMax(game.save) == 151 then
       return false, "beyond-kanto-sealed"
     end
-    if LEGACY_ELITE_IDS[species] and not durableThreePathsComplete() then
-      return false, "all three durable Legacy paths are required"
+    if LEGACY_ELITE_IDS[species] then
+      if not durableThreePathsComplete() then
+        return false, "all three durable Legacy paths are required"
+      end
+      local history = legendHistory()
+      if not history then return false, "legend_history_unavailable" end
+      local owned, err = history.owned(game, species)
+      if owned then return false, "legend_owned" end
+      if err then return false, "legend_history_unavailable" end
     end
     local durableHoennCatalog = durableCatalogHoenn(game.save, species)
       and partnerDexMax(game.save) == 251
@@ -873,6 +891,15 @@ return function(mod, opts)
     if game.writeSave and not game:writeSave() then
       mon[PARTNER_MARKER] = nil
       restoreChoice(game.save, s, old, mon)
+      -- The save.writing observer may already have seen this temporary
+      -- partner. A failed save must not turn an unissued capstone into a
+      -- lifetime ownership receipt while the player remains in Oak's lab.
+      if LEGACY_ELITE_IDS[species] then
+        local bucket = game.save.modData and game.save.modData[mod.id]
+        local persistent = bucket and bucket.hevo_persistent
+        local owned = persistent and persistent.seviiLegendOwned
+        if type(owned) == "table" then owned[tostring(dex)] = nil end
+      end
       return false, "save failed"
     end
     if journey.syncPartner then

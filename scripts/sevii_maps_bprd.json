@@ -1,0 +1,1500 @@
+{
+  "schema": "kasc.sevii-source-maps/v1",
+  "source": "pret/pokefirered data/maps/map_groups.json; dimensions verified against German BPRD rev0",
+  "maps": [
+    {
+      "name": "ONE",
+      "source": "OneIsland",
+      "group": 3,
+      "number": 12,
+      "width": 24,
+      "height": 20,
+      "island": 1,
+      "label": "EILAND EINS",
+      "index": 2100
+    },
+    {
+      "name": "KINDLE",
+      "source": "OneIsland_KindleRoad",
+      "group": 3,
+      "number": 45,
+      "width": 24,
+      "height": 140,
+      "island": 1,
+      "label": "GLUEHWEG",
+      "index": 2101
+    },
+    {
+      "name": "TREASURE",
+      "source": "OneIsland_TreasureBeach",
+      "group": 3,
+      "number": 46,
+      "width": 24,
+      "height": 40,
+      "island": 1,
+      "label": "SCHATZGESTADE",
+      "index": 2102
+    },
+    {
+      "name": "CENTER",
+      "source": "OneIsland_PokemonCenter_1F",
+      "group": 32,
+      "number": 0,
+      "width": 19,
+      "height": 11,
+      "island": 1,
+      "label": "INSELZENTRUM",
+      "index": 2103
+    },
+    {
+      "name": "CENTER_2F",
+      "source": "OneIsland_PokemonCenter_2F",
+      "group": 32,
+      "number": 1,
+      "width": 15,
+      "height": 10,
+      "island": 1,
+      "label": "INSELZENTRUM OG",
+      "index": 2104
+    },
+    {
+      "name": "HOUSE1",
+      "source": "OneIsland_House1",
+      "group": 32,
+      "number": 2,
+      "width": 11,
+      "height": 9,
+      "island": 1,
+      "label": "INSELHAUS",
+      "index": 2105
+    },
+    {
+      "name": "HOUSE2",
+      "source": "OneIsland_House2",
+      "group": 32,
+      "number": 3,
+      "width": 11,
+      "height": 9,
+      "island": 1,
+      "label": "INSELHAUS",
+      "index": 2106
+    },
+    {
+      "name": "HARBOR",
+      "source": "OneIsland_Harbor",
+      "group": 32,
+      "number": 4,
+      "width": 17,
+      "height": 13,
+      "island": 1,
+      "label": "INSELHAFEN",
+      "index": 2107
+    },
+    {
+      "name": "MT_EMBER_RUBY_PATH_B4_F",
+      "source": "MtEmber_RubyPath_B4F",
+      "group": 1,
+      "number": 96,
+      "width": 18,
+      "height": 16,
+      "island": 1,
+      "label": "GLUTBERG"
+    },
+    {
+      "name": "MT_EMBER_EXTERIOR",
+      "source": "MtEmber_Exterior",
+      "group": 1,
+      "number": 97,
+      "width": 57,
+      "height": 54,
+      "island": 1,
+      "label": "GLUTBERG"
+    },
+    {
+      "name": "MT_EMBER_SUMMIT_PATH_1_F",
+      "source": "MtEmber_SummitPath_1F",
+      "group": 1,
+      "number": 98,
+      "width": 15,
+      "height": 18,
+      "island": 1,
+      "label": "GLUTBERG"
+    },
+    {
+      "name": "MT_EMBER_SUMMIT_PATH_2_F",
+      "source": "MtEmber_SummitPath_2F",
+      "group": 1,
+      "number": 99,
+      "width": 48,
+      "height": 46,
+      "island": 1,
+      "label": "GLUTBERG"
+    },
+    {
+      "name": "MT_EMBER_SUMMIT_PATH_3_F",
+      "source": "MtEmber_SummitPath_3F",
+      "group": 1,
+      "number": 100,
+      "width": 15,
+      "height": 11,
+      "island": 1,
+      "label": "GLUTBERG"
+    },
+    {
+      "name": "MT_EMBER_SUMMIT",
+      "source": "MtEmber_Summit",
+      "group": 1,
+      "number": 101,
+      "width": 19,
+      "height": 22,
+      "island": 1,
+      "label": "GLUTBERG"
+    },
+    {
+      "name": "MT_EMBER_RUBY_PATH_B5_F",
+      "source": "MtEmber_RubyPath_B5F",
+      "group": 1,
+      "number": 102,
+      "width": 16,
+      "height": 15,
+      "island": 1,
+      "label": "GLUTBERG"
+    },
+    {
+      "name": "MT_EMBER_RUBY_PATH_1_F",
+      "source": "MtEmber_RubyPath_1F",
+      "group": 1,
+      "number": 103,
+      "width": 27,
+      "height": 19,
+      "island": 1,
+      "label": "GLUTBERG"
+    },
+    {
+      "name": "MT_EMBER_RUBY_PATH_B1_F",
+      "source": "MtEmber_RubyPath_B1F",
+      "group": 1,
+      "number": 104,
+      "width": 11,
+      "height": 23,
+      "island": 1,
+      "label": "GLUTBERG"
+    },
+    {
+      "name": "MT_EMBER_RUBY_PATH_B2_F",
+      "source": "MtEmber_RubyPath_B2F",
+      "group": 1,
+      "number": 105,
+      "width": 16,
+      "height": 11,
+      "island": 1,
+      "label": "GLUTBERG"
+    },
+    {
+      "name": "MT_EMBER_RUBY_PATH_B3_F",
+      "source": "MtEmber_RubyPath_B3F",
+      "group": 1,
+      "number": 106,
+      "width": 31,
+      "height": 23,
+      "island": 1,
+      "label": "GLUTBERG"
+    },
+    {
+      "name": "MT_EMBER_RUBY_PATH_B1_F_STAIRS",
+      "source": "MtEmber_RubyPath_B1F_Stairs",
+      "group": 1,
+      "number": 107,
+      "width": 6,
+      "height": 7,
+      "island": 1,
+      "label": "GLUTBERG"
+    },
+    {
+      "name": "MT_EMBER_RUBY_PATH_B2_F_STAIRS",
+      "source": "MtEmber_RubyPath_B2F_Stairs",
+      "group": 1,
+      "number": 108,
+      "width": 8,
+      "height": 6,
+      "island": 1,
+      "label": "GLUTBERG"
+    },
+    {
+      "name": "THREE_ISLAND_BERRY_FOREST",
+      "source": "ThreeIsland_BerryForest",
+      "group": 1,
+      "number": 109,
+      "width": 57,
+      "height": 47,
+      "island": 3,
+      "label": "BEERENFORST"
+    },
+    {
+      "name": "FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE",
+      "source": "FourIsland_IcefallCave_Entrance",
+      "group": 1,
+      "number": 110,
+      "width": 30,
+      "height": 36,
+      "island": 4,
+      "label": "EISKASKADENHOEHLE"
+    },
+    {
+      "name": "FOUR_ISLAND_ICEFALL_CAVE_1_F",
+      "source": "FourIsland_IcefallCave_1F",
+      "group": 1,
+      "number": 111,
+      "width": 20,
+      "height": 20,
+      "island": 4,
+      "label": "EISKASKADENHOEHLE"
+    },
+    {
+      "name": "FOUR_ISLAND_ICEFALL_CAVE_B1_F",
+      "source": "FourIsland_IcefallCave_B1F",
+      "group": 1,
+      "number": 112,
+      "width": 24,
+      "height": 20,
+      "island": 4,
+      "label": "EISKASKADENHOEHLE"
+    },
+    {
+      "name": "FOUR_ISLAND_ICEFALL_CAVE_BACK",
+      "source": "FourIsland_IcefallCave_Back",
+      "group": 1,
+      "number": 113,
+      "width": 25,
+      "height": 26,
+      "island": 4,
+      "label": "EISKASKADENHOEHLE"
+    },
+    {
+      "name": "FIVE_ISLAND_ROCKET_WAREHOUSE",
+      "source": "FiveIsland_RocketWarehouse",
+      "group": 1,
+      "number": 114,
+      "width": 29,
+      "height": 27,
+      "island": 5,
+      "label": "VERLASSENE STATION"
+    },
+    {
+      "name": "SIX_ISLAND_DOTTED_HOLE_1_F",
+      "source": "SixIsland_DottedHole_1F",
+      "group": 1,
+      "number": 115,
+      "width": 16,
+      "height": 11,
+      "island": 6,
+      "label": "PUNKTLOCH"
+    },
+    {
+      "name": "SIX_ISLAND_DOTTED_HOLE_B1_F",
+      "source": "SixIsland_DottedHole_B1F",
+      "group": 1,
+      "number": 116,
+      "width": 13,
+      "height": 11,
+      "island": 6,
+      "label": "PUNKTLOCH"
+    },
+    {
+      "name": "SIX_ISLAND_DOTTED_HOLE_B2_F",
+      "source": "SixIsland_DottedHole_B2F",
+      "group": 1,
+      "number": 117,
+      "width": 13,
+      "height": 11,
+      "island": 6,
+      "label": "PUNKTLOCH"
+    },
+    {
+      "name": "SIX_ISLAND_DOTTED_HOLE_B3_F",
+      "source": "SixIsland_DottedHole_B3F",
+      "group": 1,
+      "number": 118,
+      "width": 13,
+      "height": 11,
+      "island": 6,
+      "label": "PUNKTLOCH"
+    },
+    {
+      "name": "SIX_ISLAND_DOTTED_HOLE_B4_F",
+      "source": "SixIsland_DottedHole_B4F",
+      "group": 1,
+      "number": 119,
+      "width": 13,
+      "height": 11,
+      "island": 6,
+      "label": "PUNKTLOCH"
+    },
+    {
+      "name": "SIX_ISLAND_DOTTED_HOLE_SAPPHIRE_ROOM",
+      "source": "SixIsland_DottedHole_SapphireRoom",
+      "group": 1,
+      "number": 120,
+      "width": 16,
+      "height": 15,
+      "island": 6,
+      "label": "PUNKTLOCH"
+    },
+    {
+      "name": "SIX_ISLAND_PATTERN_BUSH",
+      "source": "SixIsland_PatternBush",
+      "group": 1,
+      "number": 121,
+      "width": 60,
+      "height": 32,
+      "island": 6,
+      "label": "MUSTERBUSCH",
+      "habitatGrid": [
+        20,
+        16
+      ],
+      "habitatReason": "Six connected ecological sectors for the full insect population; native encounter tables have ten slots"
+    },
+    {
+      "name": "SIX_ISLAND_ALTERING_CAVE",
+      "source": "SixIsland_AlteringCave",
+      "group": 1,
+      "number": 122,
+      "width": 32,
+      "height": 24,
+      "island": 6,
+      "label": "WANDELHOEHLE"
+    },
+    {
+      "name": "TRAINER_TOWER_1_F",
+      "source": "TrainerTower_1F",
+      "group": 2,
+      "number": 1,
+      "width": 18,
+      "height": 17,
+      "island": 7,
+      "label": "TRAINERTURM"
+    },
+    {
+      "name": "TRAINER_TOWER_2_F",
+      "source": "TrainerTower_2F",
+      "group": 2,
+      "number": 2,
+      "width": 18,
+      "height": 17,
+      "island": 7,
+      "label": "TRAINERTURM",
+      "disabledWarps": [
+        3
+      ],
+      "warpReason": "Unused dynamic-layout elevator event lies outside the visible floor; stairs retain access"
+    },
+    {
+      "name": "TRAINER_TOWER_3_F",
+      "source": "TrainerTower_3F",
+      "group": 2,
+      "number": 3,
+      "width": 18,
+      "height": 17,
+      "island": 7,
+      "label": "TRAINERTURM",
+      "disabledWarps": [
+        3
+      ],
+      "warpReason": "Unused dynamic-layout elevator event lies outside the visible floor; stairs retain access"
+    },
+    {
+      "name": "TRAINER_TOWER_4_F",
+      "source": "TrainerTower_4F",
+      "group": 2,
+      "number": 4,
+      "width": 18,
+      "height": 17,
+      "island": 7,
+      "label": "TRAINERTURM",
+      "disabledWarps": [
+        3
+      ],
+      "warpReason": "Unused dynamic-layout elevator event lies outside the visible floor; stairs retain access"
+    },
+    {
+      "name": "TRAINER_TOWER_5_F",
+      "source": "TrainerTower_5F",
+      "group": 2,
+      "number": 5,
+      "width": 18,
+      "height": 17,
+      "island": 7,
+      "label": "TRAINERTURM",
+      "disabledWarps": [
+        3
+      ],
+      "warpReason": "Unused dynamic-layout elevator event lies outside the visible floor; stairs retain access"
+    },
+    {
+      "name": "TRAINER_TOWER_6_F",
+      "source": "TrainerTower_6F",
+      "group": 2,
+      "number": 6,
+      "width": 18,
+      "height": 17,
+      "island": 7,
+      "label": "TRAINERTURM",
+      "disabledWarps": [
+        3
+      ],
+      "warpReason": "Unused dynamic-layout elevator event lies outside the visible floor; stairs retain access"
+    },
+    {
+      "name": "TRAINER_TOWER_7_F",
+      "source": "TrainerTower_7F",
+      "group": 2,
+      "number": 7,
+      "width": 18,
+      "height": 17,
+      "island": 7,
+      "label": "TRAINERTURM",
+      "disabledWarps": [
+        3
+      ],
+      "warpReason": "Unused dynamic-layout elevator event lies outside the visible floor; stairs retain access"
+    },
+    {
+      "name": "TRAINER_TOWER_8_F",
+      "source": "TrainerTower_8F",
+      "group": 2,
+      "number": 8,
+      "width": 18,
+      "height": 17,
+      "island": 7,
+      "label": "TRAINERTURM",
+      "disabledWarps": [
+        3
+      ],
+      "warpReason": "Unused dynamic-layout elevator event lies outside the visible floor; stairs retain access"
+    },
+    {
+      "name": "TRAINER_TOWER_ROOF",
+      "source": "TrainerTower_Roof",
+      "group": 2,
+      "number": 9,
+      "width": 18,
+      "height": 16,
+      "island": 7,
+      "label": "TRAINERTURM"
+    },
+    {
+      "name": "TRAINER_TOWER_LOBBY",
+      "source": "TrainerTower_Lobby",
+      "group": 2,
+      "number": 10,
+      "width": 19,
+      "height": 17,
+      "island": 7,
+      "label": "TRAINERTURM",
+      "cellOverrides": [
+        {
+          "x": 17,
+          "y": 10,
+          "copyFrom": [
+            17,
+            11
+          ],
+          "reason": "Open the source-script elevator counter barrier with local floor graphic"
+        }
+      ]
+    },
+    {
+      "name": "TRAINER_TOWER_ELEVATOR",
+      "source": "TrainerTower_Elevator",
+      "group": 2,
+      "number": 11,
+      "width": 5,
+      "height": 7,
+      "island": 7,
+      "label": "TRAINERTURM",
+      "warpOverrides": {
+        "1": {
+          "target": "TrainerTower_Lobby",
+          "destWarp": 3
+        }
+      },
+      "warpReason": "Authored fixed lobby return; floor selection is owned by Sevii scripts"
+    },
+    {
+      "name": "FIVE_ISLAND_LOST_CAVE_ENTRANCE",
+      "source": "FiveIsland_LostCave_Entrance",
+      "group": 2,
+      "number": 12,
+      "width": 11,
+      "height": 11,
+      "island": 5,
+      "label": "VERLORENE HOEHLE"
+    },
+    {
+      "name": "FIVE_ISLAND_LOST_CAVE_ROOM1",
+      "source": "FiveIsland_LostCave_Room1",
+      "group": 2,
+      "number": 13,
+      "width": 11,
+      "height": 11,
+      "island": 5,
+      "label": "VERLORENE HOEHLE"
+    },
+    {
+      "name": "FIVE_ISLAND_LOST_CAVE_ROOM2",
+      "source": "FiveIsland_LostCave_Room2",
+      "group": 2,
+      "number": 14,
+      "width": 11,
+      "height": 11,
+      "island": 5,
+      "label": "VERLORENE HOEHLE"
+    },
+    {
+      "name": "FIVE_ISLAND_LOST_CAVE_ROOM3",
+      "source": "FiveIsland_LostCave_Room3",
+      "group": 2,
+      "number": 15,
+      "width": 11,
+      "height": 11,
+      "island": 5,
+      "label": "VERLORENE HOEHLE"
+    },
+    {
+      "name": "FIVE_ISLAND_LOST_CAVE_ROOM4",
+      "source": "FiveIsland_LostCave_Room4",
+      "group": 2,
+      "number": 16,
+      "width": 11,
+      "height": 11,
+      "island": 5,
+      "label": "VERLORENE HOEHLE"
+    },
+    {
+      "name": "FIVE_ISLAND_LOST_CAVE_ROOM5",
+      "source": "FiveIsland_LostCave_Room5",
+      "group": 2,
+      "number": 17,
+      "width": 11,
+      "height": 11,
+      "island": 5,
+      "label": "VERLORENE HOEHLE"
+    },
+    {
+      "name": "FIVE_ISLAND_LOST_CAVE_ROOM6",
+      "source": "FiveIsland_LostCave_Room6",
+      "group": 2,
+      "number": 18,
+      "width": 11,
+      "height": 11,
+      "island": 5,
+      "label": "VERLORENE HOEHLE"
+    },
+    {
+      "name": "FIVE_ISLAND_LOST_CAVE_ROOM7",
+      "source": "FiveIsland_LostCave_Room7",
+      "group": 2,
+      "number": 19,
+      "width": 11,
+      "height": 11,
+      "island": 5,
+      "label": "VERLORENE HOEHLE"
+    },
+    {
+      "name": "FIVE_ISLAND_LOST_CAVE_ROOM8",
+      "source": "FiveIsland_LostCave_Room8",
+      "group": 2,
+      "number": 20,
+      "width": 11,
+      "height": 11,
+      "island": 5,
+      "label": "VERLORENE HOEHLE"
+    },
+    {
+      "name": "FIVE_ISLAND_LOST_CAVE_ROOM9",
+      "source": "FiveIsland_LostCave_Room9",
+      "group": 2,
+      "number": 21,
+      "width": 11,
+      "height": 11,
+      "island": 5,
+      "label": "VERLORENE HOEHLE"
+    },
+    {
+      "name": "FIVE_ISLAND_LOST_CAVE_ROOM10",
+      "source": "FiveIsland_LostCave_Room10",
+      "group": 2,
+      "number": 22,
+      "width": 11,
+      "height": 11,
+      "island": 5,
+      "label": "VERLORENE HOEHLE"
+    },
+    {
+      "name": "FIVE_ISLAND_LOST_CAVE_ROOM11",
+      "source": "FiveIsland_LostCave_Room11",
+      "group": 2,
+      "number": 23,
+      "width": 11,
+      "height": 11,
+      "island": 5,
+      "label": "VERLORENE HOEHLE"
+    },
+    {
+      "name": "FIVE_ISLAND_LOST_CAVE_ROOM12",
+      "source": "FiveIsland_LostCave_Room12",
+      "group": 2,
+      "number": 24,
+      "width": 11,
+      "height": 11,
+      "island": 5,
+      "label": "VERLORENE HOEHLE"
+    },
+    {
+      "name": "FIVE_ISLAND_LOST_CAVE_ROOM13",
+      "source": "FiveIsland_LostCave_Room13",
+      "group": 2,
+      "number": 25,
+      "width": 11,
+      "height": 11,
+      "island": 5,
+      "label": "VERLORENE HOEHLE"
+    },
+    {
+      "name": "FIVE_ISLAND_LOST_CAVE_ROOM14",
+      "source": "FiveIsland_LostCave_Room14",
+      "group": 2,
+      "number": 26,
+      "width": 11,
+      "height": 11,
+      "island": 5,
+      "label": "VERLORENE HOEHLE"
+    },
+    {
+      "name": "SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER",
+      "source": "SevenIsland_TanobyRuins_MoneanChamber",
+      "group": 2,
+      "number": 27,
+      "width": 23,
+      "height": 17,
+      "island": 7,
+      "label": "TANOBY RUINEN"
+    },
+    {
+      "name": "SEVEN_ISLAND_TANOBY_RUINS_LIPTOO_CHAMBER",
+      "source": "SevenIsland_TanobyRuins_LiptooChamber",
+      "group": 2,
+      "number": 28,
+      "width": 23,
+      "height": 17,
+      "island": 7,
+      "label": "TANOBY RUINEN"
+    },
+    {
+      "name": "SEVEN_ISLAND_TANOBY_RUINS_WEEPTH_CHAMBER",
+      "source": "SevenIsland_TanobyRuins_WeepthChamber",
+      "group": 2,
+      "number": 29,
+      "width": 23,
+      "height": 17,
+      "island": 7,
+      "label": "TANOBY RUINEN"
+    },
+    {
+      "name": "SEVEN_ISLAND_TANOBY_RUINS_DILFORD_CHAMBER",
+      "source": "SevenIsland_TanobyRuins_DilfordChamber",
+      "group": 2,
+      "number": 30,
+      "width": 23,
+      "height": 17,
+      "island": 7,
+      "label": "TANOBY RUINEN"
+    },
+    {
+      "name": "SEVEN_ISLAND_TANOBY_RUINS_SCUFIB_CHAMBER",
+      "source": "SevenIsland_TanobyRuins_ScufibChamber",
+      "group": 2,
+      "number": 31,
+      "width": 23,
+      "height": 17,
+      "island": 7,
+      "label": "TANOBY RUINEN"
+    },
+    {
+      "name": "SEVEN_ISLAND_TANOBY_RUINS_RIXY_CHAMBER",
+      "source": "SevenIsland_TanobyRuins_RixyChamber",
+      "group": 2,
+      "number": 32,
+      "width": 23,
+      "height": 17,
+      "island": 7,
+      "label": "TANOBY RUINEN"
+    },
+    {
+      "name": "SEVEN_ISLAND_TANOBY_RUINS_VIAPOIS_CHAMBER",
+      "source": "SevenIsland_TanobyRuins_ViapoisChamber",
+      "group": 2,
+      "number": 33,
+      "width": 23,
+      "height": 17,
+      "island": 7,
+      "label": "TANOBY RUINEN"
+    },
+    {
+      "name": "THREE_ISLAND_DUNSPARCE_TUNNEL",
+      "source": "ThreeIsland_DunsparceTunnel",
+      "group": 2,
+      "number": 34,
+      "width": 30,
+      "height": 7,
+      "island": 3,
+      "label": "INSELTUNNEL",
+      "layoutOverride": 319,
+      "layoutReason": "Post-League dug-out layout; matches source National Dex transition script"
+    },
+    {
+      "name": "SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY",
+      "source": "SevenIsland_SevaultCanyon_TanobyKey",
+      "group": 2,
+      "number": 35,
+      "width": 15,
+      "height": 16,
+      "island": 7,
+      "label": "SEVAE CANYON",
+      "cellOverrides": [
+        {
+          "x": 7,
+          "y": 2,
+          "copyFrom": [
+            7,
+            4
+          ]
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "copyFrom": [
+            7,
+            4
+          ]
+        },
+        {
+          "x": 10,
+          "y": 4,
+          "copyFrom": [
+            7,
+            4
+          ]
+        },
+        {
+          "x": 5,
+          "y": 6,
+          "copyFrom": [
+            7,
+            4
+          ]
+        },
+        {
+          "x": 9,
+          "y": 6,
+          "copyFrom": [
+            7,
+            4
+          ]
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "copyFrom": [
+            7,
+            4
+          ]
+        },
+        {
+          "x": 9,
+          "y": 8,
+          "copyFrom": [
+            7,
+            4
+          ]
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "copyFrom": [
+            7,
+            2
+          ]
+        },
+        {
+          "x": 7,
+          "y": 4,
+          "copyFrom": [
+            7,
+            2
+          ]
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "copyFrom": [
+            7,
+            2
+          ]
+        }
+      ],
+      "authoredNote": "Three visible calibration sockets replace the seven unused original puzzle marks; collision remains dry floor."
+    },
+    {
+      "name": "ONE_ISLAND_KINDLE_ROAD_EMBER_SPA",
+      "source": "OneIsland_KindleRoad_EmberSpa",
+      "group": 2,
+      "number": 57,
+      "width": 27,
+      "height": 39,
+      "island": 1,
+      "label": "GLUTTHERME"
+    },
+    {
+      "name": "TWO",
+      "source": "TwoIsland",
+      "group": 3,
+      "number": 13,
+      "width": 48,
+      "height": 20,
+      "island": 2,
+      "label": "EILAND ZWEI"
+    },
+    {
+      "name": "THREE",
+      "source": "ThreeIsland",
+      "group": 3,
+      "number": 14,
+      "width": 24,
+      "height": 40,
+      "island": 3,
+      "label": "EILAND DREI"
+    },
+    {
+      "name": "FOUR",
+      "source": "FourIsland",
+      "group": 3,
+      "number": 15,
+      "width": 48,
+      "height": 40,
+      "island": 4,
+      "label": "EILAND VIER"
+    },
+    {
+      "name": "FIVE",
+      "source": "FiveIsland",
+      "group": 3,
+      "number": 16,
+      "width": 24,
+      "height": 20,
+      "island": 5,
+      "label": "EILAND FUENF"
+    },
+    {
+      "name": "SEVEN",
+      "source": "SevenIsland",
+      "group": 3,
+      "number": 17,
+      "width": 24,
+      "height": 20,
+      "island": 7,
+      "label": "EILAND SIEBEN"
+    },
+    {
+      "name": "SIX",
+      "source": "SixIsland",
+      "group": 3,
+      "number": 18,
+      "width": 24,
+      "height": 30,
+      "island": 6,
+      "label": "EILAND SECHS"
+    },
+    {
+      "name": "TWO_ISLAND_CAPE_BRINK",
+      "source": "TwoIsland_CapeBrink",
+      "group": 3,
+      "number": 47,
+      "width": 24,
+      "height": 40,
+      "island": 2,
+      "label": "KAP KANTE"
+    },
+    {
+      "name": "THREE_ISLAND_BOND_BRIDGE",
+      "source": "ThreeIsland_BondBridge",
+      "group": 3,
+      "number": 48,
+      "width": 96,
+      "height": 20,
+      "island": 3,
+      "label": "BOND BRUECKE"
+    },
+    {
+      "name": "THREE_ISLAND_PORT",
+      "source": "ThreeIsland_Port",
+      "group": 3,
+      "number": 49,
+      "width": 48,
+      "height": 20,
+      "island": 3,
+      "label": "INSELHAFEN"
+    },
+    {
+      "name": "FIVE_ISLAND_RESORT_GORGEOUS",
+      "source": "FiveIsland_ResortGorgeous",
+      "group": 3,
+      "number": 54,
+      "width": 72,
+      "height": 20,
+      "island": 5,
+      "label": "RESORT"
+    },
+    {
+      "name": "FIVE_ISLAND_WATER_LABYRINTH",
+      "source": "FiveIsland_WaterLabyrinth",
+      "group": 3,
+      "number": 55,
+      "width": 72,
+      "height": 20,
+      "island": 5,
+      "label": "WASSERIRRGARTEN"
+    },
+    {
+      "name": "FIVE_ISLAND_MEADOW",
+      "source": "FiveIsland_Meadow",
+      "group": 3,
+      "number": 56,
+      "width": 24,
+      "height": 40,
+      "island": 5,
+      "label": "INSELWEIDE"
+    },
+    {
+      "name": "FIVE_ISLAND_MEMORIAL_PILLAR",
+      "source": "FiveIsland_MemorialPillar",
+      "group": 3,
+      "number": 57,
+      "width": 24,
+      "height": 60,
+      "island": 5,
+      "label": "GEDENKSAEULE"
+    },
+    {
+      "name": "SIX_ISLAND_OUTCAST_ISLAND",
+      "source": "SixIsland_OutcastIsland",
+      "group": 3,
+      "number": 58,
+      "width": 24,
+      "height": 80,
+      "island": 6,
+      "label": "ENTLEGENE INSEL"
+    },
+    {
+      "name": "SIX_ISLAND_GREEN_PATH",
+      "source": "SixIsland_GreenPath",
+      "group": 3,
+      "number": 59,
+      "width": 72,
+      "height": 20,
+      "island": 6,
+      "label": "GRUENER PFAD"
+    },
+    {
+      "name": "SIX_ISLAND_WATER_PATH",
+      "source": "SixIsland_WaterPath",
+      "group": 3,
+      "number": 60,
+      "width": 24,
+      "height": 100,
+      "island": 6,
+      "label": "WASSERPFAD"
+    },
+    {
+      "name": "SIX_ISLAND_RUIN_VALLEY",
+      "source": "SixIsland_RuinValley",
+      "group": 3,
+      "number": 61,
+      "width": 48,
+      "height": 40,
+      "island": 6,
+      "label": "RUINENTAL"
+    },
+    {
+      "name": "SEVEN_ISLAND_TRAINER_TOWER",
+      "source": "SevenIsland_TrainerTower",
+      "group": 3,
+      "number": 62,
+      "width": 120,
+      "height": 40,
+      "island": 7,
+      "label": "TRAINERTURM"
+    },
+    {
+      "name": "SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE",
+      "source": "SevenIsland_SevaultCanyon_Entrance",
+      "group": 3,
+      "number": 63,
+      "width": 24,
+      "height": 40,
+      "island": 7,
+      "label": "SEVAE CANYON"
+    },
+    {
+      "name": "SEVEN_ISLAND_SEVAULT_CANYON",
+      "source": "SevenIsland_SevaultCanyon",
+      "group": 3,
+      "number": 64,
+      "width": 24,
+      "height": 80,
+      "island": 7,
+      "label": "SEVAE CANYON"
+    },
+    {
+      "name": "SEVEN_ISLAND_TANOBY_RUINS",
+      "source": "SevenIsland_TanobyRuins",
+      "group": 3,
+      "number": 65,
+      "width": 144,
+      "height": 20,
+      "island": 7,
+      "label": "TANOBY RUINEN"
+    },
+    {
+      "name": "SEVEN_ISLAND_HOUSE_ROOM1",
+      "source": "SevenIsland_House_Room1",
+      "group": 31,
+      "number": 0,
+      "width": 11,
+      "height": 9,
+      "island": 7,
+      "label": "INSELHAUS"
+    },
+    {
+      "name": "SEVEN_ISLAND_HOUSE_ROOM2",
+      "source": "SevenIsland_House_Room2",
+      "group": 31,
+      "number": 1,
+      "width": 12,
+      "height": 9,
+      "island": 7,
+      "label": "INSELHAUS"
+    },
+    {
+      "name": "SEVEN_ISLAND_MART",
+      "source": "SevenIsland_Mart",
+      "group": 31,
+      "number": 2,
+      "width": 11,
+      "height": 9,
+      "island": 7,
+      "label": "MARKT"
+    },
+    {
+      "name": "SEVEN_ISLAND_POKEMON_CENTER_1_F",
+      "source": "SevenIsland_PokemonCenter_1F",
+      "group": 31,
+      "number": 3,
+      "width": 15,
+      "height": 10,
+      "island": 7,
+      "label": "POKEMON CENTER"
+    },
+    {
+      "name": "SEVEN_ISLAND_POKEMON_CENTER_2_F",
+      "source": "SevenIsland_PokemonCenter_2F",
+      "group": 31,
+      "number": 4,
+      "width": 15,
+      "height": 10,
+      "island": 7,
+      "label": "POKEMON CENTER"
+    },
+    {
+      "name": "SEVEN_ISLAND_HARBOR",
+      "source": "SevenIsland_Harbor",
+      "group": 31,
+      "number": 6,
+      "width": 17,
+      "height": 13,
+      "island": 7,
+      "label": "INSELHAFEN"
+    },
+    {
+      "name": "TWO_ISLAND_JOYFUL_GAME_CORNER",
+      "source": "TwoIsland_JoyfulGameCorner",
+      "group": 33,
+      "number": 0,
+      "width": 12,
+      "height": 10,
+      "island": 2,
+      "label": "INSELARCHIV"
+    },
+    {
+      "name": "TWO_ISLAND_HOUSE",
+      "source": "TwoIsland_House",
+      "group": 33,
+      "number": 1,
+      "width": 11,
+      "height": 9,
+      "island": 2,
+      "label": "INSELHAUS"
+    },
+    {
+      "name": "TWO_ISLAND_POKEMON_CENTER_1_F",
+      "source": "TwoIsland_PokemonCenter_1F",
+      "group": 33,
+      "number": 2,
+      "width": 15,
+      "height": 10,
+      "island": 2,
+      "label": "POKEMON CENTER"
+    },
+    {
+      "name": "TWO_ISLAND_POKEMON_CENTER_2_F",
+      "source": "TwoIsland_PokemonCenter_2F",
+      "group": 33,
+      "number": 3,
+      "width": 15,
+      "height": 10,
+      "island": 2,
+      "label": "POKEMON CENTER"
+    },
+    {
+      "name": "TWO_ISLAND_HARBOR",
+      "source": "TwoIsland_Harbor",
+      "group": 33,
+      "number": 4,
+      "width": 17,
+      "height": 13,
+      "island": 2,
+      "label": "INSELHAFEN"
+    },
+    {
+      "name": "THREE_ISLAND_HOUSE1",
+      "source": "ThreeIsland_House1",
+      "group": 34,
+      "number": 0,
+      "width": 11,
+      "height": 9,
+      "island": 3,
+      "label": "INSELHAUS"
+    },
+    {
+      "name": "THREE_ISLAND_POKEMON_CENTER_1_F",
+      "source": "ThreeIsland_PokemonCenter_1F",
+      "group": 34,
+      "number": 1,
+      "width": 15,
+      "height": 10,
+      "island": 3,
+      "label": "POKEMON CENTER"
+    },
+    {
+      "name": "THREE_ISLAND_POKEMON_CENTER_2_F",
+      "source": "ThreeIsland_PokemonCenter_2F",
+      "group": 34,
+      "number": 2,
+      "width": 15,
+      "height": 10,
+      "island": 3,
+      "label": "POKEMON CENTER"
+    },
+    {
+      "name": "THREE_ISLAND_MART",
+      "source": "ThreeIsland_Mart",
+      "group": 34,
+      "number": 3,
+      "width": 11,
+      "height": 9,
+      "island": 3,
+      "label": "MARKT"
+    },
+    {
+      "name": "THREE_ISLAND_HOUSE2",
+      "source": "ThreeIsland_House2",
+      "group": 34,
+      "number": 4,
+      "width": 11,
+      "height": 9,
+      "island": 3,
+      "label": "INSELHAUS"
+    },
+    {
+      "name": "THREE_ISLAND_HOUSE3",
+      "source": "ThreeIsland_House3",
+      "group": 34,
+      "number": 5,
+      "width": 11,
+      "height": 9,
+      "island": 3,
+      "label": "INSELHAUS"
+    },
+    {
+      "name": "THREE_ISLAND_HOUSE4",
+      "source": "ThreeIsland_House4",
+      "group": 34,
+      "number": 6,
+      "width": 11,
+      "height": 9,
+      "island": 3,
+      "label": "INSELHAUS"
+    },
+    {
+      "name": "THREE_ISLAND_HOUSE5",
+      "source": "ThreeIsland_House5",
+      "group": 34,
+      "number": 7,
+      "width": 11,
+      "height": 9,
+      "island": 3,
+      "label": "INSELHAUS"
+    },
+    {
+      "name": "FOUR_ISLAND_POKEMON_DAY_CARE",
+      "source": "FourIsland_PokemonDayCare",
+      "group": 35,
+      "number": 0,
+      "width": 12,
+      "height": 9,
+      "island": 4,
+      "label": "PENSION"
+    },
+    {
+      "name": "FOUR_ISLAND_POKEMON_CENTER_1_F",
+      "source": "FourIsland_PokemonCenter_1F",
+      "group": 35,
+      "number": 1,
+      "width": 15,
+      "height": 10,
+      "island": 4,
+      "label": "POKEMON CENTER"
+    },
+    {
+      "name": "FOUR_ISLAND_POKEMON_CENTER_2_F",
+      "source": "FourIsland_PokemonCenter_2F",
+      "group": 35,
+      "number": 2,
+      "width": 15,
+      "height": 10,
+      "island": 4,
+      "label": "POKEMON CENTER"
+    },
+    {
+      "name": "FOUR_ISLAND_HOUSE1",
+      "source": "FourIsland_House1",
+      "group": 35,
+      "number": 3,
+      "width": 11,
+      "height": 9,
+      "island": 4,
+      "label": "INSELHAUS"
+    },
+    {
+      "name": "FOUR_ISLAND_LORELEIS_HOUSE",
+      "source": "FourIsland_LoreleisHouse",
+      "group": 35,
+      "number": 4,
+      "width": 11,
+      "height": 9,
+      "island": 4,
+      "label": "INSELHAUS"
+    },
+    {
+      "name": "FOUR_ISLAND_HARBOR",
+      "source": "FourIsland_Harbor",
+      "group": 35,
+      "number": 5,
+      "width": 17,
+      "height": 13,
+      "island": 4,
+      "label": "INSELHAFEN"
+    },
+    {
+      "name": "FOUR_ISLAND_HOUSE2",
+      "source": "FourIsland_House2",
+      "group": 35,
+      "number": 6,
+      "width": 11,
+      "height": 9,
+      "island": 4,
+      "label": "INSELHAUS"
+    },
+    {
+      "name": "FOUR_ISLAND_MART",
+      "source": "FourIsland_Mart",
+      "group": 35,
+      "number": 7,
+      "width": 11,
+      "height": 9,
+      "island": 4,
+      "label": "MARKT"
+    },
+    {
+      "name": "FIVE_ISLAND_POKEMON_CENTER_1_F",
+      "source": "FiveIsland_PokemonCenter_1F",
+      "group": 36,
+      "number": 0,
+      "width": 15,
+      "height": 10,
+      "island": 5,
+      "label": "POKEMON CENTER"
+    },
+    {
+      "name": "FIVE_ISLAND_POKEMON_CENTER_2_F",
+      "source": "FiveIsland_PokemonCenter_2F",
+      "group": 36,
+      "number": 1,
+      "width": 15,
+      "height": 10,
+      "island": 5,
+      "label": "POKEMON CENTER"
+    },
+    {
+      "name": "FIVE_ISLAND_HARBOR",
+      "source": "FiveIsland_Harbor",
+      "group": 36,
+      "number": 2,
+      "width": 17,
+      "height": 13,
+      "island": 5,
+      "label": "INSELHAFEN"
+    },
+    {
+      "name": "FIVE_ISLAND_HOUSE1",
+      "source": "FiveIsland_House1",
+      "group": 36,
+      "number": 3,
+      "width": 11,
+      "height": 9,
+      "island": 5,
+      "label": "INSELHAUS"
+    },
+    {
+      "name": "FIVE_ISLAND_HOUSE2",
+      "source": "FiveIsland_House2",
+      "group": 36,
+      "number": 4,
+      "width": 11,
+      "height": 9,
+      "island": 5,
+      "label": "INSELHAUS"
+    },
+    {
+      "name": "SIX_ISLAND_POKEMON_CENTER_1_F",
+      "source": "SixIsland_PokemonCenter_1F",
+      "group": 37,
+      "number": 0,
+      "width": 15,
+      "height": 10,
+      "island": 6,
+      "label": "POKEMON CENTER"
+    },
+    {
+      "name": "SIX_ISLAND_POKEMON_CENTER_2_F",
+      "source": "SixIsland_PokemonCenter_2F",
+      "group": 37,
+      "number": 1,
+      "width": 15,
+      "height": 10,
+      "island": 6,
+      "label": "POKEMON CENTER"
+    },
+    {
+      "name": "SIX_ISLAND_HARBOR",
+      "source": "SixIsland_Harbor",
+      "group": 37,
+      "number": 2,
+      "width": 17,
+      "height": 13,
+      "island": 6,
+      "label": "INSELHAFEN"
+    },
+    {
+      "name": "SIX_ISLAND_HOUSE",
+      "source": "SixIsland_House",
+      "group": 37,
+      "number": 3,
+      "width": 11,
+      "height": 9,
+      "island": 6,
+      "label": "INSELHAUS"
+    },
+    {
+      "name": "SIX_ISLAND_MART",
+      "source": "SixIsland_Mart",
+      "group": 37,
+      "number": 4,
+      "width": 11,
+      "height": 9,
+      "island": 6,
+      "label": "MARKT"
+    },
+    {
+      "name": "THREE_ISLAND_HARBOR",
+      "source": "ThreeIsland_Harbor",
+      "group": 38,
+      "number": 0,
+      "width": 17,
+      "height": 13,
+      "island": 3,
+      "label": "INSELHAFEN"
+    },
+    {
+      "name": "FIVE_ISLAND_RESORT_GORGEOUS_HOUSE",
+      "source": "FiveIsland_ResortGorgeous_House",
+      "group": 39,
+      "number": 0,
+      "width": 11,
+      "height": 9,
+      "island": 5,
+      "label": "RESORT"
+    },
+    {
+      "name": "TWO_ISLAND_CAPE_BRINK_HOUSE",
+      "source": "TwoIsland_CapeBrink_House",
+      "group": 40,
+      "number": 0,
+      "width": 11,
+      "height": 9,
+      "island": 2,
+      "label": "KAP KANTE"
+    },
+    {
+      "name": "SIX_ISLAND_WATER_PATH_HOUSE1",
+      "source": "SixIsland_WaterPath_House1",
+      "group": 41,
+      "number": 0,
+      "width": 11,
+      "height": 9,
+      "island": 6,
+      "label": "WASSERPFAD"
+    },
+    {
+      "name": "SIX_ISLAND_WATER_PATH_HOUSE2",
+      "source": "SixIsland_WaterPath_House2",
+      "group": 41,
+      "number": 1,
+      "width": 11,
+      "height": 9,
+      "island": 6,
+      "label": "WASSERPFAD"
+    },
+    {
+      "name": "SEVEN_ISLAND_SEVAULT_CANYON_HOUSE",
+      "source": "SevenIsland_SevaultCanyon_House",
+      "group": 42,
+      "number": 0,
+      "width": 11,
+      "height": 9,
+      "island": 7,
+      "label": "SEVAE CANYON"
+    }
+  ]
+}

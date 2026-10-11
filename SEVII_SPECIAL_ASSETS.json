@@ -1,0 +1,1155 @@
+{
+  "schema": "kasc.sevii-special-assets/v1",
+  "species": [
+    {
+      "key": "dex:485",
+      "manifest": "assets/sprite-package-manifests/b1894f4f9802bb016f711dc2ecb0566a9802149be97ee5aba81053ed46cf30fd.json",
+      "files": [
+        {
+          "path": "assets/backend_national_catalog_67/battle/485/back.png",
+          "sha256": "6cad4949eba5958f2d6a711e51e68eb7364196e03e66193b1e39ad8bd3dd1dfd",
+          "bytes": 663
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/485/backShiny.png",
+          "sha256": "c7cc9d0c739263a35b8e445fd5c7e91619f489b1f14daf7a0304b11b7b9fe53c",
+          "bytes": 602
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/485/front.png",
+          "sha256": "3d9d00eece0dd92b6e221d62b2457c9bfafa42b69a09b924e7c056d02e210f2e",
+          "bytes": 969
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/485/frontShiny.png",
+          "sha256": "4ac2caa709cb0e888ea6f43f527e2afe547aab7c8ab8e78dce2a0a3cbf99bb36",
+          "bytes": 951
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/485/icon-normal.png",
+          "sha256": "fbaf04565b67f7853ee4f65bd772207db874a04b6ee5020d14ec2b3ab2e2ecbf",
+          "bytes": 237
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/485/icon-shiny.png",
+          "sha256": "c2310b77a1d9564dadb39d85ff4cacef0a2f1843f68d32684cff8e3bafdfab8d",
+          "bytes": 235
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/485/voxel-front.png",
+          "sha256": "f4e2c9539860d98f073a640fee704a76cc4c4ebff5007ab3868fda68a6e00494",
+          "bytes": 993
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/485/voxel-frontShiny.png",
+          "sha256": "1507efadbe0452dc0f1f53b0dcdc6d150a49dfb6248b8de08533d405b3d95b97",
+          "bytes": 983
+        }
+      ]
+    },
+    {
+      "key": "dex:480",
+      "manifest": "assets/sprite-package-manifests/b1894f4f9802bb016f711dc2ecb0566a9802149be97ee5aba81053ed46cf30fd.json",
+      "files": [
+        {
+          "path": "assets/backend_national_catalog_67/battle/480/back.png",
+          "sha256": "d3dfca5dbbd03d79278e25c70bdec62b5b00eaea2c7850a51298daac5fec834f",
+          "bytes": 475
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/480/backShiny.png",
+          "sha256": "be249f8f052e4376547ae11801234deeccf7d6682de6f3968df0144359e2d05b",
+          "bytes": 471
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/480/front.png",
+          "sha256": "fcf8a687f04af87a53362b573f094d41d4d8fb56001dd6d4bde2578cb23c3426",
+          "bytes": 826
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/480/frontShiny.png",
+          "sha256": "85a2fb102d43fa84290710983f3d47535e8bdf5124a90c1a4683fdcd1da6e899",
+          "bytes": 822
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/480/icon-normal.png",
+          "sha256": "cd4efa494ba3f8a57ab3fec555f7b6d405d8d6ca1fe66f4d9e0d557d9fad9cf2",
+          "bytes": 291
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/480/icon-shiny.png",
+          "sha256": "5221159ed26bf2b49125c1c01527c49d3710d34a1c5edaca6ca5c2c0d4d40332",
+          "bytes": 289
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/480/voxel-front.png",
+          "sha256": "dc350ee75d268ac26418c14553d2be39725c310f28b65558f0908256b6458c67",
+          "bytes": 850
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/480/voxel-frontShiny.png",
+          "sha256": "86a1aec060333ab689cac4790104e8183bc0501cd829fc6535d07d9fc428a529",
+          "bytes": 847
+        }
+      ]
+    },
+    {
+      "key": "dex:481",
+      "manifest": "assets/sprite-package-manifests/b1894f4f9802bb016f711dc2ecb0566a9802149be97ee5aba81053ed46cf30fd.json",
+      "files": [
+        {
+          "path": "assets/backend_national_catalog_67/battle/481/back.png",
+          "sha256": "1d4a9481659bfbbee10f30751894aaf358ec9bbd7817c7f7acd40d53dca74330",
+          "bytes": 549
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/481/backShiny.png",
+          "sha256": "4b5b3a63937dbd9392b458180c1ee0a9960e9f6a166cf44dc6bdc3b8b55968f8",
+          "bytes": 550
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/481/front.png",
+          "sha256": "076bd4daeff93a407830738f5593b9bba27699a8d09766d07781c9518d5fddc3",
+          "bytes": 949
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/481/frontShiny.png",
+          "sha256": "49ff847f33ca3eb2033ed981f69cafccaa353367f1f680b692275abf1d5d2e73",
+          "bytes": 951
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/481/icon-normal.png",
+          "sha256": "e6f9215d1f8577591457eddb2d70f550921255fc81b8a89c9978da23daa75884",
+          "bytes": 275
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/481/icon-shiny.png",
+          "sha256": "91104146ad86027270c6ce3ce9fa4a720bedf5b18fc1efb536b37a5c7b984f2d",
+          "bytes": 268
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/481/voxel-front.png",
+          "sha256": "b8170455ec60f4368c93d95c66e0dfc891514d1458a89cdfa0b0e7dd35a74b77",
+          "bytes": 982
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/481/voxel-frontShiny.png",
+          "sha256": "d06621ebeb2a5a7c4b513838f89d16b25331c149229f13393753f0b872e8b321",
+          "bytes": 987
+        }
+      ]
+    },
+    {
+      "key": "dex:482",
+      "manifest": "assets/sprite-package-manifests/b1894f4f9802bb016f711dc2ecb0566a9802149be97ee5aba81053ed46cf30fd.json",
+      "files": [
+        {
+          "path": "assets/backend_national_catalog_67/battle/482/back.png",
+          "sha256": "bff89250710dfe759a813dc8008000887cd5569104d108197b2de945ef163e54",
+          "bytes": 555
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/482/backShiny.png",
+          "sha256": "eb0cc4be3b1d2e8337e200f9cbd66307299a5791270e709dff24a9f0733f2872",
+          "bytes": 535
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/482/front.png",
+          "sha256": "2ea44891406882478bd01301ede8a0aead3660e554f53f599424959bfe851b70",
+          "bytes": 1001
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/482/frontShiny.png",
+          "sha256": "7b2b5a691d92ca803acec7762809efa23fc05a2eb617a932fb12aaf101828013",
+          "bytes": 993
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/482/icon-normal.png",
+          "sha256": "a754016862a58f0b2955eb628c7979252c365ca320fc6f32ec4ec5d794171872",
+          "bytes": 245
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/482/icon-shiny.png",
+          "sha256": "aa53fd71d42aecfa42c1e33c8acf93db57c2f33c9240ad80bb58f8fef9401f35",
+          "bytes": 231
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/482/voxel-front.png",
+          "sha256": "df02c7e8376e41087b8c50f47d4f66dd025d972a768a6366c4ae729b780b40c8",
+          "bytes": 1021
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/482/voxel-frontShiny.png",
+          "sha256": "206ce4a38281c08d34d1777c5a53f4844279bfebeeee4b85b83c11be4964e7b1",
+          "bytes": 1014
+        }
+      ]
+    },
+    {
+      "key": "dex:488",
+      "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json",
+      "files": [
+        {
+          "path": "assets/backend_national_catalog_67/battle/488/back.png",
+          "sha256": "5d477a058c3836cad83db7f12fb142d7e13f1c13232e75d74e2f64096550b123",
+          "bytes": 658
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/488/backShiny.png",
+          "sha256": "95412c1938d834f73fe698aeda3aa3f4fbcd3b2964ac02403d5870682691cd41",
+          "bytes": 654
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/488/front.png",
+          "sha256": "e68721250a602a6aa9f18ec1cb885346ee3bb05653ec482be51ac50cbfc319ab",
+          "bytes": 939
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/488/frontShiny.png",
+          "sha256": "5dd4a5c8a4726712be6d995884fa22230f60b6ba0c60bdf0aadcc49fbab64665",
+          "bytes": 938
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/488/icon-normal.png",
+          "sha256": "3b7c7e513d76c35fdc7bb7270eff45ea34da7fb3c5ff1e948486e89bc9d221a9",
+          "bytes": 261
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/488/icon-shiny.png",
+          "sha256": "a8e286a2df7e1d2b7367767d004fae47928e741b4c0d54aafe744dee79347773",
+          "bytes": 259
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/488/voxel-front.png",
+          "sha256": "b660d3d66cdcd185e7bc5f4783ef03b1198c85fc977f3cb11dfd4498fd24f505",
+          "bytes": 978
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/488/voxel-frontShiny.png",
+          "sha256": "1c1c275e49d5d32879e695cb5aca309b82b94ab513c2d133633167f893218cb1",
+          "bytes": 980
+        }
+      ]
+    },
+    {
+      "key": "dex:491",
+      "owner": "late_species_67.lua",
+      "files": [
+        {
+          "path": "assets/late_species_67/battle/normal/back/0491.png",
+          "sha256": "aab20ed691c7d7284b99654257338baed41f00b4bc50d0a2887d5159d2c026a7",
+          "bytes": 1122,
+          "manifest": "assets/sprite-package-manifests/cd275f6413243ccf2cea0f69643346a6708d2fc494558ddf6aa604d0350622eb.json"
+        },
+        {
+          "path": "assets/late_species_67/battle/normal/front/0491.png",
+          "sha256": "88e20a8cedc7705ee760c47e85b7619ac907f83364eacaa26d60a8ef8d04fb32",
+          "bytes": 1180,
+          "manifest": "assets/sprite-package-manifests/cd275f6413243ccf2cea0f69643346a6708d2fc494558ddf6aa604d0350622eb.json"
+        },
+        {
+          "path": "assets/late_species_67/battle/shiny/back/0491.png",
+          "sha256": "ba2063e2ba6a5a1084e8f86563799c24bd81bdee9a2814c5b73b4fcdb1379edd",
+          "bytes": 1118,
+          "manifest": "assets/sprite-package-manifests/cd275f6413243ccf2cea0f69643346a6708d2fc494558ddf6aa604d0350622eb.json"
+        },
+        {
+          "path": "assets/late_species_67/battle/shiny/front/0491.png",
+          "sha256": "d8a438c149a2d458d79e66f365593fcda95792ed02ba40b549cff1cb7902bc04",
+          "bytes": 1160,
+          "manifest": "assets/sprite-package-manifests/cd275f6413243ccf2cea0f69643346a6708d2fc494558ddf6aa604d0350622eb.json"
+        },
+        {
+          "path": "assets/late_species_67/cries/491.ogg",
+          "sha256": "782fd6a9e41851de7d5ef8b79738060b79483c3ca9fba0f1209c246e7b93f776",
+          "bytes": 21497,
+          "source": "tracked-base-file"
+        },
+        {
+          "path": "assets/late_species_67/followers/normal/DARKRAI.png",
+          "sha256": "0b525e6e79defc7d439261e4eb428da36a156eab5a910e3dbe097efcfe33fc93",
+          "bytes": 967,
+          "manifest": "assets/sprite-package-manifests/bc1506104e0e93035c3740a02bc635799b8562ca4caa9dc170e0e8d944f79f6a.json"
+        },
+        {
+          "path": "assets/late_species_67/followers/shiny/DARKRAI.png",
+          "sha256": "551caa3b08f396ebcb19f63bd245f67f562ca2e22b72d16ba6ade2a0e28bf03f",
+          "bytes": 907,
+          "manifest": "assets/sprite-package-manifests/bc1506104e0e93035c3740a02bc635799b8562ca4caa9dc170e0e8d944f79f6a.json"
+        },
+        {
+          "path": "assets/late_species_67/icons/normal/0491.png",
+          "sha256": "0c5eb7001cd1cee4f386c55fffebd7355888e50e72cfff20bc1dc13820bfceb0",
+          "bytes": 296,
+          "manifest": "assets/sprite-package-manifests/cd275f6413243ccf2cea0f69643346a6708d2fc494558ddf6aa604d0350622eb.json"
+        },
+        {
+          "path": "assets/late_species_67/icons/shiny/0491.png",
+          "sha256": "cb5aafc645f29a30e1425c4e8c71c2759c897ab5f070ae36e2a32d84ce41c082",
+          "bytes": 286,
+          "manifest": "assets/sprite-package-manifests/cd275f6413243ccf2cea0f69643346a6708d2fc494558ddf6aa604d0350622eb.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/back/491.png",
+          "sha256": "197efc2920495f6bf88b8dc1341d37b6a3a71513d006d7806b312f8a619b4511",
+          "bytes": 549,
+          "manifest": "assets/sprite-package-manifests/22104a150518f10b096f2429e47e9d36d3b1c696d068497a68d375df7102487f.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/491.png",
+          "sha256": "6e0f3a4feec22e2b08f22069a64f04f8c5b55c8c65a8d41e39d5e4c4748e40de",
+          "bytes": 545,
+          "manifest": "assets/sprite-package-manifests/22104a150518f10b096f2429e47e9d36d3b1c696d068497a68d375df7102487f.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/front/491.png",
+          "sha256": "7dbdf5e377be144fa7faa57436182fb90937dec2e48d0da9a0aac742b7264352",
+          "bytes": 829,
+          "manifest": "assets/sprite-package-manifests/22104a150518f10b096f2429e47e9d36d3b1c696d068497a68d375df7102487f.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/491.png",
+          "sha256": "f145c51a02dabafafb52aa30122f4fd38de1cb8d50272056eedddb84c682d794",
+          "bytes": 832,
+          "manifest": "assets/sprite-package-manifests/22104a150518f10b096f2429e47e9d36d3b1c696d068497a68d375df7102487f.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/front/491.png",
+          "sha256": "2357dda903b0513639cb34e46a676b5dbef298e8d4ffdceb8587434c2ed3390a",
+          "bytes": 924,
+          "manifest": "assets/sprite-package-manifests/22104a150518f10b096f2429e47e9d36d3b1c696d068497a68d375df7102487f.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/back/491.png",
+          "sha256": "be2d52b7b4223a69ed1ff373f6ea8de2037ed000bf55b25692565b56feaacb00",
+          "bytes": 806,
+          "manifest": "assets/sprite-package-manifests/22104a150518f10b096f2429e47e9d36d3b1c696d068497a68d375df7102487f.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/frontShiny/491.png",
+          "sha256": "c4fb346a03cbe3be65469b03600d56ac07f1d238b5392606666a6498c76eed23",
+          "bytes": 925,
+          "manifest": "assets/sprite-package-manifests/22104a150518f10b096f2429e47e9d36d3b1c696d068497a68d375df7102487f.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/backShiny/491.png",
+          "sha256": "e473a25dbe83f021c4eb16f45b9b23e4b3b859e3ca489b3f3e558b740649dae7",
+          "bytes": 808,
+          "manifest": "assets/sprite-package-manifests/22104a150518f10b096f2429e47e9d36d3b1c696d068497a68d375df7102487f.json"
+        }
+      ]
+    },
+    {
+      "key": "dex:486",
+      "files": [
+        {
+          "path": "assets/late_species_67/battle/normal/back/0486.png",
+          "sha256": "445bb52c72699f196b9183d96065ccfee8d0b87dad787edb0848785d68624c9a",
+          "bytes": 1871,
+          "manifest": "assets/sprite-package-manifests/cd275f6413243ccf2cea0f69643346a6708d2fc494558ddf6aa604d0350622eb.json"
+        },
+        {
+          "path": "assets/late_species_67/battle/normal/front/0486.png",
+          "sha256": "589cca14f551b8c6e01e42e228b7f82d89f996154f3ac45fb5d355bfc7d3cbea",
+          "bytes": 2100,
+          "manifest": "assets/sprite-package-manifests/cd275f6413243ccf2cea0f69643346a6708d2fc494558ddf6aa604d0350622eb.json"
+        },
+        {
+          "path": "assets/late_species_67/battle/shiny/back/0486.png",
+          "sha256": "8c0d8db6b324973ff9cb69cf287182708ae7f5d52212a6b3ff5f3e430f7d7061",
+          "bytes": 1788,
+          "manifest": "assets/sprite-package-manifests/cd275f6413243ccf2cea0f69643346a6708d2fc494558ddf6aa604d0350622eb.json"
+        },
+        {
+          "path": "assets/late_species_67/battle/shiny/front/0486.png",
+          "sha256": "453edfca830f22cfe57913f2fe6878cae0fee10d0e0facd086f8ab40a541c1be",
+          "bytes": 2107,
+          "manifest": "assets/sprite-package-manifests/cd275f6413243ccf2cea0f69643346a6708d2fc494558ddf6aa604d0350622eb.json"
+        },
+        {
+          "path": "assets/late_species_67/cries/486.ogg",
+          "sha256": "f8c26762cf5b06846413133d26b051b5f44c3fff5909441b3ab8609135d00186",
+          "bytes": 22787,
+          "source": "tracked-base-file"
+        },
+        {
+          "path": "assets/late_species_67/followers/normal/REGIGIGAS.png",
+          "sha256": "5f3190e44e021a98005d8fd86c78d1b282af000d205579d1224ab3b09ad0f0f5",
+          "bytes": 1356,
+          "manifest": "assets/sprite-package-manifests/dd632add2cf078cdd1ba439b016ad78e185ce278053626240c90e14743b5a67b.json"
+        },
+        {
+          "path": "assets/late_species_67/followers/shiny/REGIGIGAS.png",
+          "sha256": "76fafebead564ee99196d5c9a02bff8cdf4d0835bb91d1d490ece7faa9bb6f09",
+          "bytes": 1464,
+          "manifest": "assets/sprite-package-manifests/dd632add2cf078cdd1ba439b016ad78e185ce278053626240c90e14743b5a67b.json"
+        },
+        {
+          "path": "assets/late_species_67/icons/normal/0486.png",
+          "sha256": "958b4fe65ae824fa71f1687b0c5575a965dd6f6fec217e12ff278f397b679cfa",
+          "bytes": 396,
+          "manifest": "assets/sprite-package-manifests/cd275f6413243ccf2cea0f69643346a6708d2fc494558ddf6aa604d0350622eb.json"
+        },
+        {
+          "path": "assets/late_species_67/icons/shiny/0486.png",
+          "sha256": "a0cf743bd01a2768801d4087ae44b6f58e45801e87849ea17249f6a141471c21",
+          "bytes": 406,
+          "manifest": "assets/sprite-package-manifests/cd275f6413243ccf2cea0f69643346a6708d2fc494558ddf6aa604d0350622eb.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/back/486.png",
+          "sha256": "386ff293a8d5a8b81371a655ac21f6557391af8e2033c8665a903b673b586e37",
+          "bytes": 908,
+          "manifest": "assets/sprite-package-manifests/cadfd37d553d5ff5abfc2a1ed14b87979e022dccd8a3ce67ac14640fd3b8060a.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/486.png",
+          "sha256": "9838b94bb2183581654af736528e7caf62f02cd60ad3559a0324c8000c850c9f",
+          "bytes": 774,
+          "manifest": "assets/sprite-package-manifests/cadfd37d553d5ff5abfc2a1ed14b87979e022dccd8a3ce67ac14640fd3b8060a.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/front/486.png",
+          "sha256": "be1367be96ecdebf20e60547bf68bc12acbaffb7b291a8559b3ab7cc9ab77f37",
+          "bytes": 1397,
+          "manifest": "assets/sprite-package-manifests/cadfd37d553d5ff5abfc2a1ed14b87979e022dccd8a3ce67ac14640fd3b8060a.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/486.png",
+          "sha256": "1c5e9b77c676cca9980c396b76e4286335950dcbc3c29348f43e459bea27260e",
+          "bytes": 1403,
+          "manifest": "assets/sprite-package-manifests/cadfd37d553d5ff5abfc2a1ed14b87979e022dccd8a3ce67ac14640fd3b8060a.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/front/486.png",
+          "sha256": "b8431a634a9ec1f6e9d9f42d83476f61e4088a0772feeaff4228a73d6f7678f1",
+          "bytes": 1410,
+          "manifest": "assets/sprite-package-manifests/cadfd37d553d5ff5abfc2a1ed14b87979e022dccd8a3ce67ac14640fd3b8060a.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/back/486.png",
+          "sha256": "29c6f3d94db15790bb1dc07af76fccbe7e3fee88dd7b0f4e008837964ebb1341",
+          "bytes": 1279,
+          "manifest": "assets/sprite-package-manifests/cadfd37d553d5ff5abfc2a1ed14b87979e022dccd8a3ce67ac14640fd3b8060a.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/frontShiny/486.png",
+          "sha256": "9613db43125ddee86f3d3659c0c487cd45fae79d38203ded453282962bf7362b",
+          "bytes": 1403,
+          "manifest": "assets/sprite-package-manifests/cadfd37d553d5ff5abfc2a1ed14b87979e022dccd8a3ce67ac14640fd3b8060a.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/backShiny/486.png",
+          "sha256": "504d00cb0dc666e24307686e37996912b989b00d0328c1e7b32a163c047f0572",
+          "bytes": 1278,
+          "manifest": "assets/sprite-package-manifests/cadfd37d553d5ff5abfc2a1ed14b87979e022dccd8a3ce67ac14640fd3b8060a.json"
+        }
+      ]
+    },
+    {
+      "key": "dex:489",
+      "files": [
+        {
+          "path": "assets/backend_national_catalog_67/battle/489/back.png",
+          "sha256": "e9ff5e9597d743914b2bc22eccd2e705640261c94d68c5aaf4b1d01c80ce05db",
+          "bytes": 462,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/489/backShiny.png",
+          "sha256": "bf28059ee32c291ca7cd1775d3d7c11b99c291fe3ad6fc8465226ec13524cf04",
+          "bytes": 460,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/489/front.png",
+          "sha256": "d64ddc0e634d0c221898d386aeb8d56baabd07f2d5b07554613bc21ce68d0ae7",
+          "bytes": 772,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/489/frontShiny.png",
+          "sha256": "5aa494c3f84422500a2fecb798b466ae2ed5fcf37320d67005c20792ae1c4f26",
+          "bytes": 779,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/489/icon-normal.png",
+          "sha256": "5eaa29ee942e264ca1e5bfdf2d376ec77bab1e642f4ee7ea36a5c7b98aca83d8",
+          "bytes": 237,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/489/icon-shiny.png",
+          "sha256": "9c76bc82787770b37fc277ac9de9b901d5ac5f7cf2beadd771ba37fb7d07b6fe",
+          "bytes": 235,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/489/voxel-front.png",
+          "sha256": "52619779f8c21209c9ebfc7cbc75d162e969703ab2b48b1ee9fcd2752c2f8353",
+          "bytes": 788,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/489/voxel-frontShiny.png",
+          "sha256": "c044d4d0824599726019d1915e3ad2600a9312b3819217f5c5e563038327d6c0",
+          "bytes": 796,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        }
+      ]
+    },
+    {
+      "key": "dex:490",
+      "files": [
+        {
+          "path": "assets/backend_national_catalog_67/battle/490/back.png",
+          "sha256": "fd8f7b7ef163994586edb138816d9ec9b0391505411d04f9ec9b3c6dc90c853a",
+          "bytes": 426,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/490/backShiny.png",
+          "sha256": "690247fc15f74d3e6adf8738d7fba1a48de0d72140a0bdb1b349cb272bdec441",
+          "bytes": 426,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/490/front.png",
+          "sha256": "b5873ffd03210f3c8cf7389d224385ebc4b970bc5a1024af715318644c3561a2",
+          "bytes": 769,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/490/frontShiny.png",
+          "sha256": "0da9d53baf366a954783ec41e897c59ef064fd0e6793da45cfd515f38846688f",
+          "bytes": 766,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/490/icon-normal.png",
+          "sha256": "f7b39f32cbe7eca089c32400e63fc285fac51a325a997449bff4d427ddf5c32f",
+          "bytes": 225,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/490/icon-shiny.png",
+          "sha256": "ff6cc638ab2457e45d2023adad93ed561cdff2176e4cf643a4484d74aab3200a",
+          "bytes": 232,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/490/voxel-front.png",
+          "sha256": "09553e52f5f0ff3b58368f371ae0ad236159ea401cb915e9959318ebf01089fa",
+          "bytes": 800,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/490/voxel-frontShiny.png",
+          "sha256": "745e7a4a315efd60bf125bdb24276377f35bd11a035013f2f46867ec069a85be",
+          "bytes": 801,
+          "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json"
+        }
+      ]
+    },
+    {
+      "key": "dex:492",
+      "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json",
+      "files": [
+        {
+          "path": "assets/backend_national_catalog_67/battle/492/back.png",
+          "sha256": "5a6d5a9eff149c3e21d062d6245b39140f17ad3c24426144f0d669b1f4f02b91",
+          "bytes": 381
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/492/backShiny.png",
+          "sha256": "67c6d18ef4d18534a97f609b3d537881175b893f5a1b448c49ce422ae7ab9d21",
+          "bytes": 376
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/492/front.png",
+          "sha256": "5a41cd6db25cf05545b12a798a69b4799539891dc447d388becf2328ec2e8bc5",
+          "bytes": 573
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/492/frontShiny.png",
+          "sha256": "01d97f74639bae771a10c04f2c2770bf2e11115ec3184ffe572ece2f33c86437",
+          "bytes": 591
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/492/icon-normal.png",
+          "sha256": "77b9a221b59f987cbd937040e29336ac1bc218772a1f393d105332b6cd46016b",
+          "bytes": 250
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/492/icon-shiny.png",
+          "sha256": "432d0a5cf40e0f0b7da2d19d2068dcd93efe09eea38b2b2606e1b04dcc30c370",
+          "bytes": 240
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/492/voxel-front.png",
+          "sha256": "6e303154e61512e36c0f2017c5238dd0aca7c59c01f20b605aef6830fe0b22ac",
+          "bytes": 591
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/492/voxel-frontShiny.png",
+          "sha256": "09b2f7bcd3d7f3da1dc90e2353ca33eff553f2cb78a4a2e9eddc91955156a725",
+          "bytes": 606
+        }
+      ]
+    },
+    {
+      "key": "dex:483",
+      "manifest": "assets/sprite-package-manifests/b1894f4f9802bb016f711dc2ecb0566a9802149be97ee5aba81053ed46cf30fd.json",
+      "files": [
+        {
+          "path": "assets/backend_national_catalog_67/battle/483/back.png",
+          "sha256": "256b276b9f7ee6fdea47a40094dcbb3948c447ba6d2be4f7c8012e4f3160687e",
+          "bytes": 907
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/483/backShiny.png",
+          "sha256": "3b8e0aa02416b0e5286a62b627878b82e5aa03dd0057d3ec6021419d38b61842",
+          "bytes": 820
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/483/front.png",
+          "sha256": "ff0f02697cc0d2b5af5fdbce9c2fb99eaf3799a1e91d455b161fc244f7da7139",
+          "bytes": 1299
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/483/frontShiny.png",
+          "sha256": "f71a31570eb8ab22f6b36741c7f72ec9e1a0088503b7e4344ad99f18e6ea5954",
+          "bytes": 1328
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/483/icon-normal.png",
+          "sha256": "b4ca96dd673fc99f9d7ef68e891d914fd99d2f05196f5602b6226b028666911b",
+          "bytes": 276
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/483/icon-shiny.png",
+          "sha256": "2789e353206434f23376bee9b37a7dd2664703ad85479f35b7b6f1df9ebbb449",
+          "bytes": 271
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/483/voxel-front.png",
+          "sha256": "1c6a5e08a094bd1ed3d383fa101014ec95bef84cfdf8902cac7aafe1af5ac6a7",
+          "bytes": 1344
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/483/voxel-frontShiny.png",
+          "sha256": "b05cc9e2b35b960b2b56cba6738c38fbb4c6d3580b5f429d60b93809aa4637fe",
+          "bytes": 1368
+        }
+      ]
+    },
+    {
+      "key": "dex:484",
+      "manifest": "assets/sprite-package-manifests/b1894f4f9802bb016f711dc2ecb0566a9802149be97ee5aba81053ed46cf30fd.json",
+      "files": [
+        {
+          "path": "assets/backend_national_catalog_67/battle/484/back.png",
+          "sha256": "43962979d2ab9f251e92b0538ec31607018e57721fc91039aad59f90d5c8dca7",
+          "bytes": 768
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/484/backShiny.png",
+          "sha256": "bad0c29640b8f1788eae2d3d2edbfb37c35432abe6a8acc062d06c41dbfe5029",
+          "bytes": 783
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/484/front.png",
+          "sha256": "5cbc4eba329534a29d1772995933afc39bf62f570b9f9b471afd5278f1877788",
+          "bytes": 1440
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/484/frontShiny.png",
+          "sha256": "0e238dc50a53da74aec2a7b0995d978199fed3569bf61357b95d71f97db251db",
+          "bytes": 1482
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/484/icon-normal.png",
+          "sha256": "56cebbc6f77c1dc656976381328f650cfded24c22d9fb9cfcacc50a5da0c149b",
+          "bytes": 306
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/484/icon-shiny.png",
+          "sha256": "0f090d6b2624176fd062bede85516b7151a38bfd90233440ce37cae56eccf25b",
+          "bytes": 305
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/484/voxel-front.png",
+          "sha256": "37d38ad9e3775abf09378356f74dcf7fc5087375b74f092bdd6f0f5d914a8b67",
+          "bytes": 1489
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/484/voxel-frontShiny.png",
+          "sha256": "69de919e932c119120058ae280ad812c6170fce092a66263cbb30bf39b3de956",
+          "bytes": 1528
+        }
+      ]
+    },
+    {
+      "key": "dex:493",
+      "manifest": "assets/sprite-package-manifests/34c65ef1a93e522bcd48555f806f9334dc744a3885d65bb4772220374c13f305.json",
+      "files": [
+        {
+          "path": "assets/backend_national_catalog_67/battle/493/back.png",
+          "sha256": "11f496b02b38658257846862a3821e99e4ce9695316ac5668ed99b70bf15f44f",
+          "bytes": 780
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/493/backShiny.png",
+          "sha256": "befaf21aa768ef19915360a350a4221f1287012b7fab90ac217636e174f99cfb",
+          "bytes": 775
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/493/front.png",
+          "sha256": "79c27486ce929f0d8a317641ff7a42cbfcfcb53bdafc52680665a7f817613a33",
+          "bytes": 1126
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/493/frontShiny.png",
+          "sha256": "9b1f5535d9067957f64fffe928de624269b282a9b735fcdb364d7be449538697",
+          "bytes": 1154
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/493/icon-normal.png",
+          "sha256": "b56143e579528eb908a24cf560533a4d4926eea91d608b862ff0b5bf559f17e7",
+          "bytes": 242
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/493/icon-shiny.png",
+          "sha256": "7d7b72e60cf39806d6a59208a24de2e082cb4256d902bb64db31956179f649b3",
+          "bytes": 210
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/493/voxel-front.png",
+          "sha256": "edac83b0c9d32b93633c88136b3ba3767679dbc7b2c4ccb126fd81d25c80b117",
+          "bytes": 1165
+        },
+        {
+          "path": "assets/backend_national_catalog_67/battle/493/voxel-frontShiny.png",
+          "sha256": "81bb295fa82fd4212c42711faa47726084b97e2b39a36e9f689bc9b1dc2e5918",
+          "bytes": 1184
+        }
+      ]
+    },
+    {
+      "key": "dex:377",
+      "files": [
+        {
+          "path": "assets/crystal_animated/back/normal/377/001.png",
+          "sha256": "a58262b94ce787852aeabcad43da38b3fb749f629a524e557cda91df313e89a9",
+          "bytes": 1803,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/crystal_animated/back/shiny/377/001.png",
+          "sha256": "74158e64dba45131a933bca28cf0f86c3e75089c1cb63675ad5a5bd1b7d4cbdf",
+          "bytes": 1811,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/crystal_animated/front/normal/377/001.png",
+          "sha256": "80f3ae51592d3388b7b34719f4909b57195f813c0cfa647fb5e1a6549dc00815",
+          "bytes": 2132,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/crystal_animated/front/shiny/377/001.png",
+          "sha256": "4529bee75733881a957df75f3bae17c0c6f0dfe51e2e2e192399c5ed3c8aa956",
+          "bytes": 2112,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/cries/0377.ogg",
+          "sha256": "4e4d44eaa7a9e5e243364e2d6b66dfc1ee44dcd0ab4dc95dadc581a4d4c86b55",
+          "bytes": 16404,
+          "source": "tracked-base-file"
+        },
+        {
+          "path": "assets/hoenn_species_67/followers/normal/follower_REGIROCK.png",
+          "sha256": "c64758f3ffe33142ebc655eb5a23d098368467b43fb5a750d191b4f39a771eaf",
+          "bytes": 1384,
+          "manifest": "assets/sprite-package-manifests/c6255e9323a99750e7985d97b51155a0c698e395b27e216b21fcc85dd28009c8.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/followers/shiny/follower_REGIROCK.png",
+          "sha256": "6a756c54c1bd460ee31c4a15d1fa5691125242a882c56138278ad2b672596b51",
+          "bytes": 1347,
+          "manifest": "assets/sprite-package-manifests/c6255e9323a99750e7985d97b51155a0c698e395b27e216b21fcc85dd28009c8.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/icons/normal/0377.png",
+          "sha256": "f8dd4bf32b6fab1388d3d3815608277c7b6893d4a4947cc0f546f103f11e61e3",
+          "bytes": 705,
+          "manifest": "assets/sprite-package-manifests/72f49720ea719c8b52f80c7cc3b25d3d320638a69d79029c546cbdee7642fadd.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/icons/shiny/0377.png",
+          "sha256": "ffb1ae7ff6b3f43b286a8e165960bb5976806833a093d66d77c6be9b28792aa9",
+          "bytes": 733,
+          "manifest": "assets/sprite-package-manifests/72f49720ea719c8b52f80c7cc3b25d3d320638a69d79029c546cbdee7642fadd.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/back/377.png",
+          "sha256": "527d110c78b7195c8d3dbaeea04dee2fb0ecd48d0709fef7742d47638db042fc",
+          "bytes": 779,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/377.png",
+          "sha256": "d8f0dbbbaf420726399c2e84434fce4f62009eed763b7ddf4d8343cdcb1e32d8",
+          "bytes": 813,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/front/377.png",
+          "sha256": "8bd1501599109f646ff9ddf158ff6e9baf2d0b346d9359435d6e2c65ea808483",
+          "bytes": 1324,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/377.png",
+          "sha256": "3e5732573f0a531eb1a0799f66ad7d8d0fe10711af0550ea0b14bb4fa2613f64",
+          "bytes": 1373,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        }
+      ]
+    },
+    {
+      "key": "dex:378",
+      "files": [
+        {
+          "path": "assets/crystal_animated/back/normal/378/001.png",
+          "sha256": "a39cca938ebfd5d5c271811dc1437a2e42f412f22d3bb702f418d27c44b4e824",
+          "bytes": 1071,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/crystal_animated/back/shiny/378/001.png",
+          "sha256": "c90f96553ea686a9c57812f696c7af16e0eefb9157891aa978ed691a07acc2fd",
+          "bytes": 1044,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/crystal_animated/front/normal/378/001.png",
+          "sha256": "7c7e61ffc068bb31f01e7ccf80fffb90bc49307784fda369548e389e54aad1c4",
+          "bytes": 1910,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/crystal_animated/front/shiny/378/001.png",
+          "sha256": "a6de54619e3220e78d47b856f2c9eef4fca1d857ed93fe08645eb039ae1900e1",
+          "bytes": 1897,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/cries/0378.ogg",
+          "sha256": "857b290b572a7ffa6c4f0fd582c5425af443c8a7e1dcaecbc5aff910f3dd10a7",
+          "bytes": 16244,
+          "source": "tracked-base-file"
+        },
+        {
+          "path": "assets/hoenn_species_67/followers/normal/follower_REGICE.png",
+          "sha256": "91798b2e8613da0bf11aac0ca572269425ab9fc530af973396de7a4cc659da1b",
+          "bytes": 1091,
+          "manifest": "assets/sprite-package-manifests/c6255e9323a99750e7985d97b51155a0c698e395b27e216b21fcc85dd28009c8.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/followers/shiny/follower_REGICE.png",
+          "sha256": "97b0e8fdd89d48712455b69b3654aa5d3a95dca08c72753093a300226ffc8da9",
+          "bytes": 1057,
+          "manifest": "assets/sprite-package-manifests/c6255e9323a99750e7985d97b51155a0c698e395b27e216b21fcc85dd28009c8.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/icons/normal/0378.png",
+          "sha256": "ee8d4d88bd63ed1a9164baa27464c69bbc6225d5a4fb83cb0fd3d4c8e577aded",
+          "bytes": 649,
+          "manifest": "assets/sprite-package-manifests/72f49720ea719c8b52f80c7cc3b25d3d320638a69d79029c546cbdee7642fadd.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/icons/shiny/0378.png",
+          "sha256": "a87be6fef5fca940bbbcd2e3a2bb7b196b649bd03022305b218c3d4e4b471571",
+          "bytes": 632,
+          "manifest": "assets/sprite-package-manifests/72f49720ea719c8b52f80c7cc3b25d3d320638a69d79029c546cbdee7642fadd.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/back/378.png",
+          "sha256": "0d580dd179432439025f944f78857e2345b37a18ed7f0351bc231cb8af90c7eb",
+          "bytes": 725,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/378.png",
+          "sha256": "394881a6c3440128b6800bb2446d063e84402a55b9a2922b47a5cf76571a1232",
+          "bytes": 712,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/front/378.png",
+          "sha256": "08b4ee73f076beca12e9d17c5799b95df1b87f016e22a1149aae92e97a6ebe78",
+          "bytes": 1247,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/378.png",
+          "sha256": "26cbb38db2450025421d59dcf62d9f40f54286f93e0bdb3a160ca418b5e1f5ca",
+          "bytes": 1248,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        }
+      ]
+    },
+    {
+      "key": "dex:379",
+      "files": [
+        {
+          "path": "assets/crystal_animated/back/normal/379/001.png",
+          "sha256": "ac94855ac0d50c2de5abdb8606887566977d4d97b1b375ba295afdb6611e88b8",
+          "bytes": 1224,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/crystal_animated/back/shiny/379/001.png",
+          "sha256": "5f771b188c67ac1d2e61dce8912404e581c5ef36cf2a631c55f0b7219a30558d",
+          "bytes": 1224,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/crystal_animated/front/normal/379/001.png",
+          "sha256": "f6d3b83d4eddac20c197fab7d8ec9333d335cf8fa56ed35b452c1e0d113731cf",
+          "bytes": 2027,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/crystal_animated/front/shiny/379/001.png",
+          "sha256": "0afe450959312f5944e42af220ae6a04a271d57df9bca87cebcd368091b2df01",
+          "bytes": 2025,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/cries/0379.ogg",
+          "sha256": "2ec75498171a07d1d26dac6500b9d910e4552a917573cf04d081b12f119e356e",
+          "bytes": 13070,
+          "source": "tracked-base-file"
+        },
+        {
+          "path": "assets/hoenn_species_67/followers/normal/follower_REGISTEEL.png",
+          "sha256": "f285f3c8312ade0cb97718efd20ef5bd5b3cef7e0e7a90e03b357fe81f5e850a",
+          "bytes": 1254,
+          "manifest": "assets/sprite-package-manifests/c6255e9323a99750e7985d97b51155a0c698e395b27e216b21fcc85dd28009c8.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/followers/shiny/follower_REGISTEEL.png",
+          "sha256": "906f950c9ddb41cd95be363bc54758d1d95c46269f0cf46da00944094b604280",
+          "bytes": 1290,
+          "manifest": "assets/sprite-package-manifests/c6255e9323a99750e7985d97b51155a0c698e395b27e216b21fcc85dd28009c8.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/icons/normal/0379.png",
+          "sha256": "becc42d901471587122564c3371729e161ae52e98e628bfa68ae0ae24c329faa",
+          "bytes": 704,
+          "manifest": "assets/sprite-package-manifests/72f49720ea719c8b52f80c7cc3b25d3d320638a69d79029c546cbdee7642fadd.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/icons/shiny/0379.png",
+          "sha256": "a2d3df8375796ef1fbfe1690eb618e487848b15d7fa520534921b439e35a7567",
+          "bytes": 686,
+          "manifest": "assets/sprite-package-manifests/72f49720ea719c8b52f80c7cc3b25d3d320638a69d79029c546cbdee7642fadd.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/back/379.png",
+          "sha256": "1f7d9f4f43ef6da819b9d207a4b6dac9bb420921255242763d912f94564e42e6",
+          "bytes": 706,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/379.png",
+          "sha256": "ee470c7217b64d7ca983bfea6f5f3c18246ee706a7bc481853b90c88ff10d912",
+          "bytes": 709,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/front/379.png",
+          "sha256": "e21b6b1ee8adfaad748478e85c97d463ff683cccf477ad07891eb272267f004a",
+          "bytes": 1177,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/379.png",
+          "sha256": "1a760c445bb8cbb0df6690b301bd4944c54389c46a41b716c2cb8bbc6064591e",
+          "bytes": 1203,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        }
+      ]
+    },
+    {
+      "key": "dex:380",
+      "files": [
+        {
+          "path": "assets/crystal_animated/back/normal/380/001.png",
+          "sha256": "02549efda9d62d8350c6980befd64f28dc7069589356242b13b89047b19dce3d",
+          "bytes": 1326,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/crystal_animated/back/shiny/380/001.png",
+          "sha256": "7ab0729defde266911127eb3fe12f02abe7c72b6635e40aa433803c8a2abf8b3",
+          "bytes": 1317,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/crystal_animated/front/normal/380/001.png",
+          "sha256": "82c791af7e8d614c9de63a672e08f69e368b46533157cafa60d1f3079911e714",
+          "bytes": 1978,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/crystal_animated/front/shiny/380/001.png",
+          "sha256": "9fe2befd601516f233aad3357d482ae6d7c7938a102d0ebb3d71da6dc9affc98",
+          "bytes": 1942,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/cries/0380.ogg",
+          "sha256": "9ed5f7e41d28b66649130504839ebe6f9ae99b7a1ef1a70218a41bde6fc9d7fe",
+          "bytes": 8878,
+          "source": "tracked-base-file"
+        },
+        {
+          "path": "assets/hoenn_species_67/followers/normal/follower_LATIAS.png",
+          "sha256": "1c712583a5effcf3d440e948fb63c1823b9bdbf0e91da6e5e0e853966ba0a530",
+          "bytes": 1213,
+          "manifest": "assets/sprite-package-manifests/c6255e9323a99750e7985d97b51155a0c698e395b27e216b21fcc85dd28009c8.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/followers/shiny/follower_LATIAS.png",
+          "sha256": "8c924409041d5a77f57d2900dd10451d24b3911757d07c1f78442fb0e40d189b",
+          "bytes": 1215,
+          "manifest": "assets/sprite-package-manifests/c6255e9323a99750e7985d97b51155a0c698e395b27e216b21fcc85dd28009c8.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/icons/normal/0380.png",
+          "sha256": "76678e71f68ba9f67e6fac45357d3c1ddcb7f15cb9e2c37fca9ccbc7440d537b",
+          "bytes": 607,
+          "manifest": "assets/sprite-package-manifests/72f49720ea719c8b52f80c7cc3b25d3d320638a69d79029c546cbdee7642fadd.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/icons/shiny/0380.png",
+          "sha256": "48ff3bdada260384c7658f6d449e57a5505146ca49cc4259d6981c0380cd0b3f",
+          "bytes": 500,
+          "manifest": "assets/sprite-package-manifests/72f49720ea719c8b52f80c7cc3b25d3d320638a69d79029c546cbdee7642fadd.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/back/380.png",
+          "sha256": "e3b983aac9bc3a8ff67d2cc594ebba53ae42c563098c2c2f7964068e178cffe5",
+          "bytes": 623,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/380.png",
+          "sha256": "fd53cf3a91877fa743ffbedf35556c4e7e7a976aafb0dcf73a07d19b6a8cfce7",
+          "bytes": 605,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/front/380.png",
+          "sha256": "2b6858470392b14e8d7bc3967e48b4b007408144198e88c000136431be194711",
+          "bytes": 1084,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/380.png",
+          "sha256": "e84f9589e0a94eab315a75a95fdb95f36888e6616c94ec16588adce0dba3718d",
+          "bytes": 1097,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        }
+      ]
+    },
+    {
+      "key": "dex:381",
+      "files": [
+        {
+          "path": "assets/crystal_animated/back/normal/381/001.png",
+          "sha256": "34a4fded114f06abb7604b0e2f6f738706e6db13d3ae33a578837061e94dd8bd",
+          "bytes": 1372,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/crystal_animated/back/shiny/381/001.png",
+          "sha256": "24b2fe6a05e22570eaea2bdc7e4b2762786d9f12b33978acd71998775ca12b96",
+          "bytes": 1387,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/crystal_animated/front/normal/381/001.png",
+          "sha256": "7979ea5f55a11e8d0f7b48b8037a6584c2ae47a3c15f8739e20ac9db44775f97",
+          "bytes": 2205,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/crystal_animated/front/shiny/381/001.png",
+          "sha256": "3f7dbf7c67776e1454040f74f064bf1460e069c1ba6ea5ec8952cf8980b0c06b",
+          "bytes": 2259,
+          "manifest": "assets/sprite-package-manifests/3f8ac1d71a11636c85de56b4beaadcb1e0dbce3b6bcfd5241193fda56c3415dd.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/cries/0381.ogg",
+          "sha256": "da21385e295e58218cbd217778166de1d5a845835bf6b4dc147a0632ea5f1815",
+          "bytes": 12255,
+          "source": "tracked-base-file"
+        },
+        {
+          "path": "assets/hoenn_species_67/followers/normal/follower_LATIOS.png",
+          "sha256": "a7ebe97c6a16e199a1f2c6bc9f72db9dc06e422704698d1d4231ec54ffa156f0",
+          "bytes": 1295,
+          "manifest": "assets/sprite-package-manifests/c6255e9323a99750e7985d97b51155a0c698e395b27e216b21fcc85dd28009c8.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/followers/shiny/follower_LATIOS.png",
+          "sha256": "acd26eadf0a30ee9d86a22b9f72ae4f7129bda016443325dfc1ff235acd6ef38",
+          "bytes": 1309,
+          "manifest": "assets/sprite-package-manifests/c6255e9323a99750e7985d97b51155a0c698e395b27e216b21fcc85dd28009c8.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/icons/normal/0381.png",
+          "sha256": "ae10d30b4ff433632ddc45c30bfc1fa35459638a35b7e83ec96d810479d50a0a",
+          "bytes": 690,
+          "manifest": "assets/sprite-package-manifests/72f49720ea719c8b52f80c7cc3b25d3d320638a69d79029c546cbdee7642fadd.json"
+        },
+        {
+          "path": "assets/hoenn_species_67/icons/shiny/0381.png",
+          "sha256": "43e5ead57781b78e68d2243f0def784076cbddcd62c101edc5010129c6c2dbe7",
+          "bytes": 662,
+          "manifest": "assets/sprite-package-manifests/72f49720ea719c8b52f80c7cc3b25d3d320638a69d79029c546cbdee7642fadd.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/back/381.png",
+          "sha256": "db3e0eda035a604bed83a11b2d243bb865009582786385df6adac6409721f47b",
+          "bytes": 686,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/381.png",
+          "sha256": "3f22afc49ac6a71c2ea7daab3b8fe90cdfc230f95e298b56cff0fd1cea73e1b8",
+          "bytes": 703,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/front/381.png",
+          "sha256": "65458fb1247e343130e8f18411cf4a5aed5298eb0c0e2203d83e9b6f26723aa3",
+          "bytes": 1144,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        },
+        {
+          "path": "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/381.png",
+          "sha256": "d8e32af967525a34579fea1399dba3b28858e36505295820cd7cef0721f205a2",
+          "bytes": 1141,
+          "manifest": "assets/sprite-package-manifests/a73fbd138d9cfaf46d62b59b31282836d33a2d8785754fd385c1c9e7ddfee33b.json"
+        }
+      ]
+    }
+  ]
+}

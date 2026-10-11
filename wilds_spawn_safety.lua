@@ -40,6 +40,20 @@ return function(mod)
     return tostring(value or ""):upper()
   end
 
+  local function authoredSeviiRoom(mapId)
+    if not mapId:match('^KA_SEVII_') then return false end
+    return mapId == 'KA_SEVII_CENTER' or mapId == 'KA_SEVII_CENTER_2F'
+      or mapId:find('_POKEMON_CENTER_', 1, true) ~= nil
+      or mapId:find('_MART', 1, true) ~= nil
+      or mapId:find('_HOUSE', 1, true) ~= nil
+      or mapId:find('_POKEMON_DAY_CARE', 1, true) ~= nil
+      or mapId:find('_JOYFUL_GAME_CORNER', 1, true) ~= nil
+      or mapId:find('_ROCKET_WAREHOUSE', 1, true) ~= nil
+      or mapId:match('^KA_SEVII_TRAINER_TOWER_[1-8]_F$') ~= nil
+      or mapId == 'KA_SEVII_TRAINER_TOWER_LOBBY'
+      or mapId == 'KA_SEVII_TRAINER_TOWER_ELEVATOR'
+  end
+
   local function cellKey(x, y)
     if x == nil or y == nil then return nil end
     return tostring(x) .. ":" .. tostring(y)
@@ -113,6 +127,12 @@ return function(mod)
     local mapId = upper(mapIdOf(value))
     if mapId == OAKS_LAB and not S.starterComplete(game) then
       return false, STARTER_REASON
+    end
+    -- Sevii's rooms have authored staff, visitors and interactive objects.
+    -- Ambient Wilds otherwise places unrelated roaming bodies in homes,
+    -- shops, the Day Care and battle rooms as well as Pokemon Centers.
+    if authoredSeviiRoom(mapId) then
+      return false, "rejected: authored Sevii room"
     end
     return true
   end

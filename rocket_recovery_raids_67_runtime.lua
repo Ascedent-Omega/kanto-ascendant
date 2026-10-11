@@ -311,6 +311,19 @@ return function(mod,opts)
   end
 
   local function startCapture(game,ow,npc,capture,done)
+    local reconciled,why=raids.reconcileCaptures(game)
+    if not reconciled then return show(game,tr("The rescue records could not be saved: ",
+      "Die Rettungsdaten konnten nicht gespeichert werden: ")..tostring(why),done)end
+    local current=raids.currentCapture()
+    if not current or current.key~=capture.key then
+      return show(game,tr("The rescue records have changed. This containment field is empty; the operation can continue.",
+        "Die Rettungsdaten haben sich geaendert. Dieses Eindaemmungsfeld ist leer; die Operation kann weitergehen."),function()
+          local objective=raids.objective(game)
+          if not objective or objective.map~=ow.map.id then R.returnToHost(game,ow.map.id)
+          else refresh(game,ow,ow.map.id)end
+          if done then done()end
+        end)
+    end
     if not(game and game.data and game.data.pokemon
         and game.data.pokemon[capture.species])then return show(game,tr(
       "The confiscated life-sign is unstable. Nothing changed.",

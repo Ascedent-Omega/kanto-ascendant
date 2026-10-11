@@ -1,0 +1,562 @@
+{
+  "schema": "kasc.sevii-habitats/v1",
+  "districts": [
+    {
+      "id": "ember_slopes",
+      "names": {
+        "de": "Glutpfade",
+        "en": "Ember slopes"
+      },
+      "sources": [
+        "OneIsland_KindleRoad",
+        "MtEmber_Exterior"
+      ],
+      "terrain": "grass",
+      "level": 52,
+      "species": [
+        "NUMEL",
+        "CAMERUPT",
+        "TORKOAL",
+        "TORCHIC",
+        "COMBUSKEN",
+        "BLAZIKEN",
+        "CHIMCHAR",
+        "MONFERNO",
+        "INFERNAPE",
+        "MAGMORTAR"
+      ]
+    },
+    {
+      "id": "ember_ore",
+      "names": {
+        "de": "Erzadern",
+        "en": "Ore veins"
+      },
+      "sources": [
+        "MtEmber_RubyPath_1F",
+        "MtEmber_RubyPath_B1F",
+        "MtEmber_RubyPath_B3F"
+      ],
+      "terrain": "indoor",
+      "level": 56,
+      "species": [
+        "NOSEPASS",
+        "PROBOPASS",
+        "ARON",
+        "LAIRON",
+        "AGGRON",
+        "RHYPERIOR"
+      ]
+    },
+    {
+      "id": "summit",
+      "names": {
+        "de": "Gipfelstille",
+        "en": "Silent summit"
+      },
+      "sources": [
+        "MtEmber_SummitPath_2F",
+        "MtEmber_Summit"
+      ],
+      "terrain": "indoor",
+      "level": 58,
+      "species": [
+        "MEDITITE",
+        "MEDICHAM",
+        "RIOLU",
+        "LUCARIO",
+        "CHIMECHO",
+        "CHINGLING"
+      ]
+    },
+    {
+      "id": "treasure_grass",
+      "names": {
+        "de": "Schatzgestade",
+        "en": "Treasure Beach"
+      },
+      "sources": [
+        "OneIsland_TreasureBeach"
+      ],
+      "terrain": "grass",
+      "level": 49,
+      "species": [
+        "ZIGZAGOON",
+        "LINOONE",
+        "WINGULL",
+        "PELIPPER"
+      ]
+    },
+    {
+      "id": "warm_current",
+      "names": {
+        "de": "Warme Stroemung",
+        "en": "Warm current"
+      },
+      "sources": [
+        "OneIsland_TreasureBeach",
+        "OneIsland_KindleRoad"
+      ],
+      "terrain": "water",
+      "level": 51,
+      "species": [
+        "WAILMER",
+        "WAILORD",
+        "CARVANHA",
+        "SHARPEDO",
+        "FINNEON",
+        "LUMINEON",
+        "MANTYKE"
+      ]
+    },
+    {
+      "id": "cape",
+      "names": {
+        "de": "Wiesen am Kap",
+        "en": "Cape meadows"
+      },
+      "sources": [
+        "TwoIsland_CapeBrink"
+      ],
+      "terrain": "grass",
+      "level": 52,
+      "species": [
+        "SPOINK",
+        "GRUMPIG",
+        "SKITTY",
+        "DELCATTY",
+        "SPINDA",
+        "SWABLU",
+        "ALTARIA",
+        "TOGEKISS",
+        "MIME_JR",
+        "HAPPINY"
+      ]
+    },
+    {
+      "id": "cape_lake",
+      "names": {
+        "de": "Teich am Kap",
+        "en": "Cape lake"
+      },
+      "sources": [
+        "TwoIsland_CapeBrink",
+        "ThreeIsland_BondBridge"
+      ],
+      "terrain": "water",
+      "level": 51,
+      "species": [
+        "MUDKIP",
+        "MARSHTOMP",
+        "SWAMPERT",
+        "AZURILL",
+        "BARBOACH",
+        "WHISCASH",
+        "FEEBAS",
+        "MILOTIC",
+        "LOTAD",
+        "LOMBRE",
+        "LUDICOLO",
+        "BUIZEL",
+        "FLOATZEL"
+      ]
+    },
+    {
+      "id": "bond",
+      "names": {
+        "de": "Wiesen an der Bruecke",
+        "en": "Bridge meadows"
+      },
+      "sources": [
+        "ThreeIsland_BondBridge",
+        "ThreeIsland_Port"
+      ],
+      "terrain": "grass",
+      "level": 52,
+      "species": [
+        "TAILLOW",
+        "SWELLOW",
+        "STARLY",
+        "STARAVIA",
+        "STARAPTOR",
+        "ZANGOOSE",
+        "SEVIPER",
+        "POOCHYENA",
+        "MIGHTYENA"
+      ]
+    },
+    {
+      "id": "berry_wood",
+      "names": {
+        "de": "Alter Beerenforst",
+        "en": "Old Berry Forest"
+      },
+      "sources": [
+        "ThreeIsland_BerryForest"
+      ],
+      "terrain": "grass",
+      "level": 54,
+      "species": [
+        "TREECKO",
+        "GROVYLE",
+        "SCEPTILE",
+        "SHROOMISH",
+        "BRELOOM",
+        "SLAKOTH",
+        "VIGOROTH",
+        "SLAKING",
+        "KECLEON",
+        "TROPIUS",
+        "TURTWIG",
+        "GROTLE",
+        "TORTERRA",
+        "CHERUBI",
+        "CHERRIM",
+        "AMBIPOM",
+        "MUNCHLAX",
+        "LICKILICKY",
+        "TANGROWTH",
+        "LEAFEON"
+      ]
+    },
+    {
+      "id": "berry_flowers",
+      "names": {
+        "de": "Lichtungen im Beerenforst",
+        "en": "Berry Forest clearings"
+      },
+      "sources": [
+        "ThreeIsland_BerryForest"
+      ],
+      "terrain": "grass",
+      "level": 54,
+      "species": [
+        "RALTS",
+        "KIRLIA",
+        "GARDEVOIR",
+        "ROSELIA",
+        "BUDEW",
+        "ROSERADE",
+        "BUNEARY",
+        "LOPUNNY",
+        "GALLADE",
+        "WYNAUT"
+      ]
+    },
+    {
+      "id": "forest_pools",
+      "names": {
+        "de": "Waldtuempel",
+        "en": "Forest pools"
+      },
+      "sources": [
+        "ThreeIsland_BerryForest"
+      ],
+      "terrain": "water",
+      "level": 52,
+      "species": [
+        "CORPHISH",
+        "CRAWDAUNT",
+        "SURSKIT",
+        "MASQUERAIN",
+        "BIDOOF",
+        "BIBAREL"
+      ]
+    },
+    {
+      "id": "pattern",
+      "names": {
+        "de": "Musterbusch",
+        "en": "Pattern Bush"
+      },
+      "sources": [
+        "SixIsland_PatternBush"
+      ],
+      "terrain": "grass",
+      "level": 56,
+      "species": [
+        "WURMPLE",
+        "SILCOON",
+        "BEAUTIFLY",
+        "CASCOON",
+        "DUSTOX",
+        "SEEDOT",
+        "NUZLEAF",
+        "SHIFTRY",
+        "NINCADA",
+        "NINJASK",
+        "SHEDINJA",
+        "VOLBEAT",
+        "ILLUMISE",
+        "KRICKETOT",
+        "KRICKETUNE",
+        "BURMY",
+        "WORMADAM",
+        "MOTHIM",
+        "COMBEE",
+        "VESPIQUEN",
+        "PACHIRISU",
+        "YANMEGA",
+        "CARNIVINE"
+      ]
+    },
+    {
+      "id": "ice",
+      "names": {
+        "de": "Frostkammern",
+        "en": "Frost chambers"
+      },
+      "sources": [
+        "FourIsland_IcefallCave_1F",
+        "FourIsland_IcefallCave_B1F"
+      ],
+      "terrain": "indoor",
+      "level": 56,
+      "species": [
+        "SNORUNT",
+        "GLALIE",
+        "FROSLASS",
+        "GLACEON",
+        "WEAVILE",
+        "SNOVER",
+        "ABOMASNOW",
+        "MAMOSWINE"
+      ]
+    },
+    {
+      "id": "ice_water",
+      "names": {
+        "de": "Eiskaltes Wasser",
+        "en": "Icy water"
+      },
+      "sources": [
+        "FourIsland_IcefallCave_Entrance",
+        "FourIsland_IcefallCave_Back"
+      ],
+      "terrain": "water",
+      "level": 55,
+      "species": [
+        "SPHEAL",
+        "SEALEO",
+        "WALREIN",
+        "PIPLUP",
+        "PRINPLUP",
+        "EMPOLEON"
+      ]
+    },
+    {
+      "id": "meadow",
+      "names": {
+        "de": "Forschungsweide",
+        "en": "Research meadow"
+      },
+      "sources": [
+        "FiveIsland_Meadow"
+      ],
+      "terrain": "grass",
+      "level": 55,
+      "species": [
+        "ELECTRIKE",
+        "MANECTRIC",
+        "PLUSLE",
+        "MINUN",
+        "SHINX",
+        "LUXIO",
+        "LUXRAY",
+        "GLAMEOW",
+        "PURUGLY",
+        "CHATOT"
+      ]
+    },
+    {
+      "id": "station",
+      "names": {
+        "de": "Verlassene Station",
+        "en": "Abandoned station"
+      },
+      "sources": [
+        "FiveIsland_RocketWarehouse"
+      ],
+      "terrain": "indoor",
+      "level": 58,
+      "species": [
+        "BELDUM",
+        "METANG",
+        "METAGROSS",
+        "MAGNEZONE",
+        "ELECTIVIRE",
+        "PORYGON_Z",
+        "ROTOM"
+      ]
+    },
+    {
+      "id": "marsh",
+      "names": {
+        "de": "Schlammufer",
+        "en": "Muddy banks"
+      },
+      "sources": [
+        "SixIsland_WaterPath"
+      ],
+      "terrain": "grass",
+      "level": 55,
+      "species": [
+        "GULPIN",
+        "SWALOT",
+        "STUNKY",
+        "SKUNTANK",
+        "CROAGUNK",
+        "TOXICROAK",
+        "SHELLOS",
+        "GASTRODON"
+      ]
+    },
+    {
+      "id": "reef",
+      "names": {
+        "de": "Alte Riffe",
+        "en": "Ancient reefs"
+      },
+      "sources": [
+        "FiveIsland_WaterLabyrinth",
+        "FiveIsland_ResortGorgeous"
+      ],
+      "terrain": "water",
+      "level": 56,
+      "species": [
+        "CLAMPERL",
+        "HUNTAIL",
+        "GOREBYSS",
+        "RELICANTH",
+        "LUVDISC",
+        "LILEEP",
+        "CRADILY",
+        "ANORITH",
+        "ARMALDO"
+      ]
+    },
+    {
+      "id": "meteor",
+      "names": {
+        "de": "Sternkammern",
+        "en": "Star chambers"
+      },
+      "sources": [
+        "SixIsland_DottedHole_B2F",
+        "SixIsland_DottedHole_B3F",
+        "SixIsland_DottedHole_B4F"
+      ],
+      "terrain": "indoor",
+      "level": 58,
+      "species": [
+        "LUNATONE",
+        "SOLROCK",
+        "BALTOY",
+        "CLAYDOL",
+        "BRONZOR",
+        "BRONZONG"
+      ]
+    },
+    {
+      "id": "echo",
+      "names": {
+        "de": "Wandelhoehle",
+        "en": "Altering Cave"
+      },
+      "sources": [
+        "SixIsland_AlteringCave"
+      ],
+      "terrain": "indoor",
+      "level": 57,
+      "species": [
+        "WHISMUR",
+        "LOUDRED",
+        "EXPLOUD",
+        "MAKUHITA",
+        "HARIYAMA",
+        "MAWILE",
+        "SABLEYE"
+      ]
+    },
+    {
+      "id": "lost",
+      "names": {
+        "de": "Verlorene Hallen",
+        "en": "Lost halls"
+      },
+      "sources": [
+        "FiveIsland_LostCave_Room2",
+        "FiveIsland_LostCave_Room5",
+        "FiveIsland_LostCave_Room8",
+        "FiveIsland_LostCave_Room11",
+        "FiveIsland_LostCave_Room14"
+      ],
+      "terrain": "indoor",
+      "level": 58,
+      "species": [
+        "DUSKULL",
+        "DUSCLOPS",
+        "DUSKNOIR",
+        "SHUPPET",
+        "BANETTE",
+        "MISMAGIUS",
+        "HONCHKROW",
+        "DRIFLOON",
+        "DRIFBLIM",
+        "SPIRITOMB"
+      ]
+    },
+    {
+      "id": "memorial",
+      "names": {
+        "de": "Gedenkwiese",
+        "en": "Memorial meadow"
+      },
+      "sources": [
+        "FiveIsland_MemorialPillar"
+      ],
+      "terrain": "grass",
+      "level": 55,
+      "species": [
+        "ABSOL",
+        "CASTFORM"
+      ]
+    },
+    {
+      "id": "canyon",
+      "names": {
+        "de": "Sevae Canyon",
+        "en": "Sevault Canyon"
+      },
+      "sources": [
+        "SevenIsland_SevaultCanyon",
+        "SevenIsland_SevaultCanyon_Entrance"
+      ],
+      "terrain": "grass",
+      "level": 60,
+      "species": [
+        "TRAPINCH",
+        "VIBRAVA",
+        "FLYGON",
+        "CACNEA",
+        "CACTURNE",
+        "BAGON",
+        "SHELGON",
+        "SALAMENCE",
+        "GIBLE",
+        "GABITE",
+        "GARCHOMP",
+        "HIPPOPOTAS",
+        "HIPPOWDON",
+        "SKORUPI",
+        "DRAPION",
+        "GLISCOR",
+        "BONSLY",
+        "CRANIDOS",
+        "RAMPARDOS",
+        "SHIELDON",
+        "BASTIODON"
+      ]
+    }
+  ]
+}

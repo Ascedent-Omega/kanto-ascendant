@@ -519,6 +519,19 @@ return function(mod, opts)
     return OUTDOOR_MAPS[mapId] == true
   end
 
+  function W.registerOutdoorMaps(rows)
+    if type(rows) ~= "table" then return false end
+    local added = 0
+    for _, row in ipairs(rows) do
+      if type(row) == "table" and type(row.id) == "string"
+          and row.outdoor == true and not OUTDOOR_MAPS[row.id] then
+        OUTDOOR_MAPS[row.id] = true
+        added = added + 1
+      end
+    end
+    return added
+  end
+
   function W.isLargeOutdoorMap(game, mapId)
     if not W.isEligibleMap(mapId) then return false end
     local def = game and game.data and game.data.maps

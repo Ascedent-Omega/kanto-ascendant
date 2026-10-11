@@ -32,6 +32,7 @@ return function(mod, opts)
   opts = opts or {}
   local i18n = opts.i18n
   local postgame = opts.postgame
+  local Combo = opts.catchCombo
   local S = { game = nil, odds = 8192 }
   local pendingForce
   local worldEvents
@@ -69,6 +70,7 @@ return function(mod, opts)
         version = 1, seen = {}, caught = {}, rematchStreak = 0,
         bestStreak = 0, totalRematchWins = 0, outbreakIndex = 0,
         encounters = {}, caughtCounts = {}, awards = {},
+        catchCombo = { species = nil, count = 0 },
       }
       mod.save:set("shiny_system", s)
     end
@@ -80,6 +82,8 @@ return function(mod, opts)
       s.caughtCounts = type(s.caughtCounts) == "table"
         and s.caughtCounts or {}
       s.awards = type(s.awards) == "table" and s.awards or {}
+      s.catchCombo = Combo and Combo.normalize(s.catchCombo)
+        or s.catchCombo or { species = nil, count = 0 }
       s.rematchStreak = math.max(0,
         math.floor(tonumber(s.rematchStreak) or 0))
       s.bestStreak = math.max(s.rematchStreak,
@@ -168,6 +172,15 @@ return function(mod, opts)
     return mod.options:get("shiny_hunts") or "ascendant"
   end
 
+  local function comboEnabled()
+    return Combo and mod.options:get("shiny_catch_combo") ~= false
+  end
+
+  function S.catchCombo()
+    local s = state(false)
+    return Combo and Combo.normalize(s and s.catchCombo) or { species = nil, count = 0 }
+  end
+
   local function eventEnabled()
     return huntingMode() == "ascendant"
       and mod.options:get("shiny_event") ~= false
@@ -254,7 +267,7 @@ return function(mod, opts)
     unlockCharm(game)
   end
 
-  local function extraRolls(s)
+  local function extraRolls(s, species)
     if huntingMode() ~= "ascendant" then return 0 end
     local rolls = s.charm and 2 or 0
     local streak = s.rematchStreak
@@ -264,6 +277,9 @@ return function(mod, opts)
     if worldEvents and worldEvents.shinyBonusRolls then
       rolls = rolls + math.max(0,
         math.floor(tonumber(worldEvents.shinyBonusRolls()) or 0))
+    end
+    if comboEnabled() then
+      rolls = rolls + Combo.bonusRolls(s.catchCombo, species)
     end
     return rolls
   end
@@ -315,7 +331,7 @@ return function(mod, opts)
       pendingForce = { species = EVENT_SPECIES, event = true }
       return out
     end
-    local rolls = extraRolls(s)
+    local rolls = extraRolls(s, out.species)
     if outbreak then rolls = rolls + 15 end
     if rollBonus(ctx, rolls) then
       pendingForce = { species = out.species }
@@ -594,6 +610,14 @@ return function(mod, opts)
             value = seen and row.id or nil,
           }
         end
+        if comboEnabled() then
+          local combo = S.catchCombo()
+          table.insert(rows, 1, {
+            label = tr("CATCH COMBO", "FANGSERIE"),
+            right = combo.count > 0 and ("x%d"):format(combo.count) or "-",
+            value = "__catch_combo",
+          })
+        end
         return (mod.ui.KantoListMenu or mod.ui.ListMenu).new(game,
           tr(("SHINY DEX %d/%d"):format(totalCaught, totalSeen),
              ("SHINY-DEX %d/%d"):format(totalCaught, totalSeen)),
@@ -604,6 +628,20 @@ return function(mod, opts)
             pageJump = true,
             onChoose = function(item)
               if not item.value then return end
+              if item.value == "__catch_combo" then
+                local combo = S.catchCombo()
+                local def = combo.species and game.data.pokemon[combo.species]
+                local name = def and def.name or combo.species
+                local info = combo.count > 0 and tr(
+                  ("Catch Combo: %s x%d.\fKeep catching this species for more shiny rolls at 11, 21 and 31.")
+                    :format(name, combo.count),
+                  ("Fangserie: %s x%d.\fFange diese Art weiter für zusätzliche Shiny-Würfe ab 11, 21 und 31.")
+                    :format(name, combo.count)) or tr(
+                    "No Catch Combo yet. Catch the same wild species repeatedly.",
+                    "Noch keine Fangserie. Fange dieselbe wilde Art mehrmals hintereinander.")
+                game.stack:push(require("src.render.TextBox").new(game, info))
+                return
+              end
               local s = state()
               local status = s.caught[item.value]
                 and tr("SHINY CAUGHT", "SHINY GEFANGEN")
@@ -624,8 +662,9 @@ return function(mod, opts)
 
   mod.hooks:wrap("ui.start_menu.items", function(nextItems, game, items)
     local out = nextItems(game, items)
-    if type(out) ~= "table" or (postgame
-        and not postgame.hasHallOfFame(game.save)) then return out end
+    -- Catch Combo works on Kanto's first wild routes. Its live counter must
+    -- be reachable there too, before the Hall of Fame opens Sevii.
+    if type(out) ~= "table" then return out end
     return mod.ui.insertBefore(out, "SAVE", {
       label = tr("SHINY", "SHINY"),
       ascendantMenu = true,
@@ -656,6 +695,14 @@ return function(mod, opts)
 
   mod.events:on("pokemon.caught", function(ev)
     if ev and ev.mon then
+      if Combo and ev.battle and ev.battle.kind == "wild"
+          and S.game and (not ev.game or ev.game == S.game) then
+        local s = state()
+        s.catchCombo = comboEnabled()
+          and Combo.catch(s.catchCombo, ev.mon.species)
+          or Combo.breakCombo()
+        persist(s)
+      end
       local shiny = S.isShiny(ev.mon)
       S.markCaught(ev.mon)
       if shiny and ev.mon.species then
@@ -679,6 +726,12 @@ return function(mod, opts)
 
   mod.events:on("battle.ended", function(ev)
     local battle = ev and ev.battle
+    if Combo and battle and battle.kind == "wild" and ev.result == "run"
+        and not battle.kaShinyComboPlayerRetreat then
+      local s = state()
+      s.catchCombo = Combo.breakCombo()
+      persist(s)
+    end
     if battle then battleEffects[battle] = nil end
     if battle and battle.rematchTrainerClass and ev.result ~= "win" then
       local s = state()
@@ -725,6 +778,25 @@ return function(mod, opts)
     S.game = game
     state()
     scanSave(game)
+    if Combo then
+      local ok, BattleState = pcall(require, "src.battle.BattleState")
+      if ok and BattleState and not BattleState._kaShinyComboRetreatWrapped then
+        BattleState._kaShinyComboRetreatWrapped = true
+        -- runRoll is shared by the RUN command and the faint-dialogue exit.
+        -- Both are player retreats; the Safari flee check does not call it.
+        local runRoll = BattleState.runRoll
+        BattleState.runRoll = function(battle, ...)
+          local escaped = runRoll(battle, ...)
+          if escaped then battle.kaShinyComboPlayerRetreat = true end
+          return escaped
+        end
+        local safariAction = BattleState.safariAction
+        BattleState.safariAction = function(battle, choice, ...)
+          if choice == "run" then battle.kaShinyComboPlayerRetreat = true end
+          return safariAction(battle, choice, ...)
+        end
+      end
+    end
     local ok, SummaryMenu = pcall(require, "src.ui.SummaryMenu")
     if not S.externalActive() and ok and type(SummaryMenu) == "table"
         and not SummaryMenu._kantoAscendantShinyIconWrapped then

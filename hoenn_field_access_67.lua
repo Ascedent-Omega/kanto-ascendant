@@ -657,6 +657,13 @@ return function(mod, opts)
   end
 
   handlers.oak = function(game, ow, npc, done)
+    local sevii = mod.exports and mod.exports.seviiExpedition
+    local finale = sevii and sevii.chapters and sevii.chapters.finale
+    if finale and finale.consultOakAboutGsBall
+        and finale.consultOakAboutGsBall(game) then
+      return show(game, tr('OAK: A GS Ball? And it answered that signal on Sevii? Keep it with you for now. I will ask my friend Professor Ivy what she knows. Come back with the ball later, when I have heard from her.',
+        'EICH: Ein GS-Ball? Und er hat auf das Signal von Sevii reagiert? Behalte ihn erst einmal. Ich frage meine Freundin Professorin Ivy, was sie darüber weiß. Komm später mit dem Ball wieder, wenn ich von ihr gehört habe.'), done)
+    end
     local function explainLegacy(message)
       if not F.isLegacy(game) or not F.hasDex(game) then
         return show(game, message, done)

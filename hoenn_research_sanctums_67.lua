@@ -109,11 +109,15 @@ return function(mod, opts)
       or rules.shouldUseEpoch(game, 3, false) == true
   end
 
-  function S.available(game)
+  function S.researchEligible(game)
     return option(game) and generationReady(game)
       and (not postgame or postgame.hasHallOfFame(game and game.save))
       and (not fieldAccess or type(fieldAccess.hasDex) ~= "function"
         or fieldAccess.hasDex(game) == true)
+  end
+  function S.available(game)
+    local sevii=mod.exports and mod.exports.seviiExpedition
+    return S.researchEligible(game) and not(sevii and sevii.available)
   end
 
   local function eventComplete(game, species)
@@ -253,6 +257,10 @@ return function(mod, opts)
       events.progress=type(events.progress)=="table"and events.progress or{}
       events.progress[returnKey(row)]=point
     end
+    -- The Hoenn Dex/profile can become available after the last load. Build
+    -- the destination NPCs from current toggles, not the previous inactive
+    -- state: onEnter runs too late to restore an omitted technique stone.
+    S.syncPuzzleVisibility(game,row)
     writeSave(game);return warp(game,row.map,S.ENTRY),row.map
   end
 
@@ -368,8 +376,11 @@ return function(mod, opts)
     for _,name in ipairs(row.gateNames)do
       setObjectVisible(game,row.map,name,not active or not solved)
     end
+    local owned,err=S.priorOwnership(game,row)
     setObjectVisible(game,row.map,row.object,
-      active and not eventComplete(game,row.species))
+      active and not eventComplete(game,row.species)and not owned and not err)
+    setObjectVisible(game,row.map,row.object.."_MEMORY",
+      active and not eventComplete(game,row.species)and (owned or err~=nil))
     if row.puzzle.kind=="route"then
       setObjectVisible(game,row.map,row.object.."_TECHNIQUE",active and not solved)
     end
@@ -528,6 +539,28 @@ return function(mod, opts)
     S.syncPuzzleVisibility(game,row);writeSave(game);return marked,receipt
   end
 
+  function S.bindLegendHistory(history)
+    assert(history);opts.legendHistory=function()return history end
+  end
+  function S.priorOwnership(game,row)
+    if not opts.legendHistory then return false end
+    local history=opts.legendHistory()
+    if not history then return false,"legend_history_unavailable" end
+    return (history.ownedThisRun or history.owned)(game,row.species)
+  end
+  function S.recordWitness(game,row)
+    if not(row and S.bySpecies[row.species]==row and S.available(game) and S.puzzleSolved(game,row))then return false,"unfinished"end
+    if eventComplete(game,row.species)then return false,"recorded"end
+    if not S.priorOwnership(game,row)then return false,"unowned"end
+    if not runEvents then return false,"run_owner_unavailable"end
+    local run=runEvents.state(game,true)
+    local ok,why=runEvents.mark(game,row.species,{map=row.map,level=row.level,battleResult="witnessed",captured=false})
+    if not ok then return false,why end
+    if writeSave(game)==false then
+      run.completed[row.species]=nil;S.syncPuzzleVisibility(game,row);return false,"save"
+    end
+    S.syncPuzzleVisibility(game,row);return true
+  end
   function S.challenge(game,ow,npc,done,row)
     if not S.available(game)then return show(game,tr(
       "This sanctum is currently inactive.",
@@ -537,7 +570,31 @@ return function(mod, opts)
     if not S.puzzleSolved(game,row)then return show(game,tr(
       "The ancient wall still bars the way. Read the dotted inscription below.",
       "Die uralte Wand versperrt den Weg. Lies unten die Punktinschrift."),done)end
+    local owned,historyError=S.priorOwnership(game,row)
+    if owned then
+      local save=game.save
+      return show(game,tr(
+        "The inscription honours your bond with "..row.species..". The opened seal is steady.\fComplete this sanctum without another capture?",
+        "Die Inschrift ehrt deine Bindung mit "..row.species..". Das offene Siegel ruht.\fHeiligtum ohne weiteren Fang abschließen?"),nil,{
+        defaultNo=true,choice=function(yes)
+          if game.save~=save then if done then done()end;return end
+          if yes then
+            local ok,why=S.recordWitness(game,row)
+            if not ok and why~="recorded"then return show(game,tr(
+              "The sanctum could not be saved. Try again.",
+              "Das Heiligtum wurde nicht gespeichert. Versuch es erneut."),done)end
+          end
+          if done then done()end
+        end})
+    end
+    if historyError then return show(game,tr(
+      "The ownership archive is unavailable. Try again when it can be read.",
+      "Das Besitzarchiv ist nicht lesbar. Versuche es später erneut."),done)end
+    local save=game.save
     local function start()
+      if game.save~=save then if done then done()end;return end
+      local prior,err=S.priorOwnership(game,row)
+      if prior or err then return S.challenge(game,ow,npc,done,row)end
       local BattleState=opts.battleState or require("src.battle.BattleState")
       local battle=BattleState.newWild(game,row.species,row.level,{
         encounterSource="hoenn_regi_sanctum",randomizerProtected=true})
@@ -561,6 +618,8 @@ return function(mod, opts)
       {index=3,name=row.object.."_INSCRIPTION",sprite="SPRITE_BOULDER",x=8,y=8,
         movement="STAY",range="NONE",text=row.inscriptionText,passable=false},
     }
+    objects[#objects+1]={name=row.object.."_MEMORY",sprite="SPRITE_POKE_BALL",x=8,y=4,
+      movement="STAY",range="DOWN",text=row.text,passable=false}
     if row.puzzle.kind=="route"then
       objects[#objects+1]={index=#objects+1,name=row.object.."_TECHNIQUE",
         sprite="SPRITE_BOULDER",x=row.puzzle.action.x,y=row.puzzle.action.y,

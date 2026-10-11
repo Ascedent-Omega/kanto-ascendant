@@ -215,6 +215,22 @@ return function(mod, opts)
       witnesses[#witnesses + 1] = "story:hevo_evolution_completed"
     end
 
+    -- Sevii's post-League expedition is an independent content path.
+    -- Its investigation receipts allow AUTO to discover the first island
+    -- Hoenn/Sinnoh species without requiring ownership of one beforehand.
+    local sevii=bucket and bucket.sevii_expedition_v1
+    local champion=save and save.flags and save.flags.EVENT_BEAT_CHAMPION_RIVAL==true
+    local seviiStage=type(sevii)=='table'and tonumber(sevii.stage)or 0
+    if champion and seviiStage and seviiStage>=1 then
+      epoch=math.max(epoch,3)
+      witnesses[#witnesses+1]='story:sevii_expedition_started'
+      if sevii.chapterOneComplete==true and seviiStage>=3 and type(sevii.samples)=='table'
+          and sevii.samples.drift==true and sevii.samples.heat==true then
+        epoch=math.max(epoch,4)
+        witnesses[#witnesses+1]='story:sevii_cross_region_investigation'
+      end
+    end
+
     epoch = math.max(epoch, discoveryEpoch(bucket, witnesses))
 
     epoch = math.max(epoch, ownedEpoch(game, save or {}, witnesses, content))
