@@ -1051,7 +1051,10 @@ return function(mod, opts)
             if bond == nil then bond = 0 end
             if type(bond) == "number" and bond == math.floor(bond)
                 and bond >= 0 and bond <= 255 then
-              mon.johtoBond = math.min(255, bond + 1)
+              local balls=mod.exports and mod.exports.seviiBalls
+              if not(balls and balls.gainFriendship and balls.gainFriendship(game,mon,1))then
+                mon.johtoBond = math.min(255, bond + 1)
+              end
               progress = progress - FRIENDSHIP_STEP_CADENCE
             end
           end

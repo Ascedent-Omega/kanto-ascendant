@@ -678,9 +678,8 @@ return function(mod)
       } },
     { key = "wild_level_scaling",
       label = menuLabel("WILD LEVEL SCALING", "WILD-LEVEL-SKALIERUNG"),
-      -- Difficulty must never raise a fresh or migrated save's Wild levels
-      -- unless the player explicitly opts in. The upstream encounter remains
-      -- authoritative while OFF; trainer difficulty is a separate contract.
+      -- Kanto's Difficulty bonus remains opt-in. The post-League Sevii
+      -- expedition has its own authored-floor team scaling on every setting.
       type = "toggle", default = false },
     { key = "rare_item_lock",
       label = menuLabel("RARE ITEM LOCK", "SELTENE ITEMS SCHÜTZEN"),
@@ -906,6 +905,9 @@ return function(mod)
         { menuLabel("ASCENDANT", "ASCENDANT"), "ascendant" },
         { menuLabel("NATURAL 1/8192", "NATÜRLICH 1/8192"), "natural" },
       } },
+    { key = "shiny_catch_combo",
+      label = menuLabel("CATCH COMBO", "FANGSERIE"),
+      type = "toggle", default = true },
     { key = "shiny_effects",
       label = menuLabel("SHINY EFFECTS", "SHINY-EFFEKTE"),
       type = "toggle", default = true },
@@ -1676,6 +1678,10 @@ return function(mod)
     rematchRewards = rematchRewards,
     restProfiles = restProfiles,
     beyondKanto = mod.exports.beyondKanto,
+    legendHistory = function()
+      local sevii = mod.exports.seviiExpedition
+      return sevii and sevii.legendPolicy and sevii.legendPolicy.history
+    end,
     rivalIdentity = function()
       return extendedCharacters.getRivalCharacter()
     end,
@@ -1699,6 +1705,9 @@ return function(mod)
       data = mod.exports.rocketRecoveryRaids67Data,
       supportLog = mod.exports.supportSessionLog,
       captureAvailable = function(game, row)
+        local sevii = mod.exports.seviiExpedition
+        if sevii and sevii.legendPolicy
+            and not sevii.legendPolicy.raidCaptureAllowed(game, row) then return false end
         local provider = mod.exports.lateSpecies67
         return provider ~= nil
           and type(provider.raidCaptureAvailable) == "function"
@@ -1887,6 +1896,11 @@ return function(mod)
       local archive=mod.exports.eventArchive
       return archive and archive.giftEggHatchAllowed(mon) or false
     end,
+    newOffspringAllowed = function(game,species)
+      local sevii=mod.exports.seviiExpedition
+      return not(sevii and sevii.legendPolicy)
+        or sevii.legendPolicy.newOffspringAllowed(game,species)
+    end,
     fieldTech = fieldTech,
     hevoPackages = mod.exports.hevoPackages,
     beyondKanto = mod.exports.beyondKanto,
@@ -1911,6 +1925,7 @@ return function(mod)
   local shinySystem = makeShinySystem(mod, {
     postgame = postgame,
     i18n = i18n,
+    catchCombo = loadSibling(mod, "shiny_catch_combo.lua")(),
   })
   local makeGorochuVisuals = loadSibling(mod, "gorochu_visuals.lua")
   local gorochuVisuals = makeGorochuVisuals(mod, {
@@ -2328,6 +2343,10 @@ return function(mod)
       accessReturn = mod.exports.hiddenAccessReturn,
       dex = mod.exports.hoennDexCompletion67,
       journey = legacyJourney, i18n = i18n,
+      convergenceOnly = function()
+        local sevii = mod.exports.seviiExpedition
+        return sevii and sevii.available == true or false
+      end,
     })
   -- The physical Hoenn access Card is registered before content freezes;
   -- its shared collision-aware placement authority is reused by all later
@@ -2947,8 +2966,9 @@ return function(mod)
           return ok and sealed == true and owner == character
         end
         if gate.kind == "profile_legend" then
-          return hasCurrentSeal(gate.profile)
-            and mod.exports.hoennLegendPortals67.available(game, gate.profile)
+          -- The former weather chambers are closed. Their unique encounter
+          -- owner now answers only on Sevii after the own HEVO door visit.
+          return false
         end
         if gate.kind == "jirachi_convergence" then
           return completed.red == true and completed.blue == true
@@ -3039,6 +3059,76 @@ return function(mod)
         end
       end,
     })
+  mod.exports.seviiExpedition = loadSibling(mod, "sevii_expedition.lua")(mod, {
+    json = loadSibling(mod, "starter_habitat_json.lua"),
+    sourceElevation = loadSibling(mod, "sevii_source_elevation.lua"),
+    beyondKanto = mod.exports.beyondKanto,
+    generationRules = mod.exports.generationRules,
+    i18n = i18n,
+    spawnSafety = wildsSpawnSafety,
+    fieldAccess = mod.exports.hoennFieldAccess,
+    hoennSpecies = mod.exports.hoennSpecies67,
+    scaling = loadSibling(mod, "sevii_level_scaling.lua"),
+    difficulty = difficulty,
+    encounters = loadSibling(mod, "sevii_encounters.lua"),
+    battleAnimations = loadSibling(mod, "sevii_battle_animations.lua"),
+    flight = loadSibling(mod, "sevii_flight.lua"),
+    guide = loadSibling(mod, "sevii_guide.lua"),
+    population = loadSibling(mod, "sevii_population.lua"),
+    evolutionResearch = loadSibling(mod, "sevii_evolution_research.lua"),
+    hevoPackages = mod.exports.hevoPackages,
+    legacyJourney = legacyJourney,
+    trainers = loadSibling(mod, "sevii_trainers.lua"),
+    doubleArenas = loadSibling(mod, "sevii_double_arenas.lua"),
+    doubleBattle = loadSibling(mod, "sevii_double_battle.lua"),
+    doubleView = loadSibling(mod, "sevii_double_native_view.lua"),
+    tower = loadSibling(mod, "sevii_tower.lua"),
+    legendPolicy = loadSibling(mod, "sevii_legend_policy.lua"),
+    legendHistory = loadSibling(mod, "sevii_legend_history.lua"),
+    mysteries = loadSibling(mod, "sevii_mysteries.lua"),
+    specialEncounters = loadSibling(mod, "sevii_special_encounters.lua"),
+    lakeGuardians = loadSibling(mod, "sevii_lake_guardians.lua"),
+    dreams = loadSibling(mod, "sevii_dreams.lua"),
+    sleepingGiant = loadSibling(mod, "sevii_sleeping_giant.lua"),
+    weatherTrio = loadSibling(mod, "sevii_weather_trio.lua"),
+    hoennDex = mod.exports.hoennDexCompletion67,
+    timeMode = mod.exports.johtoAudio.timeMode,
+    fieldWeather = function(game)
+      local owner=mod.exports.wave1Sliggoo67
+      return owner and owner.fieldWeather and owner.fieldWeather(game)
+    end,
+    legacyWanderers = legacyWanderers,
+    hoennSanctums = mod.exports.hoennResearchSanctums67,
+    hoennMoltres = mod.exports.hoennMoltresVolcano67,
+    hoennRoamers = mod.exports.hoennRoamers67,
+    hoennLegendPortals = mod.exports.hoennLegendPortals67,
+    hoennBirthIsland = mod.exports.hoennBirthIsland67,
+    hoennJirachiFinale = mod.exports.hoennJirachiFinale67,
+    daycare = mod.exports.daycare,
+    eonRoaming = loadSibling(mod, "sevii_eon_roaming.lua"),
+    tidalReturn = loadSibling(mod, "sevii_tidal_return.lua"),
+    garden = loadSibling(mod, "sevii_garden.lua"),
+    timeSpace = loadSibling(mod, "sevii_time_space.lua"),
+    sevenTestimonies = loadSibling(mod, "sevii_seven_testimonies.lua"),
+    journey = legacyJourney,
+    bankBridge = function() return mod.exports.legacyBankBridge end,
+    eventArchive = function() return mod.exports.eventArchive end,
+    nationalCatalog = function() return mod.exports.backendNationalCatalog67 end,
+    ui = ascendantUi,
+    showGuideHelp = mod.exports.fullscreenUiCard.style.showHelp,
+    chapters = loadSibling(mod, "sevii_chapters.lua"),
+    forestRescue = loadSibling(mod, "sevii_forest_rescue.lua"),
+    iceMemory = loadSibling(mod, "sevii_ice_memory.lua"),
+    stationMission = loadSibling(mod, "sevii_station.lua"),
+    ruinsMission = loadSibling(mod, "sevii_ruins.lua"),
+    finaleMission = loadSibling(mod, "sevii_finale.lua"),
+    apparition = loadSibling(mod, "sevii_apparition.lua"),
+    classicArt = mod.exports.nonCrystalPixel2DSprites67.data,
+    hevoSpecies = hevoSpecies,
+    animationData = crystalAnimationData,
+    lateSpecies = mod.exports.lateSpecies67,
+    backendSpecies = function() return mod.exports.backendGiftSpecies67 end,
+  })
   mod.exports.worldAccessPresentation = loadSibling(mod, "world_access_presentation.lua")(mod)
   local makeWildsCompat = loadSibling(mod, "wilds_compat.lua")
   local wildsCompat = makeWildsCompat(mod, {
@@ -3451,7 +3541,12 @@ return function(mod)
             or screens and screens.supportsItem(game,id,epoch)
             or sap and sap.supportsItem(game,id,epoch)
             or transformations and transformations.supportsItem(game,id,epoch)
-            or goggles and goggles.supportsItem(game,id,epoch) or false
+            or goggles and goggles.supportsItem(game,id,epoch)
+            or mod.exports.seviiBalls and mod.exports.seviiBalls.supportsFriendshipItem(game,id,epoch)
+            or mod.exports.seviiEverstone and mod.exports.seviiEverstone.supportsItem(game,id,epoch)
+            or mod.exports.seviiTrainingItems and mod.exports.seviiTrainingItems.supportsItem(game,id,epoch)
+            or mod.exports.seviiFieldFlutes and mod.exports.seviiFieldFlutes.supportsItem(game,id,epoch)
+            or false
         end}
       end,
       supportLog = mod.exports.supportSessionLog,
@@ -3959,6 +4054,16 @@ return function(mod)
   local makeEventArchive = loadSibling(mod, "event_archive.lua")
   local eventArchive = makeEventArchive(mod, {
     data = eventData,
+    acquisitionAllowed = function(game,profile)
+      local sevii=mod.exports.seviiExpedition
+      local policy=sevii and sevii.legendPolicy
+      if policy then return policy.acquisitionAllowed(game,profile)end
+      return true
+    end,
+    giftDelivered = function(game,mon)
+      local s=mod.exports.seviiExpedition
+      if s and s.legendPolicy.history then s.legendPolicy.history.record(game,mon)end
+    end,
     postgame = postgame,
     i18n = i18n,
     placement = mod.exports.runtimeNpcPlacement,
@@ -6293,6 +6398,31 @@ return function(mod)
   mod.exports.pokemonCelebration67.install()
   mod.exports.pokemonCasterStrikes67.install()
   mod.exports.pokemonItemAccess67.install()
+  mod.exports.seviiMedicine=loadSibling(mod,'sevii_medicine.lua')(mod,{
+    i18n=i18n,rules=mod.exports.generationRules,
+  })
+  mod.exports.seviiZinc=loadSibling(mod,'sevii_zinc.lua')(mod,{
+    i18n=i18n,rules=mod.exports.generationRules,
+  })
+  mod.exports.seviiBalls=loadSibling(mod,'sevii_balls.lua')(mod,{
+    i18n=i18n,rules=mod.exports.generationRules,
+    environment=function(b)return mod.exports.pokemonCalledMoves67.environment(b)end,
+  })
+  mod.exports.seviiEverstone=loadSibling(mod,'sevii_everstone.lua')(mod,{
+    rules=mod.exports.generationRules,
+  })
+  mod.exports.seviiTrainingItems=loadSibling(mod,'sevii_training_items.lua')(mod,{
+    rules=mod.exports.generationRules,
+  })
+  mod.exports.seviiTrainingItems.install()
+  mod.exports.seviiFieldFlutes=loadSibling(mod,'sevii_field_flutes.lua')(mod,{
+    i18n=i18n,rules=mod.exports.generationRules,
+  })
+  mod.exports.seviiRecovery=loadSibling(mod,'sevii_recovery.lua')(mod,{
+    i18n=i18n,rules=mod.exports.generationRules,infatuation=mod.exports.pokemonInfatuation67,
+    fieldFlutes=mod.exports.seviiFieldFlutes,
+  })
+  mod.exports.generationCheckpoint67.addValidator(mod.exports.seviiBalls.validateCheckpoint)
   mod.exports.pokemonFieldInterruptions67.install()
   mod.exports.pokemonSafetyGoggles67.install()
   mod.exports.pokemonPursuit67.install()

@@ -9,6 +9,13 @@ return function(i18n)
   end
 
   local exact = {
+    MOOMOO_MILK = { 'Restores 100 HP. Use from the Bag.', 'Stellt 100 KP wieder her. Aus dem Beutel anwenden.' },
+    BERRY_JUICE = { 'Restores 20 HP when used from the Bag.', 'Stellt bei Anwendung aus dem Beutel 20 KP wieder her.' },
+    ENERGY_POWDER = { 'Restores 50 HP. Bitter: lowers friendship.', 'Stellt 50 KP wieder her. Bitter: senkt die Freundschaft.' },
+    ENERGY_ROOT = { 'Restores 200 HP. Bitter: lowers friendship.', 'Stellt 200 KP wieder her. Bitter: senkt die Freundschaft.' },
+    HEAL_POWDER = { 'Cures status problems. Bitter: lowers friendship.', 'Heilt Statusprobleme. Bitter: senkt die Freundschaft.' },
+    REVIVAL_HERB = { 'Revives with full HP. Bitter: lowers friendship.', 'Belebt mit vollen KP wieder. Bitter: senkt die Freundschaft.' },
+    LAVA_COOKIE = { 'Cures status problems without lowering friendship.', 'Heilt Statusprobleme, ohne die Freundschaft zu senken.' },
     SACHET = { "Spritzee: hold it, then use a Linking Cord. Both consumed on evolution. No battle bonus.", "Parfi: tragen lassen, dann Verbindungsschnur anwenden. Beides wird bei der Entwicklung verbraucht. Kein Kampfbonus." },
     WHIPPED_DREAM = { "Swirlix: hold it, then use a Linking Cord. Both consumed on evolution. No battle bonus.", "Flauschling: tragen lassen, dann Verbindungsschnur anwenden. Beides wird bei der Entwicklung verbraucht. Kein Kampfbonus." },
     RAZOR_CLAW = { "Hisuian Sneasel: hold it and level up by day. Ordinary Sneasel: existing Bag evolution. Consumed on evolution.", "Hisui-Sniebel: tragen und tagsüber aufleveln. Normales Sniebel: bestehende Beutel-Entwicklung. Verbrauch bei Entwicklung." },
@@ -54,12 +61,21 @@ return function(i18n)
     IRON = { "Raises the Defense training value.", "Erhöht den Verteidigungs-Trainingswert." },
     CARBOS = { "Raises the Speed training value.", "Erhöht den Initiative-Trainingswert." },
     CALCIUM = { "Raises the Special training value.", "Erhöht den Spezial-Trainingswert." },
+    ZINC = { "Raises Special Defense training from Gen 3 onward. Does not change Special Attack.", "Erhöht ab Gen 3 den Spezial-Verteidigungstrainingswert, nicht den Spezial-Angriff." },
     PP_UP = { "Raises the maximum PP of one move.", "Erhöht die maximalen AP einer Attacke." },
+    PP_MAX = { "Maximizes one selected move's PP capacity. Field only; consumed once.", "Maximiert die AP-Kapazität einer gewählten Attacke. Nur im Feld; einmaliger Verbrauch." },
+    SACRED_ASH = { "Field only: revives all fainted party Pokémon at full HP. Leaves others and PP unchanged.", "Nur im Feld: Belebt alle besiegten Team-Pokémon mit vollen KP. Andere Pokémon und AP bleiben unverändert." },
+    BLUE_FLUTE = { "Reusable: wakes one sleeping Pokémon. Using it in battle takes a turn.", "Wiederverwendbar: Weckt ein schlafendes Pokémon. Einsatz im Kampf kostet einen Zug." },
+    YELLOW_FLUTE = { "Reusable in battle: clears the active Pokémon's confusion; takes a turn.", "Im Kampf wiederverwendbar: Heilt Verwirrung des aktiven Pokémon; kostet einen Zug." },
+    RED_FLUTE = { "Reusable in battle: clears the active Pokémon's infatuation; takes a turn.", "Im Kampf wiederverwendbar: Heilt Verliebtheit des aktiven Pokémon; kostet einen Zug." },
+    BLACK_FLUTE = { "Reusable in the field: halves normal random encounter rate in this area. Play again or leave to stop; does not change roamers or visible spawns.", "Im Feld wiederverwendbar: Halbiert normale Zufallsbegegnungen im Gebiet. Erneut spielen oder Gebiet verlassen beendet die Wirkung; Wanderer und sichtbare Pokémon bleiben unverändert." },
+    WHITE_FLUTE = { "Reusable in the field: raises normal random encounter rate by half in this area. Play again or leave to stop; does not change roamers or visible spawns.", "Im Feld wiederverwendbar: Erhöht normale Zufallsbegegnungen im Gebiet um die Hälfte. Erneut spielen oder Gebiet verlassen beendet die Wirkung; Wanderer und sichtbare Pokémon bleiben unverändert." },
     ESCAPE_ROPE = { "Returns you to a dungeon's entrance.", "Bringt Dich zum Eingang eines Dungeons zurück." },
     REPEL = { "Repels weaker wild Pokémon for 100 steps.", "Hält schwächere wilde Pokémon 100 Schritte fern." },
     SUPER_REPEL = { "Repels weaker wild Pokémon for 200 steps.", "Hält schwächere wilde Pokémon 200 Schritte fern." },
     MAX_REPEL = { "Repels weaker wild Pokémon for 250 steps.", "Hält schwächere wilde Pokémon 250 Schritte fern." },
     POKE_DOLL = { "Escapes from a wild battle.", "Beendet einen Kampf gegen ein wildes Pokémon." },
+    FLUFFY_TAIL = { "Consumed to escape an ordinary wild battle. Does not bypass trainer, raid, echo or ghost encounters. Requires Gen 3 or later.", "Wird bei der Flucht aus einem gewöhnlichen Wildkampf verbraucht. Umgeht keine Trainer-, Raid-, Echo- oder Geisterkämpfe. Ab Gen 3." },
     POKE_FLUTE = { "Wakes sleeping Pokémon in and out of battle.", "Weckt schlafende Pokémon im und außerhalb des Kampfes." },
     BICYCLE = { "Lets you travel faster where cycling is allowed.", "Lässt Dich dort schneller fahren, wo Radfahren erlaubt ist." },
     OLD_ROD = { "Fishes for Pokémon near water.", "Angelt an Gewässern nach Pokémon." },
@@ -111,12 +127,37 @@ return function(i18n)
     FAST_BALL = { "Catch rate x4 if the target's base Speed is at least 100.", "Fangrate x4 bei mindestens 100 Basis-Initiative des Ziels." },
     LOVE_BALL = { "Catch rate x8 for the same species with compatible opposite genders.", "Fangrate x8 bei gleicher Art und kompatiblen Gegengeschlechtern." },
     FRIEND_BALL = { "Normal catch rate; on success the caught Pokémon gets friendship 200.", "Normale Fangrate; bei Erfolg erhält das gefangene Pokémon Freundschaft 200." },
+    PREMIER_BALL = { "A commemorative Hoenn ball with the ordinary x1 catch bonus. Sold on Five Island; requires Gen 3 or later.", "Ein Hoenn-Ball zur Erinnerung mit gewöhnlichem Fangbonus x1. Auf Eiland Fünf erhältlich; ab Gen 3." },
+    NET_BALL = { "Classic Hoenn catch bonus: x3 for Water or Bug targets, otherwise x1. Requires Gen 3 or later.", "Klassischer Hoenn-Fangbonus: x3 bei Wasser oder Käfer, sonst x1. Ab Gen 3." },
+    DIVE_BALL = { "KASC catch bonus: x3.5 for water encounters and Pokémon hooked by fishing, otherwise x1. The encounter's starting environment counts. Requires Gen 3 or later.", "KASC-Fangbonus: x3,5 bei Wasserbegegnungen und geangelten Pokémon, sonst x1. Es zählt die Umgebung bei Kampfbeginn. Ab Gen 3." },
+    LUXURY_BALL = { "Catch bonus x1. A Pokémon caught in it gains twice as much friendship later. Requires Gen 3 or later.", "Fangbonus x1. Ein damit gefangenes Pokémon erhält später doppelte Freundschaftsgewinne. Ab Gen 3." },
+    SOOTHE_BELL = { "A held bell that raises KASC friendship gains by 50%, rounded up. Stacks with a Luxury Ball. Requires Gen 3 or later.", "Getragen erhöht die Sanftglocke KASC-Freundschaftsgewinne um 50%, aufgerundet. Mit dem Luxusball kombinierbar. Ab Gen 3." },
+    EVERSTONE = { "While held, this stone prevents evolution. Remove it to allow evolution again. Requires Gen 2 or later.", "Getragen verhindert der Ewigstein eine Entwicklung. Nach dem Ablegen ist sie wieder möglich. Ab Gen 2." },
+    LUCKY_EGG = { "A held Lucky Egg increases battle experience gained by its partner by 50%. Requires Gen 2 or later.", "Getragen erhöht das Glücks-Ei die im Kampf erhaltenen Erfahrungspunkte seines Partners um 50%. Ab Gen 2." },
+    AMULET_COIN = { "If its holder joins a Trainer battle, the victory prize is doubled. Requires Gen 2 or later.", "Nimmt sein Träger an einem Trainerkampf teil, verdoppelt sich das Preisgeld beim Sieg. Ab Gen 2." },
+    CLEANSE_TAG = { "When held by the first Pokémon in your team, reduces normal random encounters by one third. Works with the field flutes; roamers are unchanged. Requires Gen 2 or later.", "Vom ersten Pokémon im Team getragen, verringert es normale Zufallsbegegnungen um ein Drittel. Wirkt zusammen mit Glasflöten; Wanderer bleiben unverändert. Ab Gen 2." },
+    NEST_BALL = { "Classic Hoenn catch bonus: (40 minus target level) / 10, at least x1. Requires Gen 3 or later.", "Klassischer Hoenn-Fangbonus: (40 minus Ziellevel) / 10, mindestens x1. Ab Gen 3." },
+    REPEAT_BALL = { "Classic Hoenn catch bonus: x3 for a species previously owned, otherwise x1. Seen alone does not count. Requires Gen 3 or later.", "Klassischer Hoenn-Fangbonus: x3 für schon besessene Arten, sonst x1. Nur gesehen zählt nicht. Ab Gen 3." },
+    TIMER_BALL = { "Classic Hoenn catch bonus: x1 plus 0.1 per completed battle turn, up to x4 after 30 turns. Item turns count. Requires Gen 3 or later.", "Klassischer Hoenn-Fangbonus: x1 plus 0,1 je vergangener Kampfrunde, höchstens x4 nach 30 Runden. Itemrunden zählen mit. Ab Gen 3." },
     MOON_BALL = { "Catch rate x4 for members of a registered Moon Stone evolution line.", "Fangrate x4 für Arten einer registrierten Mondstein-Entwicklungslinie." },
   }
 
   local H = {}
   function H.describe(game, id)
     local def = game and game.data and game.data.items and game.data.items[id]
+    if id == 'GS_BALL' then
+      local kasc = game and game.mods and game.mods.exports
+        and game.mods.exports.kanto_ascendant
+      local sevii = kasc and kasc.seviiExpedition
+      local state = sevii and sevii.state and sevii.state()
+      local seven = state and state.chapters and state.chapters.seven
+      if seven and seven.gsBallOakConsulted then
+        return tr('Oak is asking Professor Ivy about this ball. Keep it and return later.',
+          'Eich fragt Professorin Ivy nach diesem Ball. Behalte ihn und komm später wieder.')
+      end
+      return tr('An unusual ball from Sevii. Bring it to Professor Oak in Pallet Town.',
+        'Ein seltsamer Ball von Sevii. Bring ihn zu Professor Eich in Alabastia.')
+    end
     if id == "HOENN_HONEY" then
       local save = game and game.save or {}
       local carried = (tonumber((save.inventory or {})[id]) or 0) > 0

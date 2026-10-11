@@ -427,8 +427,11 @@ return function(mod, opts)
       messages[#messages + 1] = message
     end
     for _, mon in ipairs(game.save.party or {}) do
-      mon.johtoBond = math.min(255,
-        math.max(0, tonumber(mon.johtoBond) or 0) + 10)
+      local balls=mod.exports and mod.exports.seviiBalls
+      if not(balls and balls.gainFriendship and balls.gainFriendship(game,mon,10))then
+        mon.johtoBond = math.min(255,
+          math.max(0, tonumber(mon.johtoBond) or 0) + 10)
+      end
     end
     persist(s)
     return #messages > 0 and table.concat(messages, "\f") or nil
@@ -757,8 +760,11 @@ return function(mod, opts)
 
   local function raiseBond(game)
     for _, mon in ipairs(game.save.party or {}) do
-      mon.johtoBond = math.min(255,
-        math.max(0, tonumber(mon.johtoBond) or 0) + 1)
+      local balls=mod.exports and mod.exports.seviiBalls
+      if not(balls and balls.gainFriendship and balls.gainFriendship(game,mon,1))then
+        mon.johtoBond = math.min(255,
+          math.max(0, tonumber(mon.johtoBond) or 0) + 1)
+      end
     end
   end
 

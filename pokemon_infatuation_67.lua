@@ -57,6 +57,10 @@ return function(mod,opts)
     local a,z=gender.getMonGender(who.mon,b.game),gender.getMonGender(source.mon,b.game)
     return a~=gender.GENDERLESS and z~=gender.GENDERLESS and a~=z
   end
+  function M.cure(b,who)
+    if not M.state(b,who)then return false end
+    local rows=list(b);rows[side(b,who)]=nil;return true
+  end
   function M.start(b,who,source,reflected)
     if not M.epoch(b) or not side(b,who) or not side(b,source) or who==source
         or who.mon.hp<=0 or source.mon.hp<=0 or egg(who.mon) or egg(source.mon)

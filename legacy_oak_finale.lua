@@ -204,6 +204,15 @@ return function(mod, opts)
       end
       statExp[key] = value
     end
+    -- Gen-3 Zinc opens an independent training track. Keep it when Oak
+    -- validates a borrowed party, or the trial silently undoes that training.
+    if mon.statExp and mon.statExp.specialDefense ~= nil then
+      local value = tonumber(mon.statExp.specialDefense)
+      if not isInteger(value) or value < 0 or value > 65535 then
+        return nil, "invalid_stat_exp"
+      end
+      statExp.specialDefense = value
+    end
     result.dvs, result.statExp = dvs, statExp
     result.stats = stats.calc(def, result.level, dvs, statExp, result)
     result.hp = result.stats.hp

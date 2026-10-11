@@ -277,7 +277,16 @@ return function(mod, data, opts)
   end
 
   local function caught(s, save, species)
-    return (s and s.catches and s.catches[species]) or owns(save, species) or false
+    if s and s.catches and s.catches[species] then
+      return true
+    end
+    local history = opts.legendHistory and opts.legendHistory()
+    if history and history.key(species) and controller.game
+        and controller.game.save == save then
+      local owned=(history.ownedThisRun or history.owned)(controller.game,species)
+      return owned==true
+    end
+    return owns(save,species)
   end
 
   legendSetting = function(species)
@@ -786,7 +795,7 @@ return function(mod, data, opts)
       elseif setting == "off" then
         visible = false
       elseif setting == "vanilla" then
-        visible = not owns(game.save, species)
+        visible = not caught(s, game.save, species)
           and not (game.save.flags and game.save.flags[def.flag])
       else
         visible = not caught(s, game.save, species)

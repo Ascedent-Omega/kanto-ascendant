@@ -213,10 +213,16 @@ return function(mod, opts)
     return a and b and a.ot ~= nil and a.ot == b.ot
   end
 
+  local function newOffspringAllowed(game,species)
+    return not opts.newOffspringAllowed or opts.newOffspringAllowed(game,species)==true
+  end
+
   -- Crystal's compatibility byte: 255/254 for matching species and 128/51
   -- for different species; matching OTs take the lower value.
   local function compatible(game, a, b)
     if not (a and b) or a.isEgg or b.isEgg then return false, 0 end
+    if not newOffspringAllowed(game,a.species)
+        or not newOffspringAllowed(game,b.species)then return false,0 end
     if not speciesAllowed(game, a.species)
         or not speciesAllowed(game, b.species) then
       return false, 0
@@ -249,6 +255,8 @@ return function(mod, opts)
   end
 
   local function eggSpecies(game, a, b, random)
+    if not(a and b)or not newOffspringAllowed(game,a.species)
+        or not newOffspringAllowed(game,b.species)then return nil end
     local mother
     if a.species == "DITTO" then mother = b
     elseif b.species == "DITTO" then mother = a
@@ -261,7 +269,7 @@ return function(mod, opts)
       random = random or (love and love.math and love.math.random) or math.random
       if random(0, 255) >= 128 then species = "NIDORAN_M" end
     end
-    return species
+    return newOffspringAllowed(game,species)and species or nil
   end
 
   local function hatchStepsFor(game, species)
@@ -878,7 +886,7 @@ return function(mod, opts)
       }))
   end
 
-  local function daycareMenu(game, done)
+  local function daycareMenu(game, done, title)
     local s = state()
     local rows = {}
     for slot = 1, 2 do
@@ -910,7 +918,7 @@ return function(mod, opts)
       }
     end
     rows[#rows + 1] = { label = tr("CANCEL", "ZURÜCK"), value = "cancel" }
-    game.stack:push((mod.ui.KantoListMenu or mod.ui.ListMenu).new(game, tr("ROUTE 5 DAY-CARE", "ROUTE-5-PENSION"),
+    local menu=(mod.ui.KantoListMenu or mod.ui.ListMenu).new(game, title or tr("ROUTE 5 DAY-CARE", "ROUTE-5-PENSION"),
       rows, {
         onCancel = done,
         onChoose = function(item, menu)
@@ -933,7 +941,17 @@ return function(mod, opts)
             else retrieve(game, tonumber(slot), done) end
           end
         end,
-      }))
+      })
+    menu.__vascHeaderLabel=tr("DAY-CARE", "PENSION")
+    game.stack:push(menu)
+  end
+
+  -- Additional staffed offices share this exact owner: no second parents,
+  -- egg queue, prices, training clock or evolution-machine access.
+  function D.openNursery(game, done, title)
+    if not(enabled and game and game.save)then return false end
+    daycareMenu(game,done or function()end,title)
+    return true
   end
 
   function D.handleTalk(ow, npc, game)
@@ -1005,6 +1023,7 @@ return function(mod, opts)
     for _, row in ipairs(s.reservedEggs) do
       if researchKey and row.researchKey == researchKey then return true end
     end
+    if not newOffspringAllowed(D.game,species)then return false,"sevii_special_offspring"end
     s.reservedEggs[#s.reservedEggs + 1] = {
       species = species,
       steps = math.max(1, math.floor(tonumber(steps) or DEFAULT_HATCH_STEPS)),

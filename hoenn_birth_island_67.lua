@@ -74,6 +74,12 @@ return function(mod,opts)
   function B.available(game)return option(game)
     and dex.report(game).birthIslandReady==true
     and B.volcanoEventsComplete(game)end
+  function B.bindLegendHistory(history)opts.legendHistory=assert(history)end
+  function B.priorOwnership(game)
+    if not opts.legendHistory then return false end
+    local h=opts.legendHistory
+    return (h.ownedThisRun or h.owned)(game,'DEOXYS')
+  end
   local function show(game,text,done,boxOpts)game.stack:push(
     require("src.render.TextBox").new(game,text,done,boxOpts));return true end
   local function writeSave(game)return not game or type(game.writeSave)~="function"or game:writeSave()end
@@ -92,8 +98,8 @@ return function(mod,opts)
       "CAPTAIN: The secret Birth Island voyage is complete.",
       "KAPITÄN: Die geheime Reise zur Entstehungsinsel ist abgeschlossen."),done)end
     return show(game,tr(
-      "CAPTAIN: Three ancient capture seals reveal an island outside every chart.\fSail there now?",
-      "KAPITÄN: Drei uralte Fangsiegel zeigen eine Insel auf keiner Karte.\fJetzt dorthin segeln?"),nil,
+      "CAPTAIN: The volcano readings and three fissure paths point to an island beyond our charts.\fWant to sail?",
+      "KAPITÄN: Die Vulkanmessungen und drei Risspfade weisen auf eine Insel jenseits unserer Karten.\fWillst du hinsegeln?"),nil,
       {defaultNo=true,choice=function(yes)if yes then B.enter(game)elseif done then done()end end})
   end
   local function findTriangle(ow)
@@ -115,9 +121,9 @@ return function(mod,opts)
   local function stored(save,mon)for _,m in ipairs(save and save.party or{})do if m==mon then return true end end
     for _,box in ipairs(save and save.boxes or{})do for _,m in ipairs(box)do if m==mon then return true end end end
     return false end
-  function B.recordCatch(game,mon)if not(game and game.save and stored(game.save,mon))then
+  function B.recordCatch(game,mon)if not(game and game.save and mon and mon.species=='DEOXYS'and stored(game.save,mon))then
       return false,"not-stored"end;local s=state()
-    local receipt={map=B.MAP,level=tonumber(mon.level)or B.LEVEL}
+    local receipt={map=B.MAP,level=tonumber(mon.level)or B.LEVEL,captured=true,battleResult='caught'}
     local marked,why
     if runEvents and type(runEvents.mark)=="function"then
       marked,why=runEvents.mark(game,"DEOXYS",receipt)
@@ -131,7 +137,22 @@ return function(mod,opts)
     if not marked and why~="recorded"then return false,why end
     if not s.caught then s.caught=receipt;persist(s);dex.record(game,"DEOXYS")end
     writeSave(game);return marked,receipt end
+  function B.recordWitness(game)
+    if not(B.available(game)and game.overworld and game.overworld.map.id==B.MAP
+        and triangleStep(game)==#B.trianglePositions-1)then return false,'unfinished'end
+    if B.caught(game)then return false,'recorded'end
+    local owned,why=B.priorOwnership(game);if not owned then return false,why or'unowned'end
+    if not runEvents then return false,'run_owner_unavailable'end
+    local run=runEvents.state(game,true)
+    local ok,reason=runEvents.mark(game,'DEOXYS',{map=B.MAP,level=B.LEVEL,captured=false,battleResult='witnessed'})
+    if not ok then return false,reason end
+    if writeSave(game)==false then run.completed.DEOXYS=nil;return false,'save'end
+    return true
+  end
   function B.startBattle(game,ow,done)
+    if not B.available(game)or B.caught(game)or triangleStep(game)~=#B.trianglePositions-1 then return false,'unfinished'end
+    local owned,why=B.priorOwnership(game)
+    if owned or why then return false,why or'legend_owned'end
     local BattleState=opts.battleState or require("src.battle.BattleState")
     local battle=BattleState.newWild(game,"DEOXYS",B.LEVEL,{
       encounterSource="birth_island",randomizerProtected=true})
@@ -152,8 +173,30 @@ return function(mod,opts)
       return show(game,tr("The black triangle shifts closer to the center.",
         "Das schwarze Dreieck rückt näher zur Mitte."),done)
     end
+    local owned,historyError=B.priorOwnership(game)
+    if owned then
+      local save=game.save
+      return show(game,tr("The triangle remembers your bond. Complete this expedition without another capture?",
+        "Das Dreieck erinnert sich an deine Bindung. Expedition ohne weiteren Fang abschliessen?"),nil,
+        {defaultNo=true,choice=function(yes)
+          if game.save~=save then if done then done()end;return end
+          if yes then local ok,why=B.recordWitness(game)
+            if not ok and why~='recorded'then return show(game,tr("The record could not be saved. Try again.",
+              "Der Beleg wurde nicht gespeichert. Versuch es erneut."),done)end
+          end
+          if done then done()end
+        end})
+    end
+    if historyError then return show(game,tr("The ownership archive is unavailable. Try again later.",
+      "Das Besitzarchiv ist nicht lesbar. Versuche es spaeter erneut."),done)end
+    local save=game.save
     return show(game,tr("The triangle flashes. DEOXYS descends!",
-      "Das Dreieck blitzt. DEOXYS erscheint!"),function()B.startBattle(game,ow,done)end)
+      "Das Dreieck blitzt. DEOXYS erscheint!"),function()
+        if game.save~=save then if done then done()end;return end
+        local prior,err=B.priorOwnership(game)
+        if prior or err then return B.triangleTalk(game,ow,npc,done)end
+        B.startBattle(game,ow,done)
+      end)
   end
   local function blocks()local w,h,wall,floor,glint=8,8,125,25,21;local o={}
     for i=1,w*h do o[i]=wall end;local function put(x,y,v)o[x+y*w+1]=v end

@@ -1,0 +1,11 @@
+return {
+  title = "KANTO + SEVII MAPS",
+  subtitle = "576x324 / VASC + KASC",
+  accent = { 0.19, 0.55, 0.84 },
+  lines = {
+    "Illustrated Kanto and Sevii overview cards",
+    "START switches regions; SELECT opens local info",
+    "Island Fly opens after the radio station chapter",
+    "Visited islands get safe outdoor Fly landings",
+  },
+}

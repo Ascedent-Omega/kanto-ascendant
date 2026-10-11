@@ -1,0 +1,4004 @@
+{
+  "characters": {
+    "RED": {
+      "wandererFamilies": 21,
+      "missingFamilies": [
+        "ABSOL",
+        "ANORITH",
+        "ARON",
+        "AZURILL",
+        "BAGON",
+        "BELDUM",
+        "CACNEA",
+        "CLAMPERL",
+        "CORPHISH",
+        "DUSKULL",
+        "FEEBAS",
+        "GULPIN",
+        "KECLEON",
+        "LILEEP",
+        "LOTAD",
+        "LUNATONE",
+        "MAKUHITA",
+        "MAWILE",
+        "MINUN",
+        "NINCADA",
+        "NOSEPASS",
+        "PLUSLE",
+        "RALTS",
+        "RELICANTH",
+        "ROSELIA",
+        "SEEDOT",
+        "SEVIPER",
+        "SHROOMISH",
+        "SHUPPET",
+        "SOLROCK",
+        "SPHEAL",
+        "SPINDA",
+        "SURSKIT",
+        "SWABLU",
+        "TAILLOW",
+        "TORKOAL",
+        "VOLBEAT",
+        "WAILMER",
+        "WHISMUR",
+        "WYNAUT",
+        "ZIGZAGOON"
+      ],
+      "missingSpecies": [
+        "ABSOL",
+        "AGGRON",
+        "ALTARIA",
+        "ANORITH",
+        "ARMALDO",
+        "ARON",
+        "AZURILL",
+        "BAGON",
+        "BANETTE",
+        "BELDUM",
+        "BRELOOM",
+        "CACNEA",
+        "CACTURNE",
+        "CLAMPERL",
+        "CORPHISH",
+        "CRADILY",
+        "CRAWDAUNT",
+        "DUSCLOPS",
+        "DUSKULL",
+        "EXPLOUD",
+        "FEEBAS",
+        "GARDEVOIR",
+        "GOREBYSS",
+        "GULPIN",
+        "HARIYAMA",
+        "HUNTAIL",
+        "KECLEON",
+        "KIRLIA",
+        "LAIRON",
+        "LILEEP",
+        "LINOONE",
+        "LOMBRE",
+        "LOTAD",
+        "LOUDRED",
+        "LUDICOLO",
+        "LUNATONE",
+        "MAKUHITA",
+        "MASQUERAIN",
+        "MAWILE",
+        "METAGROSS",
+        "METANG",
+        "MILOTIC",
+        "MINUN",
+        "NINCADA",
+        "NINJASK",
+        "NOSEPASS",
+        "NUZLEAF",
+        "PLUSLE",
+        "RALTS",
+        "RELICANTH",
+        "ROSELIA",
+        "SALAMENCE",
+        "SEALEO",
+        "SEEDOT",
+        "SEVIPER",
+        "SHELGON",
+        "SHIFTRY",
+        "SHROOMISH",
+        "SHUPPET",
+        "SOLROCK",
+        "SPHEAL",
+        "SPINDA",
+        "SURSKIT",
+        "SWABLU",
+        "SWALOT",
+        "SWELLOW",
+        "TAILLOW",
+        "TORKOAL",
+        "VOLBEAT",
+        "WAILMER",
+        "WAILORD",
+        "WALREIN",
+        "WHISMUR",
+        "WYNAUT",
+        "ZIGZAGOON"
+      ]
+    },
+    "GREEN": {
+      "wandererFamilies": 21,
+      "missingFamilies": [
+        "AZURILL",
+        "BALTOY",
+        "BARBOACH",
+        "BELDUM",
+        "CACNEA",
+        "CARVANHA",
+        "CASTFORM",
+        "CHIMECHO",
+        "ELECTRIKE",
+        "FEEBAS",
+        "GULPIN",
+        "ILLUMISE",
+        "LUVDISC",
+        "MAKUHITA",
+        "MAWILE",
+        "MEDITITE",
+        "MINUN",
+        "NINCADA",
+        "NUMEL",
+        "POOCHYENA",
+        "RALTS",
+        "RELICANTH",
+        "SABLEYE",
+        "SEVIPER",
+        "SHROOMISH",
+        "SHUPPET",
+        "SKITTY",
+        "SLAKOTH",
+        "SNORUNT",
+        "SOLROCK",
+        "SPOINK",
+        "SURSKIT",
+        "SWABLU",
+        "TAILLOW",
+        "TRAPINCH",
+        "TROPIUS",
+        "WAILMER",
+        "WHISMUR",
+        "WINGULL",
+        "WURMPLE",
+        "ZANGOOSE"
+      ],
+      "missingSpecies": [
+        "ALTARIA",
+        "AZURILL",
+        "BALTOY",
+        "BANETTE",
+        "BARBOACH",
+        "BEAUTIFLY",
+        "BELDUM",
+        "BRELOOM",
+        "CACNEA",
+        "CACTURNE",
+        "CAMERUPT",
+        "CARVANHA",
+        "CASCOON",
+        "CASTFORM",
+        "CHIMECHO",
+        "CLAYDOL",
+        "DELCATTY",
+        "DUSTOX",
+        "ELECTRIKE",
+        "EXPLOUD",
+        "FEEBAS",
+        "FLYGON",
+        "GARDEVOIR",
+        "GLALIE",
+        "GRUMPIG",
+        "GULPIN",
+        "HARIYAMA",
+        "ILLUMISE",
+        "KIRLIA",
+        "LOUDRED",
+        "LUVDISC",
+        "MAKUHITA",
+        "MANECTRIC",
+        "MASQUERAIN",
+        "MAWILE",
+        "MEDICHAM",
+        "MEDITITE",
+        "METAGROSS",
+        "METANG",
+        "MIGHTYENA",
+        "MILOTIC",
+        "MINUN",
+        "NINCADA",
+        "NINJASK",
+        "NUMEL",
+        "PELIPPER",
+        "POOCHYENA",
+        "RALTS",
+        "RELICANTH",
+        "SABLEYE",
+        "SEVIPER",
+        "SHARPEDO",
+        "SHROOMISH",
+        "SHUPPET",
+        "SILCOON",
+        "SKITTY",
+        "SLAKING",
+        "SLAKOTH",
+        "SNORUNT",
+        "SOLROCK",
+        "SPOINK",
+        "SURSKIT",
+        "SWABLU",
+        "SWALOT",
+        "SWELLOW",
+        "TAILLOW",
+        "TRAPINCH",
+        "TROPIUS",
+        "VIBRAVA",
+        "VIGOROTH",
+        "WAILMER",
+        "WAILORD",
+        "WHISCASH",
+        "WHISMUR",
+        "WINGULL",
+        "WURMPLE",
+        "ZANGOOSE"
+      ]
+    },
+    "BLUE": {
+      "wandererFamilies": 20,
+      "missingFamilies": [
+        "ABSOL",
+        "ANORITH",
+        "ARON",
+        "BAGON",
+        "BALTOY",
+        "BARBOACH",
+        "CARVANHA",
+        "CASTFORM",
+        "CHIMECHO",
+        "CLAMPERL",
+        "CORPHISH",
+        "DUSKULL",
+        "ELECTRIKE",
+        "ILLUMISE",
+        "KECLEON",
+        "LILEEP",
+        "LOTAD",
+        "LUNATONE",
+        "LUVDISC",
+        "MEDITITE",
+        "NOSEPASS",
+        "NUMEL",
+        "PLUSLE",
+        "POOCHYENA",
+        "ROSELIA",
+        "SABLEYE",
+        "SEEDOT",
+        "SKITTY",
+        "SLAKOTH",
+        "SNORUNT",
+        "SPHEAL",
+        "SPINDA",
+        "SPOINK",
+        "TORKOAL",
+        "TRAPINCH",
+        "TROPIUS",
+        "VOLBEAT",
+        "WINGULL",
+        "WURMPLE",
+        "WYNAUT",
+        "ZANGOOSE",
+        "ZIGZAGOON"
+      ],
+      "missingSpecies": [
+        "ABSOL",
+        "AGGRON",
+        "ANORITH",
+        "ARMALDO",
+        "ARON",
+        "BAGON",
+        "BALTOY",
+        "BARBOACH",
+        "BEAUTIFLY",
+        "CAMERUPT",
+        "CARVANHA",
+        "CASCOON",
+        "CASTFORM",
+        "CHIMECHO",
+        "CLAMPERL",
+        "CLAYDOL",
+        "CORPHISH",
+        "CRADILY",
+        "CRAWDAUNT",
+        "DELCATTY",
+        "DUSCLOPS",
+        "DUSKULL",
+        "DUSTOX",
+        "ELECTRIKE",
+        "FLYGON",
+        "GLALIE",
+        "GOREBYSS",
+        "GRUMPIG",
+        "HUNTAIL",
+        "ILLUMISE",
+        "KECLEON",
+        "LAIRON",
+        "LILEEP",
+        "LINOONE",
+        "LOMBRE",
+        "LOTAD",
+        "LUDICOLO",
+        "LUNATONE",
+        "LUVDISC",
+        "MANECTRIC",
+        "MEDICHAM",
+        "MEDITITE",
+        "MIGHTYENA",
+        "NOSEPASS",
+        "NUMEL",
+        "NUZLEAF",
+        "PELIPPER",
+        "PLUSLE",
+        "POOCHYENA",
+        "ROSELIA",
+        "SABLEYE",
+        "SALAMENCE",
+        "SEALEO",
+        "SEEDOT",
+        "SHARPEDO",
+        "SHELGON",
+        "SHIFTRY",
+        "SILCOON",
+        "SKITTY",
+        "SLAKING",
+        "SLAKOTH",
+        "SNORUNT",
+        "SPHEAL",
+        "SPINDA",
+        "SPOINK",
+        "TORKOAL",
+        "TRAPINCH",
+        "TROPIUS",
+        "VIBRAVA",
+        "VIGOROTH",
+        "VOLBEAT",
+        "WALREIN",
+        "WHISCASH",
+        "WINGULL",
+        "WURMPLE",
+        "WYNAUT",
+        "ZANGOOSE",
+        "ZIGZAGOON"
+      ]
+    }
+  },
+  "ordinary": [
+    {
+      "id": "TREECKO",
+      "names": {
+        "de": "Geckarbor",
+        "en": "Treecko"
+      },
+      "generation": 3,
+      "key": "dex:252",
+      "dex": 252,
+      "requirement": "Additional ordinary Hoenn acquisition, including starters and Shedinja",
+      "types": [
+        "GRASS"
+      ]
+    },
+    {
+      "id": "GROVYLE",
+      "names": {
+        "de": "Reptain",
+        "en": "Grovyle"
+      },
+      "generation": 3,
+      "key": "dex:253",
+      "dex": 253,
+      "requirement": "Additional ordinary Hoenn acquisition, including starters and Shedinja",
+      "types": [
+        "GRASS"
+      ]
+    },
+    {
+      "id": "SCEPTILE",
+      "names": {
+        "de": "Gewaldro",
+        "en": "Sceptile"
+      },
+      "generation": 3,
+      "key": "dex:254",
+      "dex": 254,
+      "requirement": "Additional ordinary Hoenn acquisition, including starters and Shedinja",
+      "types": [
+        "GRASS"
+      ]
+    },
+    {
+      "id": "TORCHIC",
+      "names": {
+        "de": "Flemmli",
+        "en": "Torchic"
+      },
+      "generation": 3,
+      "key": "dex:255",
+      "dex": 255,
+      "requirement": "Additional ordinary Hoenn acquisition, including starters and Shedinja",
+      "types": [
+        "FIRE"
+      ]
+    },
+    {
+      "id": "COMBUSKEN",
+      "names": {
+        "de": "Jungglut",
+        "en": "Combusken"
+      },
+      "generation": 3,
+      "key": "dex:256",
+      "dex": 256,
+      "requirement": "Additional ordinary Hoenn acquisition, including starters and Shedinja",
+      "types": [
+        "FIRE",
+        "FIGHTING"
+      ]
+    },
+    {
+      "id": "BLAZIKEN",
+      "names": {
+        "de": "Lohgock",
+        "en": "Blaziken"
+      },
+      "generation": 3,
+      "key": "dex:257",
+      "dex": 257,
+      "requirement": "Additional ordinary Hoenn acquisition, including starters and Shedinja",
+      "types": [
+        "FIRE",
+        "FIGHTING"
+      ]
+    },
+    {
+      "id": "MUDKIP",
+      "names": {
+        "de": "Hydropi",
+        "en": "Mudkip"
+      },
+      "generation": 3,
+      "key": "dex:258",
+      "dex": 258,
+      "requirement": "Additional ordinary Hoenn acquisition, including starters and Shedinja",
+      "types": [
+        "WATER"
+      ]
+    },
+    {
+      "id": "MARSHTOMP",
+      "names": {
+        "de": "Moorabbel",
+        "en": "Marshtomp"
+      },
+      "generation": 3,
+      "key": "dex:259",
+      "dex": 259,
+      "requirement": "Additional ordinary Hoenn acquisition, including starters and Shedinja",
+      "types": [
+        "WATER",
+        "GROUND"
+      ]
+    },
+    {
+      "id": "SWAMPERT",
+      "names": {
+        "de": "Sumpex",
+        "en": "Swampert"
+      },
+      "generation": 3,
+      "key": "dex:260",
+      "dex": 260,
+      "requirement": "Additional ordinary Hoenn acquisition, including starters and Shedinja",
+      "types": [
+        "WATER",
+        "GROUND"
+      ]
+    },
+    {
+      "id": "POOCHYENA",
+      "names": {
+        "de": "Fiffyen",
+        "en": "Poochyena"
+      },
+      "generation": 3,
+      "key": "dex:261",
+      "dex": 261,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "DARK"
+      ],
+      "family": "POOCHYENA"
+    },
+    {
+      "id": "MIGHTYENA",
+      "names": {
+        "de": "Magnayen",
+        "en": "Mightyena"
+      },
+      "generation": 3,
+      "key": "dex:262",
+      "dex": 262,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "DARK"
+      ],
+      "family": "POOCHYENA"
+    },
+    {
+      "id": "ZIGZAGOON",
+      "names": {
+        "de": "Zigzachs",
+        "en": "Zigzagoon"
+      },
+      "generation": 3,
+      "key": "dex:263",
+      "dex": 263,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL"
+      ],
+      "family": "ZIGZAGOON"
+    },
+    {
+      "id": "LINOONE",
+      "names": {
+        "de": "Geradaks",
+        "en": "Linoone"
+      },
+      "generation": 3,
+      "key": "dex:264",
+      "dex": 264,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL"
+      ],
+      "family": "ZIGZAGOON"
+    },
+    {
+      "id": "WURMPLE",
+      "names": {
+        "de": "Waumpel",
+        "en": "Wurmple"
+      },
+      "generation": 3,
+      "key": "dex:265",
+      "dex": 265,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "BUG"
+      ],
+      "family": "WURMPLE"
+    },
+    {
+      "id": "SILCOON",
+      "names": {
+        "de": "Schaloko",
+        "en": "Silcoon"
+      },
+      "generation": 3,
+      "key": "dex:266",
+      "dex": 266,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "BUG"
+      ],
+      "family": "WURMPLE"
+    },
+    {
+      "id": "BEAUTIFLY",
+      "names": {
+        "de": "Papinella",
+        "en": "Beautifly"
+      },
+      "generation": 3,
+      "key": "dex:267",
+      "dex": 267,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "BUG",
+        "FLYING"
+      ],
+      "family": "WURMPLE"
+    },
+    {
+      "id": "CASCOON",
+      "names": {
+        "de": "Panekon",
+        "en": "Cascoon"
+      },
+      "generation": 3,
+      "key": "dex:268",
+      "dex": 268,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "BUG"
+      ],
+      "family": "WURMPLE"
+    },
+    {
+      "id": "DUSTOX",
+      "names": {
+        "de": "Pudox",
+        "en": "Dustox"
+      },
+      "generation": 3,
+      "key": "dex:269",
+      "dex": 269,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "BUG",
+        "POISON"
+      ],
+      "family": "WURMPLE"
+    },
+    {
+      "id": "LOTAD",
+      "names": {
+        "de": "Loturzel",
+        "en": "Lotad"
+      },
+      "generation": 3,
+      "key": "dex:270",
+      "dex": 270,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER",
+        "GRASS"
+      ],
+      "family": "LOTAD"
+    },
+    {
+      "id": "LOMBRE",
+      "names": {
+        "de": "Lombrero",
+        "en": "Lombre"
+      },
+      "generation": 3,
+      "key": "dex:271",
+      "dex": 271,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER",
+        "GRASS"
+      ],
+      "family": "LOTAD"
+    },
+    {
+      "id": "LUDICOLO",
+      "names": {
+        "de": "Kappalores",
+        "en": "Ludicolo"
+      },
+      "generation": 3,
+      "key": "dex:272",
+      "dex": 272,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER",
+        "GRASS"
+      ],
+      "family": "LOTAD"
+    },
+    {
+      "id": "SEEDOT",
+      "names": {
+        "de": "Samurzel",
+        "en": "Seedot"
+      },
+      "generation": 3,
+      "key": "dex:273",
+      "dex": 273,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GRASS"
+      ],
+      "family": "SEEDOT"
+    },
+    {
+      "id": "NUZLEAF",
+      "names": {
+        "de": "Blanas",
+        "en": "Nuzleaf"
+      },
+      "generation": 3,
+      "key": "dex:274",
+      "dex": 274,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GRASS",
+        "DARK"
+      ],
+      "family": "SEEDOT"
+    },
+    {
+      "id": "SHIFTRY",
+      "names": {
+        "de": "Tengulist",
+        "en": "Shiftry"
+      },
+      "generation": 3,
+      "key": "dex:275",
+      "dex": 275,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GRASS",
+        "DARK"
+      ],
+      "family": "SEEDOT"
+    },
+    {
+      "id": "TAILLOW",
+      "names": {
+        "de": "Schwalbini",
+        "en": "Taillow"
+      },
+      "generation": 3,
+      "key": "dex:276",
+      "dex": 276,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL",
+        "FLYING"
+      ],
+      "family": "TAILLOW"
+    },
+    {
+      "id": "SWELLOW",
+      "names": {
+        "de": "Schwalboss",
+        "en": "Swellow"
+      },
+      "generation": 3,
+      "key": "dex:277",
+      "dex": 277,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL",
+        "FLYING"
+      ],
+      "family": "TAILLOW"
+    },
+    {
+      "id": "WINGULL",
+      "names": {
+        "de": "Wingull",
+        "en": "Wingull"
+      },
+      "generation": 3,
+      "key": "dex:278",
+      "dex": 278,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER",
+        "FLYING"
+      ],
+      "family": "WINGULL"
+    },
+    {
+      "id": "PELIPPER",
+      "names": {
+        "de": "Pelipper",
+        "en": "Pelipper"
+      },
+      "generation": 3,
+      "key": "dex:279",
+      "dex": 279,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER",
+        "FLYING"
+      ],
+      "family": "WINGULL"
+    },
+    {
+      "id": "RALTS",
+      "names": {
+        "de": "Trasla",
+        "en": "Ralts"
+      },
+      "generation": 3,
+      "key": "dex:280",
+      "dex": 280,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "PSYCHIC",
+        "FAIRY"
+      ],
+      "family": "RALTS"
+    },
+    {
+      "id": "KIRLIA",
+      "names": {
+        "de": "Kirlia",
+        "en": "Kirlia"
+      },
+      "generation": 3,
+      "key": "dex:281",
+      "dex": 281,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "PSYCHIC",
+        "FAIRY"
+      ],
+      "family": "RALTS"
+    },
+    {
+      "id": "GARDEVOIR",
+      "names": {
+        "de": "Guardevoir",
+        "en": "Gardevoir"
+      },
+      "generation": 3,
+      "key": "dex:282",
+      "dex": 282,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "PSYCHIC",
+        "FAIRY"
+      ],
+      "family": "RALTS"
+    },
+    {
+      "id": "SURSKIT",
+      "names": {
+        "de": "Gehweiher",
+        "en": "Surskit"
+      },
+      "generation": 3,
+      "key": "dex:283",
+      "dex": 283,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "BUG",
+        "WATER"
+      ],
+      "family": "SURSKIT"
+    },
+    {
+      "id": "MASQUERAIN",
+      "names": {
+        "de": "Maskeregen",
+        "en": "Masquerain"
+      },
+      "generation": 3,
+      "key": "dex:284",
+      "dex": 284,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "BUG",
+        "FLYING"
+      ],
+      "family": "SURSKIT"
+    },
+    {
+      "id": "SHROOMISH",
+      "names": {
+        "de": "Knilz",
+        "en": "Shroomish"
+      },
+      "generation": 3,
+      "key": "dex:285",
+      "dex": 285,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GRASS"
+      ],
+      "family": "SHROOMISH"
+    },
+    {
+      "id": "BRELOOM",
+      "names": {
+        "de": "Kapilz",
+        "en": "Breloom"
+      },
+      "generation": 3,
+      "key": "dex:286",
+      "dex": 286,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GRASS",
+        "FIGHTING"
+      ],
+      "family": "SHROOMISH"
+    },
+    {
+      "id": "SLAKOTH",
+      "names": {
+        "de": "Bummelz",
+        "en": "Slakoth"
+      },
+      "generation": 3,
+      "key": "dex:287",
+      "dex": 287,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL"
+      ],
+      "family": "SLAKOTH"
+    },
+    {
+      "id": "VIGOROTH",
+      "names": {
+        "de": "Muntier",
+        "en": "Vigoroth"
+      },
+      "generation": 3,
+      "key": "dex:288",
+      "dex": 288,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL"
+      ],
+      "family": "SLAKOTH"
+    },
+    {
+      "id": "SLAKING",
+      "names": {
+        "de": "Letarking",
+        "en": "Slaking"
+      },
+      "generation": 3,
+      "key": "dex:289",
+      "dex": 289,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL"
+      ],
+      "family": "SLAKOTH"
+    },
+    {
+      "id": "NINCADA",
+      "names": {
+        "de": "Nincada",
+        "en": "Nincada"
+      },
+      "generation": 3,
+      "key": "dex:290",
+      "dex": 290,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "BUG",
+        "GROUND"
+      ],
+      "family": "NINCADA"
+    },
+    {
+      "id": "NINJASK",
+      "names": {
+        "de": "Ninjask",
+        "en": "Ninjask"
+      },
+      "generation": 3,
+      "key": "dex:291",
+      "dex": 291,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "BUG",
+        "FLYING"
+      ],
+      "family": "NINCADA"
+    },
+    {
+      "id": "SHEDINJA",
+      "names": {
+        "de": "Ninjatom",
+        "en": "Shedinja"
+      },
+      "generation": 3,
+      "key": "dex:292",
+      "dex": 292,
+      "requirement": "Additional ordinary Hoenn acquisition, including starters and Shedinja",
+      "types": [
+        "BUG",
+        "GHOST"
+      ]
+    },
+    {
+      "id": "WHISMUR",
+      "names": {
+        "de": "Flurmel",
+        "en": "Whismur"
+      },
+      "generation": 3,
+      "key": "dex:293",
+      "dex": 293,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL"
+      ],
+      "family": "WHISMUR"
+    },
+    {
+      "id": "LOUDRED",
+      "names": {
+        "de": "Krakeelo",
+        "en": "Loudred"
+      },
+      "generation": 3,
+      "key": "dex:294",
+      "dex": 294,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL"
+      ],
+      "family": "WHISMUR"
+    },
+    {
+      "id": "EXPLOUD",
+      "names": {
+        "de": "Krawumms",
+        "en": "Exploud"
+      },
+      "generation": 3,
+      "key": "dex:295",
+      "dex": 295,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL"
+      ],
+      "family": "WHISMUR"
+    },
+    {
+      "id": "MAKUHITA",
+      "names": {
+        "de": "Makuhita",
+        "en": "Makuhita"
+      },
+      "generation": 3,
+      "key": "dex:296",
+      "dex": 296,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "FIGHTING"
+      ],
+      "family": "MAKUHITA"
+    },
+    {
+      "id": "HARIYAMA",
+      "names": {
+        "de": "Hariyama",
+        "en": "Hariyama"
+      },
+      "generation": 3,
+      "key": "dex:297",
+      "dex": 297,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "FIGHTING"
+      ],
+      "family": "MAKUHITA"
+    },
+    {
+      "id": "AZURILL",
+      "names": {
+        "de": "Azurill",
+        "en": "Azurill"
+      },
+      "generation": 3,
+      "key": "dex:298",
+      "dex": 298,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL",
+        "FAIRY"
+      ],
+      "family": "AZURILL"
+    },
+    {
+      "id": "NOSEPASS",
+      "names": {
+        "de": "Nasgnet",
+        "en": "Nosepass"
+      },
+      "generation": 3,
+      "key": "dex:299",
+      "dex": 299,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ROCK"
+      ],
+      "family": "NOSEPASS"
+    },
+    {
+      "id": "SKITTY",
+      "names": {
+        "de": "Eneco",
+        "en": "Skitty"
+      },
+      "generation": 3,
+      "key": "dex:300",
+      "dex": 300,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL"
+      ],
+      "family": "SKITTY"
+    },
+    {
+      "id": "DELCATTY",
+      "names": {
+        "de": "Enekoro",
+        "en": "Delcatty"
+      },
+      "generation": 3,
+      "key": "dex:301",
+      "dex": 301,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL"
+      ],
+      "family": "SKITTY"
+    },
+    {
+      "id": "SABLEYE",
+      "names": {
+        "de": "Zobiris",
+        "en": "Sableye"
+      },
+      "generation": 3,
+      "key": "dex:302",
+      "dex": 302,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "DARK",
+        "GHOST"
+      ],
+      "family": "SABLEYE"
+    },
+    {
+      "id": "MAWILE",
+      "names": {
+        "de": "Flunkifer",
+        "en": "Mawile"
+      },
+      "generation": 3,
+      "key": "dex:303",
+      "dex": 303,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "STEEL",
+        "FAIRY"
+      ],
+      "family": "MAWILE"
+    },
+    {
+      "id": "ARON",
+      "names": {
+        "de": "Stollunior",
+        "en": "Aron"
+      },
+      "generation": 3,
+      "key": "dex:304",
+      "dex": 304,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "STEEL",
+        "ROCK"
+      ],
+      "family": "ARON"
+    },
+    {
+      "id": "LAIRON",
+      "names": {
+        "de": "Stollrak",
+        "en": "Lairon"
+      },
+      "generation": 3,
+      "key": "dex:305",
+      "dex": 305,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "STEEL",
+        "ROCK"
+      ],
+      "family": "ARON"
+    },
+    {
+      "id": "AGGRON",
+      "names": {
+        "de": "Stolloss",
+        "en": "Aggron"
+      },
+      "generation": 3,
+      "key": "dex:306",
+      "dex": 306,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "STEEL",
+        "ROCK"
+      ],
+      "family": "ARON"
+    },
+    {
+      "id": "MEDITITE",
+      "names": {
+        "de": "Meditie",
+        "en": "Meditite"
+      },
+      "generation": 3,
+      "key": "dex:307",
+      "dex": 307,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "FIGHTING",
+        "PSYCHIC"
+      ],
+      "family": "MEDITITE"
+    },
+    {
+      "id": "MEDICHAM",
+      "names": {
+        "de": "Meditalis",
+        "en": "Medicham"
+      },
+      "generation": 3,
+      "key": "dex:308",
+      "dex": 308,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "FIGHTING",
+        "PSYCHIC"
+      ],
+      "family": "MEDITITE"
+    },
+    {
+      "id": "ELECTRIKE",
+      "names": {
+        "de": "Frizelbliz",
+        "en": "Electrike"
+      },
+      "generation": 3,
+      "key": "dex:309",
+      "dex": 309,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ELECTRIC"
+      ],
+      "family": "ELECTRIKE"
+    },
+    {
+      "id": "MANECTRIC",
+      "names": {
+        "de": "Voltenso",
+        "en": "Manectric"
+      },
+      "generation": 3,
+      "key": "dex:310",
+      "dex": 310,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ELECTRIC"
+      ],
+      "family": "ELECTRIKE"
+    },
+    {
+      "id": "PLUSLE",
+      "names": {
+        "de": "Plusle",
+        "en": "Plusle"
+      },
+      "generation": 3,
+      "key": "dex:311",
+      "dex": 311,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ELECTRIC"
+      ],
+      "family": "PLUSLE"
+    },
+    {
+      "id": "MINUN",
+      "names": {
+        "de": "Minun",
+        "en": "Minun"
+      },
+      "generation": 3,
+      "key": "dex:312",
+      "dex": 312,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ELECTRIC"
+      ],
+      "family": "MINUN"
+    },
+    {
+      "id": "VOLBEAT",
+      "names": {
+        "de": "Volbeat",
+        "en": "Volbeat"
+      },
+      "generation": 3,
+      "key": "dex:313",
+      "dex": 313,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "BUG"
+      ],
+      "family": "VOLBEAT"
+    },
+    {
+      "id": "ILLUMISE",
+      "names": {
+        "de": "Illumise",
+        "en": "Illumise"
+      },
+      "generation": 3,
+      "key": "dex:314",
+      "dex": 314,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "BUG"
+      ],
+      "family": "ILLUMISE"
+    },
+    {
+      "id": "ROSELIA",
+      "names": {
+        "de": "Roselia",
+        "en": "Roselia"
+      },
+      "generation": 3,
+      "key": "dex:315",
+      "dex": 315,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GRASS",
+        "POISON"
+      ],
+      "family": "ROSELIA"
+    },
+    {
+      "id": "GULPIN",
+      "names": {
+        "de": "Schluppuck",
+        "en": "Gulpin"
+      },
+      "generation": 3,
+      "key": "dex:316",
+      "dex": 316,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "POISON"
+      ],
+      "family": "GULPIN"
+    },
+    {
+      "id": "SWALOT",
+      "names": {
+        "de": "Schlukwech",
+        "en": "Swalot"
+      },
+      "generation": 3,
+      "key": "dex:317",
+      "dex": 317,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "POISON"
+      ],
+      "family": "GULPIN"
+    },
+    {
+      "id": "CARVANHA",
+      "names": {
+        "de": "Kanivanha",
+        "en": "Carvanha"
+      },
+      "generation": 3,
+      "key": "dex:318",
+      "dex": 318,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER",
+        "DARK"
+      ],
+      "family": "CARVANHA"
+    },
+    {
+      "id": "SHARPEDO",
+      "names": {
+        "de": "Tohaido",
+        "en": "Sharpedo"
+      },
+      "generation": 3,
+      "key": "dex:319",
+      "dex": 319,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER",
+        "DARK"
+      ],
+      "family": "CARVANHA"
+    },
+    {
+      "id": "WAILMER",
+      "names": {
+        "de": "Wailmer",
+        "en": "Wailmer"
+      },
+      "generation": 3,
+      "key": "dex:320",
+      "dex": 320,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER"
+      ],
+      "family": "WAILMER"
+    },
+    {
+      "id": "WAILORD",
+      "names": {
+        "de": "Wailord",
+        "en": "Wailord"
+      },
+      "generation": 3,
+      "key": "dex:321",
+      "dex": 321,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER"
+      ],
+      "family": "WAILMER"
+    },
+    {
+      "id": "NUMEL",
+      "names": {
+        "de": "Camaub",
+        "en": "Numel"
+      },
+      "generation": 3,
+      "key": "dex:322",
+      "dex": 322,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "FIRE",
+        "GROUND"
+      ],
+      "family": "NUMEL"
+    },
+    {
+      "id": "CAMERUPT",
+      "names": {
+        "de": "Camerupt",
+        "en": "Camerupt"
+      },
+      "generation": 3,
+      "key": "dex:323",
+      "dex": 323,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "FIRE",
+        "GROUND"
+      ],
+      "family": "NUMEL"
+    },
+    {
+      "id": "TORKOAL",
+      "names": {
+        "de": "Qurtel",
+        "en": "Torkoal"
+      },
+      "generation": 3,
+      "key": "dex:324",
+      "dex": 324,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "FIRE"
+      ],
+      "family": "TORKOAL"
+    },
+    {
+      "id": "SPOINK",
+      "names": {
+        "de": "Spoink",
+        "en": "Spoink"
+      },
+      "generation": 3,
+      "key": "dex:325",
+      "dex": 325,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "PSYCHIC"
+      ],
+      "family": "SPOINK"
+    },
+    {
+      "id": "GRUMPIG",
+      "names": {
+        "de": "Groink",
+        "en": "Grumpig"
+      },
+      "generation": 3,
+      "key": "dex:326",
+      "dex": 326,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "PSYCHIC"
+      ],
+      "family": "SPOINK"
+    },
+    {
+      "id": "SPINDA",
+      "names": {
+        "de": "Pandir",
+        "en": "Spinda"
+      },
+      "generation": 3,
+      "key": "dex:327",
+      "dex": 327,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL"
+      ],
+      "family": "SPINDA"
+    },
+    {
+      "id": "TRAPINCH",
+      "names": {
+        "de": "Knacklion",
+        "en": "Trapinch"
+      },
+      "generation": 3,
+      "key": "dex:328",
+      "dex": 328,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GROUND"
+      ],
+      "family": "TRAPINCH"
+    },
+    {
+      "id": "VIBRAVA",
+      "names": {
+        "de": "Vibrava",
+        "en": "Vibrava"
+      },
+      "generation": 3,
+      "key": "dex:329",
+      "dex": 329,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GROUND",
+        "DRAGON"
+      ],
+      "family": "TRAPINCH"
+    },
+    {
+      "id": "FLYGON",
+      "names": {
+        "de": "Libelldra",
+        "en": "Flygon"
+      },
+      "generation": 3,
+      "key": "dex:330",
+      "dex": 330,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GROUND",
+        "DRAGON"
+      ],
+      "family": "TRAPINCH"
+    },
+    {
+      "id": "CACNEA",
+      "names": {
+        "de": "Tuska",
+        "en": "Cacnea"
+      },
+      "generation": 3,
+      "key": "dex:331",
+      "dex": 331,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GRASS"
+      ],
+      "family": "CACNEA"
+    },
+    {
+      "id": "CACTURNE",
+      "names": {
+        "de": "Noktuska",
+        "en": "Cacturne"
+      },
+      "generation": 3,
+      "key": "dex:332",
+      "dex": 332,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GRASS",
+        "DARK"
+      ],
+      "family": "CACNEA"
+    },
+    {
+      "id": "SWABLU",
+      "names": {
+        "de": "Wablu",
+        "en": "Swablu"
+      },
+      "generation": 3,
+      "key": "dex:333",
+      "dex": 333,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL",
+        "FLYING"
+      ],
+      "family": "SWABLU"
+    },
+    {
+      "id": "ALTARIA",
+      "names": {
+        "de": "Altaria",
+        "en": "Altaria"
+      },
+      "generation": 3,
+      "key": "dex:334",
+      "dex": 334,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "DRAGON",
+        "FLYING"
+      ],
+      "family": "SWABLU"
+    },
+    {
+      "id": "ZANGOOSE",
+      "names": {
+        "de": "Sengo",
+        "en": "Zangoose"
+      },
+      "generation": 3,
+      "key": "dex:335",
+      "dex": 335,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL"
+      ],
+      "family": "ZANGOOSE"
+    },
+    {
+      "id": "SEVIPER",
+      "names": {
+        "de": "Vipitis",
+        "en": "Seviper"
+      },
+      "generation": 3,
+      "key": "dex:336",
+      "dex": 336,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "POISON"
+      ],
+      "family": "SEVIPER"
+    },
+    {
+      "id": "LUNATONE",
+      "names": {
+        "de": "Lunastein",
+        "en": "Lunatone"
+      },
+      "generation": 3,
+      "key": "dex:337",
+      "dex": 337,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ROCK",
+        "PSYCHIC"
+      ],
+      "family": "LUNATONE"
+    },
+    {
+      "id": "SOLROCK",
+      "names": {
+        "de": "Sonnfel",
+        "en": "Solrock"
+      },
+      "generation": 3,
+      "key": "dex:338",
+      "dex": 338,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ROCK",
+        "PSYCHIC"
+      ],
+      "family": "SOLROCK"
+    },
+    {
+      "id": "BARBOACH",
+      "names": {
+        "de": "Schmerbe",
+        "en": "Barboach"
+      },
+      "generation": 3,
+      "key": "dex:339",
+      "dex": 339,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER",
+        "GROUND"
+      ],
+      "family": "BARBOACH"
+    },
+    {
+      "id": "WHISCASH",
+      "names": {
+        "de": "Welsar",
+        "en": "Whiscash"
+      },
+      "generation": 3,
+      "key": "dex:340",
+      "dex": 340,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER",
+        "GROUND"
+      ],
+      "family": "BARBOACH"
+    },
+    {
+      "id": "CORPHISH",
+      "names": {
+        "de": "Krebscorps",
+        "en": "Corphish"
+      },
+      "generation": 3,
+      "key": "dex:341",
+      "dex": 341,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER"
+      ],
+      "family": "CORPHISH"
+    },
+    {
+      "id": "CRAWDAUNT",
+      "names": {
+        "de": "Krebutack",
+        "en": "Crawdaunt"
+      },
+      "generation": 3,
+      "key": "dex:342",
+      "dex": 342,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER",
+        "DARK"
+      ],
+      "family": "CORPHISH"
+    },
+    {
+      "id": "BALTOY",
+      "names": {
+        "de": "Puppance",
+        "en": "Baltoy"
+      },
+      "generation": 3,
+      "key": "dex:343",
+      "dex": 343,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GROUND",
+        "PSYCHIC"
+      ],
+      "family": "BALTOY"
+    },
+    {
+      "id": "CLAYDOL",
+      "names": {
+        "de": "Lepumentas",
+        "en": "Claydol"
+      },
+      "generation": 3,
+      "key": "dex:344",
+      "dex": 344,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GROUND",
+        "PSYCHIC"
+      ],
+      "family": "BALTOY"
+    },
+    {
+      "id": "LILEEP",
+      "names": {
+        "de": "Liliep",
+        "en": "Lileep"
+      },
+      "generation": 3,
+      "key": "dex:345",
+      "dex": 345,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ROCK",
+        "GRASS"
+      ],
+      "family": "LILEEP"
+    },
+    {
+      "id": "CRADILY",
+      "names": {
+        "de": "Wielie",
+        "en": "Cradily"
+      },
+      "generation": 3,
+      "key": "dex:346",
+      "dex": 346,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ROCK",
+        "GRASS"
+      ],
+      "family": "LILEEP"
+    },
+    {
+      "id": "ANORITH",
+      "names": {
+        "de": "Anorith",
+        "en": "Anorith"
+      },
+      "generation": 3,
+      "key": "dex:347",
+      "dex": 347,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ROCK",
+        "BUG"
+      ],
+      "family": "ANORITH"
+    },
+    {
+      "id": "ARMALDO",
+      "names": {
+        "de": "Armaldo",
+        "en": "Armaldo"
+      },
+      "generation": 3,
+      "key": "dex:348",
+      "dex": 348,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ROCK",
+        "BUG"
+      ],
+      "family": "ANORITH"
+    },
+    {
+      "id": "FEEBAS",
+      "names": {
+        "de": "Barschwa",
+        "en": "Feebas"
+      },
+      "generation": 3,
+      "key": "dex:349",
+      "dex": 349,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER"
+      ],
+      "family": "FEEBAS"
+    },
+    {
+      "id": "MILOTIC",
+      "names": {
+        "de": "Milotic",
+        "en": "Milotic"
+      },
+      "generation": 3,
+      "key": "dex:350",
+      "dex": 350,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER"
+      ],
+      "family": "FEEBAS"
+    },
+    {
+      "id": "CASTFORM",
+      "names": {
+        "de": "Formeo",
+        "en": "Castform"
+      },
+      "generation": 3,
+      "key": "dex:351",
+      "dex": 351,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL"
+      ],
+      "family": "CASTFORM"
+    },
+    {
+      "id": "KECLEON",
+      "names": {
+        "de": "Kecleon",
+        "en": "Kecleon"
+      },
+      "generation": 3,
+      "key": "dex:352",
+      "dex": 352,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "NORMAL"
+      ],
+      "family": "KECLEON"
+    },
+    {
+      "id": "SHUPPET",
+      "names": {
+        "de": "Shuppet",
+        "en": "Shuppet"
+      },
+      "generation": 3,
+      "key": "dex:353",
+      "dex": 353,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GHOST"
+      ],
+      "family": "SHUPPET"
+    },
+    {
+      "id": "BANETTE",
+      "names": {
+        "de": "Banette",
+        "en": "Banette"
+      },
+      "generation": 3,
+      "key": "dex:354",
+      "dex": 354,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GHOST"
+      ],
+      "family": "SHUPPET"
+    },
+    {
+      "id": "DUSKULL",
+      "names": {
+        "de": "Zwirrlicht",
+        "en": "Duskull"
+      },
+      "generation": 3,
+      "key": "dex:355",
+      "dex": 355,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GHOST"
+      ],
+      "family": "DUSKULL"
+    },
+    {
+      "id": "DUSCLOPS",
+      "names": {
+        "de": "Zwirrklop",
+        "en": "Dusclops"
+      },
+      "generation": 3,
+      "key": "dex:356",
+      "dex": 356,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GHOST"
+      ],
+      "family": "DUSKULL"
+    },
+    {
+      "id": "TROPIUS",
+      "names": {
+        "de": "Tropius",
+        "en": "Tropius"
+      },
+      "generation": 3,
+      "key": "dex:357",
+      "dex": 357,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "GRASS",
+        "FLYING"
+      ],
+      "family": "TROPIUS"
+    },
+    {
+      "id": "CHIMECHO",
+      "names": {
+        "de": "Palimpalim",
+        "en": "Chimecho"
+      },
+      "generation": 3,
+      "key": "dex:358",
+      "dex": 358,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "PSYCHIC"
+      ],
+      "family": "CHIMECHO"
+    },
+    {
+      "id": "ABSOL",
+      "names": {
+        "de": "Absol",
+        "en": "Absol"
+      },
+      "generation": 3,
+      "key": "dex:359",
+      "dex": 359,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "DARK"
+      ],
+      "family": "ABSOL"
+    },
+    {
+      "id": "WYNAUT",
+      "names": {
+        "de": "Isso",
+        "en": "Wynaut"
+      },
+      "generation": 3,
+      "key": "dex:360",
+      "dex": 360,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "PSYCHIC"
+      ],
+      "family": "WYNAUT"
+    },
+    {
+      "id": "SNORUNT",
+      "names": {
+        "de": "Schneppke",
+        "en": "Snorunt"
+      },
+      "generation": 3,
+      "key": "dex:361",
+      "dex": 361,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ICE"
+      ],
+      "family": "SNORUNT"
+    },
+    {
+      "id": "GLALIE",
+      "names": {
+        "de": "Firnontor",
+        "en": "Glalie"
+      },
+      "generation": 3,
+      "key": "dex:362",
+      "dex": 362,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ICE"
+      ],
+      "family": "SNORUNT"
+    },
+    {
+      "id": "SPHEAL",
+      "names": {
+        "de": "Seemops",
+        "en": "Spheal"
+      },
+      "generation": 3,
+      "key": "dex:363",
+      "dex": 363,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ICE",
+        "WATER"
+      ],
+      "family": "SPHEAL"
+    },
+    {
+      "id": "SEALEO",
+      "names": {
+        "de": "Seejong",
+        "en": "Sealeo"
+      },
+      "generation": 3,
+      "key": "dex:364",
+      "dex": 364,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ICE",
+        "WATER"
+      ],
+      "family": "SPHEAL"
+    },
+    {
+      "id": "WALREIN",
+      "names": {
+        "de": "Walraisa",
+        "en": "Walrein"
+      },
+      "generation": 3,
+      "key": "dex:365",
+      "dex": 365,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "ICE",
+        "WATER"
+      ],
+      "family": "SPHEAL"
+    },
+    {
+      "id": "CLAMPERL",
+      "names": {
+        "de": "Perlu",
+        "en": "Clamperl"
+      },
+      "generation": 3,
+      "key": "dex:366",
+      "dex": 366,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER"
+      ],
+      "family": "CLAMPERL"
+    },
+    {
+      "id": "HUNTAIL",
+      "names": {
+        "de": "Aalabyss",
+        "en": "Huntail"
+      },
+      "generation": 3,
+      "key": "dex:367",
+      "dex": 367,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER"
+      ],
+      "family": "CLAMPERL"
+    },
+    {
+      "id": "GOREBYSS",
+      "names": {
+        "de": "Saganabyss",
+        "en": "Gorebyss"
+      },
+      "generation": 3,
+      "key": "dex:368",
+      "dex": 368,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER"
+      ],
+      "family": "CLAMPERL"
+    },
+    {
+      "id": "RELICANTH",
+      "names": {
+        "de": "Relicanth",
+        "en": "Relicanth"
+      },
+      "generation": 3,
+      "key": "dex:369",
+      "dex": 369,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER",
+        "ROCK"
+      ],
+      "family": "RELICANTH"
+    },
+    {
+      "id": "LUVDISC",
+      "names": {
+        "de": "Liebiskus",
+        "en": "Luvdisc"
+      },
+      "generation": 3,
+      "key": "dex:370",
+      "dex": 370,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "WATER"
+      ],
+      "family": "LUVDISC"
+    },
+    {
+      "id": "BAGON",
+      "names": {
+        "de": "Kindwurm",
+        "en": "Bagon"
+      },
+      "generation": 3,
+      "key": "dex:371",
+      "dex": 371,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "DRAGON"
+      ],
+      "family": "BAGON"
+    },
+    {
+      "id": "SHELGON",
+      "names": {
+        "de": "Draschel",
+        "en": "Shelgon"
+      },
+      "generation": 3,
+      "key": "dex:372",
+      "dex": 372,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "DRAGON"
+      ],
+      "family": "BAGON"
+    },
+    {
+      "id": "SALAMENCE",
+      "names": {
+        "de": "Brutalanda",
+        "en": "Salamence"
+      },
+      "generation": 3,
+      "key": "dex:373",
+      "dex": 373,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "DRAGON",
+        "FLYING"
+      ],
+      "family": "BAGON"
+    },
+    {
+      "id": "BELDUM",
+      "names": {
+        "de": "Tanhel",
+        "en": "Beldum"
+      },
+      "generation": 3,
+      "key": "dex:374",
+      "dex": 374,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "STEEL",
+        "PSYCHIC"
+      ],
+      "family": "BELDUM"
+    },
+    {
+      "id": "METANG",
+      "names": {
+        "de": "Metang",
+        "en": "Metang"
+      },
+      "generation": 3,
+      "key": "dex:375",
+      "dex": 375,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "STEEL",
+        "PSYCHIC"
+      ],
+      "family": "BELDUM"
+    },
+    {
+      "id": "METAGROSS",
+      "names": {
+        "de": "Metagross",
+        "en": "Metagross"
+      },
+      "generation": 3,
+      "key": "dex:376",
+      "dex": 376,
+      "requirement": "Close character-specific Wanderer gap",
+      "types": [
+        "STEEL",
+        "PSYCHIC"
+      ],
+      "family": "BELDUM"
+    },
+    {
+      "id": "TURTWIG",
+      "names": {
+        "de": "Chelast",
+        "en": "Turtwig"
+      },
+      "generation": 4,
+      "key": "dex:387",
+      "dex": 387,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GRASS"
+      ]
+    },
+    {
+      "id": "GROTLE",
+      "names": {
+        "de": "Chelcarain",
+        "en": "Grotle"
+      },
+      "generation": 4,
+      "key": "dex:388",
+      "dex": 388,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GRASS"
+      ]
+    },
+    {
+      "id": "TORTERRA",
+      "names": {
+        "de": "Chelterrar",
+        "en": "Torterra"
+      },
+      "generation": 4,
+      "key": "dex:389",
+      "dex": 389,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GRASS",
+        "GROUND"
+      ]
+    },
+    {
+      "id": "CHIMCHAR",
+      "names": {
+        "de": "Panflam",
+        "en": "Chimchar"
+      },
+      "generation": 4,
+      "key": "dex:390",
+      "dex": 390,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "FIRE"
+      ]
+    },
+    {
+      "id": "MONFERNO",
+      "names": {
+        "de": "Panpyro",
+        "en": "Monferno"
+      },
+      "generation": 4,
+      "key": "dex:391",
+      "dex": 391,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "FIRE",
+        "FIGHTING"
+      ]
+    },
+    {
+      "id": "INFERNAPE",
+      "names": {
+        "de": "Panferno",
+        "en": "Infernape"
+      },
+      "generation": 4,
+      "key": "dex:392",
+      "dex": 392,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "FIRE",
+        "FIGHTING"
+      ]
+    },
+    {
+      "id": "PIPLUP",
+      "names": {
+        "de": "Plinfa",
+        "en": "Piplup"
+      },
+      "generation": 4,
+      "key": "dex:393",
+      "dex": 393,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "WATER"
+      ]
+    },
+    {
+      "id": "PRINPLUP",
+      "names": {
+        "de": "Pliprin",
+        "en": "Prinplup"
+      },
+      "generation": 4,
+      "key": "dex:394",
+      "dex": 394,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "WATER"
+      ]
+    },
+    {
+      "id": "EMPOLEON",
+      "names": {
+        "de": "Impoleon",
+        "en": "Empoleon"
+      },
+      "generation": 4,
+      "key": "dex:395",
+      "dex": 395,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "WATER",
+        "STEEL"
+      ]
+    },
+    {
+      "id": "STARLY",
+      "names": {
+        "de": "Staralili",
+        "en": "Starly"
+      },
+      "generation": 4,
+      "key": "dex:396",
+      "dex": 396,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "NORMAL",
+        "FLYING"
+      ]
+    },
+    {
+      "id": "STARAVIA",
+      "names": {
+        "de": "Staravia",
+        "en": "Staravia"
+      },
+      "generation": 4,
+      "key": "dex:397",
+      "dex": 397,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "NORMAL",
+        "FLYING"
+      ]
+    },
+    {
+      "id": "STARAPTOR",
+      "names": {
+        "de": "Staraptor",
+        "en": "Staraptor"
+      },
+      "generation": 4,
+      "key": "dex:398",
+      "dex": 398,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "NORMAL",
+        "FLYING"
+      ]
+    },
+    {
+      "id": "BIDOOF",
+      "names": {
+        "de": "Bidiza",
+        "en": "Bidoof"
+      },
+      "generation": 4,
+      "key": "dex:399",
+      "dex": 399,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "NORMAL"
+      ]
+    },
+    {
+      "id": "BIBAREL",
+      "names": {
+        "de": "Bidifas",
+        "en": "Bibarel"
+      },
+      "generation": 4,
+      "key": "dex:400",
+      "dex": 400,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "NORMAL",
+        "WATER"
+      ]
+    },
+    {
+      "id": "KRICKETOT",
+      "names": {
+        "de": "Zirpurze",
+        "en": "Kricketot"
+      },
+      "generation": 4,
+      "key": "dex:401",
+      "dex": 401,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "BUG"
+      ]
+    },
+    {
+      "id": "KRICKETUNE",
+      "names": {
+        "de": "Zirpeise",
+        "en": "Kricketune"
+      },
+      "generation": 4,
+      "key": "dex:402",
+      "dex": 402,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "BUG"
+      ]
+    },
+    {
+      "id": "SHINX",
+      "names": {
+        "de": "Sheinux",
+        "en": "Shinx"
+      },
+      "generation": 4,
+      "key": "dex:403",
+      "dex": 403,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ELECTRIC"
+      ]
+    },
+    {
+      "id": "LUXIO",
+      "names": {
+        "de": "Luxio",
+        "en": "Luxio"
+      },
+      "generation": 4,
+      "key": "dex:404",
+      "dex": 404,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ELECTRIC"
+      ]
+    },
+    {
+      "id": "LUXRAY",
+      "names": {
+        "de": "Luxtra",
+        "en": "Luxray"
+      },
+      "generation": 4,
+      "key": "dex:405",
+      "dex": 405,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ELECTRIC"
+      ]
+    },
+    {
+      "id": "BUDEW",
+      "names": {
+        "de": "Knospi",
+        "en": "Budew"
+      },
+      "generation": 4,
+      "key": "dex:406",
+      "dex": 406,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GRASS",
+        "POISON"
+      ]
+    },
+    {
+      "id": "ROSERADE",
+      "names": {
+        "de": "Roserade",
+        "en": "Roserade"
+      },
+      "generation": 4,
+      "key": "dex:407",
+      "dex": 407,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GRASS",
+        "POISON"
+      ]
+    },
+    {
+      "id": "CRANIDOS",
+      "names": {
+        "de": "Koknodon",
+        "en": "Cranidos"
+      },
+      "generation": 4,
+      "key": "dex:408",
+      "dex": 408,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ROCK"
+      ]
+    },
+    {
+      "id": "RAMPARDOS",
+      "names": {
+        "de": "Rameidon",
+        "en": "Rampardos"
+      },
+      "generation": 4,
+      "key": "dex:409",
+      "dex": 409,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ROCK"
+      ]
+    },
+    {
+      "id": "SHIELDON",
+      "names": {
+        "de": "Schilterus",
+        "en": "Shieldon"
+      },
+      "generation": 4,
+      "key": "dex:410",
+      "dex": 410,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ROCK",
+        "STEEL"
+      ]
+    },
+    {
+      "id": "BASTIODON",
+      "names": {
+        "de": "Bollterus",
+        "en": "Bastiodon"
+      },
+      "generation": 4,
+      "key": "dex:411",
+      "dex": 411,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ROCK",
+        "STEEL"
+      ]
+    },
+    {
+      "id": "BURMY",
+      "names": {
+        "de": "Burmy",
+        "en": "Burmy"
+      },
+      "generation": 4,
+      "key": "dex:412",
+      "dex": 412,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "BUG"
+      ]
+    },
+    {
+      "id": "WORMADAM",
+      "names": {
+        "de": "Burmadame",
+        "en": "Wormadam"
+      },
+      "generation": 4,
+      "key": "dex:413",
+      "dex": 413,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "BUG",
+        "GRASS"
+      ]
+    },
+    {
+      "id": "MOTHIM",
+      "names": {
+        "de": "Moterpel",
+        "en": "Mothim"
+      },
+      "generation": 4,
+      "key": "dex:414",
+      "dex": 414,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "BUG",
+        "FLYING"
+      ]
+    },
+    {
+      "id": "COMBEE",
+      "names": {
+        "de": "Wadribie",
+        "en": "Combee"
+      },
+      "generation": 4,
+      "key": "dex:415",
+      "dex": 415,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "BUG",
+        "FLYING"
+      ]
+    },
+    {
+      "id": "VESPIQUEN",
+      "names": {
+        "de": "Honweisel",
+        "en": "Vespiquen"
+      },
+      "generation": 4,
+      "key": "dex:416",
+      "dex": 416,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "BUG",
+        "FLYING"
+      ]
+    },
+    {
+      "id": "PACHIRISU",
+      "names": {
+        "de": "Pachirisu",
+        "en": "Pachirisu"
+      },
+      "generation": 4,
+      "key": "dex:417",
+      "dex": 417,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ELECTRIC"
+      ]
+    },
+    {
+      "id": "BUIZEL",
+      "names": {
+        "de": "Bamelin",
+        "en": "Buizel"
+      },
+      "generation": 4,
+      "key": "dex:418",
+      "dex": 418,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "WATER"
+      ]
+    },
+    {
+      "id": "FLOATZEL",
+      "names": {
+        "de": "Bojelin",
+        "en": "Floatzel"
+      },
+      "generation": 4,
+      "key": "dex:419",
+      "dex": 419,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "WATER"
+      ]
+    },
+    {
+      "id": "CHERUBI",
+      "names": {
+        "de": "Kikugi",
+        "en": "Cherubi"
+      },
+      "generation": 4,
+      "key": "dex:420",
+      "dex": 420,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GRASS"
+      ]
+    },
+    {
+      "id": "CHERRIM",
+      "names": {
+        "de": "Kinoso",
+        "en": "Cherrim"
+      },
+      "generation": 4,
+      "key": "dex:421",
+      "dex": 421,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GRASS"
+      ]
+    },
+    {
+      "id": "SHELLOS",
+      "names": {
+        "de": "Schalellos",
+        "en": "Shellos"
+      },
+      "generation": 4,
+      "key": "dex:422",
+      "dex": 422,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "WATER"
+      ]
+    },
+    {
+      "id": "GASTRODON",
+      "names": {
+        "de": "Gastrodon",
+        "en": "Gastrodon"
+      },
+      "generation": 4,
+      "key": "dex:423",
+      "dex": 423,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "WATER",
+        "GROUND"
+      ]
+    },
+    {
+      "id": "AMBIPOM",
+      "names": {
+        "de": "Ambidiffel",
+        "en": "Ambipom"
+      },
+      "generation": 4,
+      "key": "dex:424",
+      "dex": 424,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "NORMAL"
+      ]
+    },
+    {
+      "id": "DRIFLOON",
+      "names": {
+        "de": "Driftlon",
+        "en": "Drifloon"
+      },
+      "generation": 4,
+      "key": "dex:425",
+      "dex": 425,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GHOST",
+        "FLYING"
+      ]
+    },
+    {
+      "id": "DRIFBLIM",
+      "names": {
+        "de": "Drifzepeli",
+        "en": "Drifblim"
+      },
+      "generation": 4,
+      "key": "dex:426",
+      "dex": 426,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GHOST",
+        "FLYING"
+      ]
+    },
+    {
+      "id": "BUNEARY",
+      "names": {
+        "de": "Haspiror",
+        "en": "Buneary"
+      },
+      "generation": 4,
+      "key": "dex:427",
+      "dex": 427,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "NORMAL"
+      ]
+    },
+    {
+      "id": "LOPUNNY",
+      "names": {
+        "de": "Schlapor",
+        "en": "Lopunny"
+      },
+      "generation": 4,
+      "key": "dex:428",
+      "dex": 428,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "NORMAL"
+      ]
+    },
+    {
+      "id": "MISMAGIUS",
+      "names": {
+        "de": "Traunmagil",
+        "en": "Mismagius"
+      },
+      "generation": 4,
+      "key": "dex:429",
+      "dex": 429,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GHOST"
+      ]
+    },
+    {
+      "id": "HONCHKROW",
+      "names": {
+        "de": "Kramshef",
+        "en": "Honchkrow"
+      },
+      "generation": 4,
+      "key": "dex:430",
+      "dex": 430,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "DARK",
+        "FLYING"
+      ]
+    },
+    {
+      "id": "GLAMEOW",
+      "names": {
+        "de": "Charmian",
+        "en": "Glameow"
+      },
+      "generation": 4,
+      "key": "dex:431",
+      "dex": 431,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "NORMAL"
+      ]
+    },
+    {
+      "id": "PURUGLY",
+      "names": {
+        "de": "Shnurgarst",
+        "en": "Purugly"
+      },
+      "generation": 4,
+      "key": "dex:432",
+      "dex": 432,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "NORMAL"
+      ]
+    },
+    {
+      "id": "CHINGLING",
+      "names": {
+        "de": "Klingplim",
+        "en": "Chingling"
+      },
+      "generation": 4,
+      "key": "dex:433",
+      "dex": 433,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "PSYCHIC"
+      ]
+    },
+    {
+      "id": "STUNKY",
+      "names": {
+        "de": "Skunkapuh",
+        "en": "Stunky"
+      },
+      "generation": 4,
+      "key": "dex:434",
+      "dex": 434,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "POISON",
+        "DARK"
+      ]
+    },
+    {
+      "id": "SKUNTANK",
+      "names": {
+        "de": "Skuntank",
+        "en": "Skuntank"
+      },
+      "generation": 4,
+      "key": "dex:435",
+      "dex": 435,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "POISON",
+        "DARK"
+      ]
+    },
+    {
+      "id": "BRONZOR",
+      "names": {
+        "de": "Bronzel",
+        "en": "Bronzor"
+      },
+      "generation": 4,
+      "key": "dex:436",
+      "dex": 436,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "STEEL",
+        "PSYCHIC"
+      ]
+    },
+    {
+      "id": "BRONZONG",
+      "names": {
+        "de": "Bronzong",
+        "en": "Bronzong"
+      },
+      "generation": 4,
+      "key": "dex:437",
+      "dex": 437,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "STEEL",
+        "PSYCHIC"
+      ]
+    },
+    {
+      "id": "BONSLY",
+      "names": {
+        "de": "Mobai",
+        "en": "Bonsly"
+      },
+      "generation": 4,
+      "key": "dex:438",
+      "dex": 438,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ROCK"
+      ]
+    },
+    {
+      "id": "MIME_JR",
+      "names": {
+        "de": "Pantimimi",
+        "en": "Mime Jr."
+      },
+      "generation": 4,
+      "key": "dex:439",
+      "dex": 439,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "PSYCHIC",
+        "FAIRY"
+      ]
+    },
+    {
+      "id": "HAPPINY",
+      "names": {
+        "de": "Wonneira",
+        "en": "Happiny"
+      },
+      "generation": 4,
+      "key": "dex:440",
+      "dex": 440,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "NORMAL"
+      ]
+    },
+    {
+      "id": "CHATOT",
+      "names": {
+        "de": "Plaudagei",
+        "en": "Chatot"
+      },
+      "generation": 4,
+      "key": "dex:441",
+      "dex": 441,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "NORMAL",
+        "FLYING"
+      ]
+    },
+    {
+      "id": "SPIRITOMB",
+      "names": {
+        "de": "Kryppuk",
+        "en": "Spiritomb"
+      },
+      "generation": 4,
+      "key": "dex:442",
+      "dex": 442,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GHOST",
+        "DARK"
+      ]
+    },
+    {
+      "id": "GIBLE",
+      "names": {
+        "de": "Kaumalat",
+        "en": "Gible"
+      },
+      "generation": 4,
+      "key": "dex:443",
+      "dex": 443,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "DRAGON",
+        "GROUND"
+      ]
+    },
+    {
+      "id": "GABITE",
+      "names": {
+        "de": "Knarksel",
+        "en": "Gabite"
+      },
+      "generation": 4,
+      "key": "dex:444",
+      "dex": 444,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "DRAGON",
+        "GROUND"
+      ]
+    },
+    {
+      "id": "GARCHOMP",
+      "names": {
+        "de": "Knakrack",
+        "en": "Garchomp"
+      },
+      "generation": 4,
+      "key": "dex:445",
+      "dex": 445,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "DRAGON",
+        "GROUND"
+      ]
+    },
+    {
+      "id": "MUNCHLAX",
+      "names": {
+        "de": "Mampfaxo",
+        "en": "Munchlax"
+      },
+      "generation": 4,
+      "key": "dex:446",
+      "dex": 446,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "NORMAL"
+      ]
+    },
+    {
+      "id": "RIOLU",
+      "names": {
+        "de": "Riolu",
+        "en": "Riolu"
+      },
+      "generation": 4,
+      "key": "dex:447",
+      "dex": 447,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "FIGHTING"
+      ]
+    },
+    {
+      "id": "LUCARIO",
+      "names": {
+        "de": "Lucario",
+        "en": "Lucario"
+      },
+      "generation": 4,
+      "key": "dex:448",
+      "dex": 448,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "FIGHTING",
+        "STEEL"
+      ]
+    },
+    {
+      "id": "HIPPOPOTAS",
+      "names": {
+        "de": "Hippopotas",
+        "en": "Hippopotas"
+      },
+      "generation": 4,
+      "key": "dex:449",
+      "dex": 449,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GROUND"
+      ]
+    },
+    {
+      "id": "HIPPOWDON",
+      "names": {
+        "de": "Hippoterus",
+        "en": "Hippowdon"
+      },
+      "generation": 4,
+      "key": "dex:450",
+      "dex": 450,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GROUND"
+      ]
+    },
+    {
+      "id": "SKORUPI",
+      "names": {
+        "de": "Pionskora",
+        "en": "Skorupi"
+      },
+      "generation": 4,
+      "key": "dex:451",
+      "dex": 451,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "POISON",
+        "BUG"
+      ]
+    },
+    {
+      "id": "DRAPION",
+      "names": {
+        "de": "Piondragi",
+        "en": "Drapion"
+      },
+      "generation": 4,
+      "key": "dex:452",
+      "dex": 452,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "POISON",
+        "DARK"
+      ]
+    },
+    {
+      "id": "CROAGUNK",
+      "names": {
+        "de": "Glibunkel",
+        "en": "Croagunk"
+      },
+      "generation": 4,
+      "key": "dex:453",
+      "dex": 453,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "POISON",
+        "FIGHTING"
+      ]
+    },
+    {
+      "id": "TOXICROAK",
+      "names": {
+        "de": "Toxiquak",
+        "en": "Toxicroak"
+      },
+      "generation": 4,
+      "key": "dex:454",
+      "dex": 454,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "POISON",
+        "FIGHTING"
+      ]
+    },
+    {
+      "id": "CARNIVINE",
+      "names": {
+        "de": "Venuflibis",
+        "en": "Carnivine"
+      },
+      "generation": 4,
+      "key": "dex:455",
+      "dex": 455,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GRASS"
+      ]
+    },
+    {
+      "id": "FINNEON",
+      "names": {
+        "de": "Finneon",
+        "en": "Finneon"
+      },
+      "generation": 4,
+      "key": "dex:456",
+      "dex": 456,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "WATER"
+      ]
+    },
+    {
+      "id": "LUMINEON",
+      "names": {
+        "de": "Lumineon",
+        "en": "Lumineon"
+      },
+      "generation": 4,
+      "key": "dex:457",
+      "dex": 457,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "WATER"
+      ]
+    },
+    {
+      "id": "MANTYKE",
+      "names": {
+        "de": "Mantirps",
+        "en": "Mantyke"
+      },
+      "generation": 4,
+      "key": "dex:458",
+      "dex": 458,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "WATER",
+        "FLYING"
+      ]
+    },
+    {
+      "id": "SNOVER",
+      "names": {
+        "de": "Shnebedeck",
+        "en": "Snover"
+      },
+      "generation": 4,
+      "key": "dex:459",
+      "dex": 459,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GRASS",
+        "ICE"
+      ]
+    },
+    {
+      "id": "ABOMASNOW",
+      "names": {
+        "de": "Rexblisar",
+        "en": "Abomasnow"
+      },
+      "generation": 4,
+      "key": "dex:460",
+      "dex": 460,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GRASS",
+        "ICE"
+      ]
+    },
+    {
+      "id": "WEAVILE",
+      "names": {
+        "de": "Snibunna",
+        "en": "Weavile"
+      },
+      "generation": 4,
+      "key": "dex:461",
+      "dex": 461,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "DARK",
+        "ICE"
+      ]
+    },
+    {
+      "id": "MAGNEZONE",
+      "names": {
+        "de": "Magnezone",
+        "en": "Magnezone"
+      },
+      "generation": 4,
+      "key": "dex:462",
+      "dex": 462,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ELECTRIC",
+        "STEEL"
+      ]
+    },
+    {
+      "id": "LICKILICKY",
+      "names": {
+        "de": "Schlurplek",
+        "en": "Lickilicky"
+      },
+      "generation": 4,
+      "key": "dex:463",
+      "dex": 463,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "NORMAL"
+      ]
+    },
+    {
+      "id": "RHYPERIOR",
+      "names": {
+        "de": "Rihornior",
+        "en": "Rhyperior"
+      },
+      "generation": 4,
+      "key": "dex:464",
+      "dex": 464,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GROUND",
+        "ROCK"
+      ]
+    },
+    {
+      "id": "TANGROWTH",
+      "names": {
+        "de": "Tangoloss",
+        "en": "Tangrowth"
+      },
+      "generation": 4,
+      "key": "dex:465",
+      "dex": 465,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GRASS"
+      ]
+    },
+    {
+      "id": "ELECTIVIRE",
+      "names": {
+        "de": "Elevoltek",
+        "en": "Electivire"
+      },
+      "generation": 4,
+      "key": "dex:466",
+      "dex": 466,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ELECTRIC"
+      ]
+    },
+    {
+      "id": "MAGMORTAR",
+      "names": {
+        "de": "Magbrant",
+        "en": "Magmortar"
+      },
+      "generation": 4,
+      "key": "dex:467",
+      "dex": 467,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "FIRE"
+      ]
+    },
+    {
+      "id": "TOGEKISS",
+      "names": {
+        "de": "Togekiss",
+        "en": "Togekiss"
+      },
+      "generation": 4,
+      "key": "dex:468",
+      "dex": 468,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "FAIRY",
+        "FLYING"
+      ]
+    },
+    {
+      "id": "YANMEGA",
+      "names": {
+        "de": "Yanmega",
+        "en": "Yanmega"
+      },
+      "generation": 4,
+      "key": "dex:469",
+      "dex": 469,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "BUG",
+        "FLYING"
+      ]
+    },
+    {
+      "id": "LEAFEON",
+      "names": {
+        "de": "Folipurba",
+        "en": "Leafeon"
+      },
+      "generation": 4,
+      "key": "dex:470",
+      "dex": 470,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GRASS"
+      ]
+    },
+    {
+      "id": "GLACEON",
+      "names": {
+        "de": "Glaziola",
+        "en": "Glaceon"
+      },
+      "generation": 4,
+      "key": "dex:471",
+      "dex": 471,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ICE"
+      ]
+    },
+    {
+      "id": "GLISCOR",
+      "names": {
+        "de": "Skorgro",
+        "en": "Gliscor"
+      },
+      "generation": 4,
+      "key": "dex:472",
+      "dex": 472,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GROUND",
+        "FLYING"
+      ]
+    },
+    {
+      "id": "MAMOSWINE",
+      "names": {
+        "de": "Mamutel",
+        "en": "Mamoswine"
+      },
+      "generation": 4,
+      "key": "dex:473",
+      "dex": 473,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ICE",
+        "GROUND"
+      ]
+    },
+    {
+      "id": "PORYGON_Z",
+      "names": {
+        "de": "Porygon-Z",
+        "en": "Porygon-Z"
+      },
+      "generation": 4,
+      "key": "dex:474",
+      "dex": 474,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "NORMAL"
+      ]
+    },
+    {
+      "id": "GALLADE",
+      "names": {
+        "de": "Galagladi",
+        "en": "Gallade"
+      },
+      "generation": 4,
+      "key": "dex:475",
+      "dex": 475,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "PSYCHIC",
+        "FIGHTING"
+      ]
+    },
+    {
+      "id": "PROBOPASS",
+      "names": {
+        "de": "Voluminas",
+        "en": "Probopass"
+      },
+      "generation": 4,
+      "key": "dex:476",
+      "dex": 476,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ROCK",
+        "STEEL"
+      ]
+    },
+    {
+      "id": "DUSKNOIR",
+      "names": {
+        "de": "Zwirrfinst",
+        "en": "Dusknoir"
+      },
+      "generation": 4,
+      "key": "dex:477",
+      "dex": 477,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "GHOST"
+      ]
+    },
+    {
+      "id": "FROSLASS",
+      "names": {
+        "de": "Frosdedje",
+        "en": "Froslass"
+      },
+      "generation": 4,
+      "key": "dex:478",
+      "dex": 478,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ICE",
+        "GHOST"
+      ]
+    },
+    {
+      "id": "ROTOM",
+      "names": {
+        "de": "Rotom",
+        "en": "Rotom"
+      },
+      "generation": 4,
+      "key": "dex:479",
+      "dex": 479,
+      "requirement": "Gen-4 island habitat",
+      "types": [
+        "ELECTRIC",
+        "GHOST"
+      ]
+    }
+  ],
+  "special": [
+    {
+      "id": "REGIROCK",
+      "names": {
+        "de": "Regirock",
+        "en": "Regirock"
+      },
+      "generation": 3,
+      "dex": 377,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "ROCK"
+      ],
+      "key": "dex:377"
+    },
+    {
+      "id": "REGICE",
+      "names": {
+        "de": "Regice",
+        "en": "Regice"
+      },
+      "generation": 3,
+      "dex": 378,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "ICE"
+      ],
+      "key": "dex:378"
+    },
+    {
+      "id": "REGISTEEL",
+      "names": {
+        "de": "Registeel",
+        "en": "Registeel"
+      },
+      "generation": 3,
+      "dex": 379,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "STEEL"
+      ],
+      "key": "dex:379"
+    },
+    {
+      "id": "LATIAS",
+      "names": {
+        "de": "Latias",
+        "en": "Latias"
+      },
+      "generation": 3,
+      "dex": 380,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "DRAGON",
+        "PSYCHIC"
+      ],
+      "key": "dex:380"
+    },
+    {
+      "id": "LATIOS",
+      "names": {
+        "de": "Latios",
+        "en": "Latios"
+      },
+      "generation": 3,
+      "dex": 381,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "DRAGON",
+        "PSYCHIC"
+      ],
+      "key": "dex:381"
+    },
+    {
+      "id": "KYOGRE",
+      "names": {
+        "de": "Kyogre",
+        "en": "Kyogre"
+      },
+      "generation": 3,
+      "dex": 382,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "WATER"
+      ],
+      "key": "dex:382"
+    },
+    {
+      "id": "GROUDON",
+      "names": {
+        "de": "Groudon",
+        "en": "Groudon"
+      },
+      "generation": 3,
+      "dex": 383,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "GROUND"
+      ],
+      "key": "dex:383"
+    },
+    {
+      "id": "RAYQUAZA",
+      "names": {
+        "de": "Rayquaza",
+        "en": "Rayquaza"
+      },
+      "generation": 3,
+      "dex": 384,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "DRAGON",
+        "FLYING"
+      ],
+      "key": "dex:384"
+    },
+    {
+      "id": "JIRACHI",
+      "names": {
+        "de": "Jirachi",
+        "en": "Jirachi"
+      },
+      "generation": 3,
+      "dex": 385,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "STEEL",
+        "PSYCHIC"
+      ],
+      "key": "dex:385"
+    },
+    {
+      "id": "DEOXYS",
+      "names": {
+        "de": "Deoxys",
+        "en": "Deoxys"
+      },
+      "generation": 3,
+      "dex": 386,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "PSYCHIC"
+      ],
+      "key": "dex:386"
+    },
+    {
+      "id": "UXIE",
+      "names": {
+        "de": "Selfe",
+        "en": "Uxie"
+      },
+      "generation": 4,
+      "dex": 480,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "PSYCHIC"
+      ],
+      "key": "dex:480"
+    },
+    {
+      "id": "MESPRIT",
+      "names": {
+        "de": "Vesprit",
+        "en": "Mesprit"
+      },
+      "generation": 4,
+      "dex": 481,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "PSYCHIC"
+      ],
+      "key": "dex:481"
+    },
+    {
+      "id": "AZELF",
+      "names": {
+        "de": "Tobutz",
+        "en": "Azelf"
+      },
+      "generation": 4,
+      "dex": 482,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "PSYCHIC"
+      ],
+      "key": "dex:482"
+    },
+    {
+      "id": "DIALGA",
+      "names": {
+        "de": "Dialga",
+        "en": "Dialga"
+      },
+      "generation": 4,
+      "dex": 483,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "STEEL",
+        "DRAGON"
+      ],
+      "key": "dex:483"
+    },
+    {
+      "id": "PALKIA",
+      "names": {
+        "de": "Palkia",
+        "en": "Palkia"
+      },
+      "generation": 4,
+      "dex": 484,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "WATER",
+        "DRAGON"
+      ],
+      "key": "dex:484"
+    },
+    {
+      "id": "HEATRAN",
+      "names": {
+        "de": "Heatran",
+        "en": "Heatran"
+      },
+      "generation": 4,
+      "dex": 485,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "FIRE",
+        "STEEL"
+      ],
+      "key": "dex:485"
+    },
+    {
+      "id": "REGIGIGAS",
+      "names": {
+        "de": "Regigigas",
+        "en": "Regigigas"
+      },
+      "generation": 4,
+      "dex": 486,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "NORMAL"
+      ],
+      "key": "dex:486"
+    },
+    {
+      "id": "CRESSELIA",
+      "names": {
+        "de": "Cresselia",
+        "en": "Cresselia"
+      },
+      "generation": 4,
+      "dex": 488,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "PSYCHIC"
+      ],
+      "key": "dex:488"
+    },
+    {
+      "id": "PHIONE",
+      "names": {
+        "de": "Phione",
+        "en": "Phione"
+      },
+      "generation": 4,
+      "dex": 489,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "WATER"
+      ],
+      "key": "dex:489"
+    },
+    {
+      "id": "MANAPHY",
+      "names": {
+        "de": "Manaphy",
+        "en": "Manaphy"
+      },
+      "generation": 4,
+      "dex": 490,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "WATER"
+      ],
+      "key": "dex:490"
+    },
+    {
+      "id": "DARKRAI",
+      "names": {
+        "de": "Darkrai",
+        "en": "Darkrai"
+      },
+      "generation": 4,
+      "dex": 491,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "DARK"
+      ],
+      "key": "dex:491"
+    },
+    {
+      "id": "SHAYMIN",
+      "names": {
+        "de": "Shaymin",
+        "en": "Shaymin"
+      },
+      "generation": 4,
+      "dex": 492,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "GRASS"
+      ],
+      "key": "dex:492"
+    },
+    {
+      "id": "ARCEUS",
+      "names": {
+        "de": "Arceus",
+        "en": "Arceus"
+      },
+      "generation": 4,
+      "dex": 493,
+      "requirement": "Review existing unique catch owner; never add a second guaranteed catch",
+      "types": [
+        "NORMAL"
+      ],
+      "key": "dex:493"
+    }
+  ],
+  "exceptions": [
+    {
+      "dex": 487,
+      "reason": "Recurring non-catchable Distortion World antagonist",
+      "id": "GIRATINA"
+    }
+  ],
+  "schema": "kasc.sevii-requirements/v1",
+  "notice": "Requirements only. Registration or this manifest does not prove catchability.",
+  "source": {
+    "acquisition": "hoenn_acquisition_67_data.lua",
+    "catalog": "backend_national_catalog_67_data.lua",
+    "hoennSourceCommit": "4bf39fe6ce32d720a03964be4c24e22198ba8de8"
+  }
+}

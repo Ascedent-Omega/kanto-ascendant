@@ -14,7 +14,7 @@ return function(mod, opts)
     SAVE_KEY = "hoenn_roamers_67",
     STATE_VERSION = 1,
     LEVEL = 40,
-    ENCOUNTER_DENOMINATOR = 32,
+    ENCOUNTER_DENOMINATOR = 20,
     KO_RECOVERY_MAPS = 3,
     ENCOUNTER_PRIORITY = 120,
     EVENT_PRIORITY = 3950,
@@ -32,8 +32,9 @@ return function(mod, opts)
     "ROUTE_25",
   }
 
-  local activeGame, pending
+  local activeGame, pending, pendingExpansion, expansion
   local visibleBattles = setmetatable({}, {__mode="k"})
+  local battleSaves = setmetatable({}, {__mode="k"})
   local randomInt = opts.randomInt or function(lo, hi)
     if love and love.math and love.math.random then return love.math.random(lo, hi) end
     return math.random(lo, hi)
@@ -97,10 +98,25 @@ return function(mod, opts)
       and fieldAccess.legendAccess(game) == true
   end
 
-  local function owned(game, species)
+  function R.bindLegendHistory(history)
+    assert(history);opts.legendHistory=function()return history end
+  end
+  function R.priorOwnership(game, species)
+    if not R.profiles[species]then return false,"unknown-species"end
+    if opts.legendHistory then
+      local history=opts.legendHistory()
+      if not history or type(history.owned)~="function"then
+        return false,"legend_history_unavailable"
+      end
+      return (history.ownedThisRun or history.owned)(game,species)
+    end
     local owned = game and game.save and game.save.pokedex
       and game.save.pokedex.owned
     return owned and owned[species] == true or false
+  end
+  local function eligible(game,species)
+    local owned,err=R.priorOwnership(game,species)
+    return not owned and not err
   end
 
   function R.observations(game,mapId)
@@ -111,34 +127,44 @@ return function(mod, opts)
     if type(s)~='table' or tonumber(s.version) and tonumber(s.version)>R.STATE_VERSION then return out end
     for _,species in ipairs(R.order)do
       local row=type(s.roamers)=='table' and s.roamers[species]
-      if type(row)=='table' and row.map==mapId and (tonumber(row.recovery) or 0)<=0
-          and not (s.caught and s.caught[species]) and not owned(game,species)then
+      if type(row)=='table' and(row.map==mapId or expansion and expansion.accepts(game,mapId)and expansion.area(row.map)==expansion.area(mapId))and (tonumber(row.recovery) or 0)<=0
+          and not (s.caught and s.caught[species]) and eligible(game,species)then
         out[#out+1]={species=species,mapId=mapId,kind='roamer',source='hoenn_roamer'}
       end
     end
     return out
   end
 
+  function R.setExpansion(value)expansion=value end
+  local function sameRoute(a,b)
+    return a==b or expansion and expansion.area(a)~=nil and expansion.area(a)==expansion.area(b)
+  end
   local function routePool(game)
-    local out = {}
+    local out,seen = {},{}
     for _, mapId in ipairs(R.routes) do
       local encounter = game and game.data and game.data.encounters
         and game.data.encounters[mapId]
-      if encounter and encounter.grass then out[#out + 1] = mapId end
+      if encounter and encounter.grass then out[#out + 1] = mapId;seen[mapId]=true end
+    end
+    if expansion then
+      for _,mapId in ipairs(expansion.routes(game))do
+        if not seen[mapId]then out[#out+1]=mapId;seen[mapId]=true end
+      end
     end
     return out
   end
+  R.routePool=routePool
 
   local function chooseMap(game, avoid, occupied)
     local pool, candidates = routePool(game), {}
     for _, mapId in ipairs(pool) do
-      if mapId ~= avoid and not (occupied and occupied[mapId]) then
+      if not sameRoute(mapId,avoid)and not (occupied and occupied[mapId]) then
         candidates[#candidates + 1] = mapId
       end
     end
     if #candidates == 0 then
       for _, mapId in ipairs(pool) do
-        if mapId ~= avoid then candidates[#candidates + 1] = mapId end
+        if not sameRoute(mapId,avoid)then candidates[#candidates + 1] = mapId end
       end
     end
     if #candidates == 0 then candidates = pool end
@@ -160,20 +186,29 @@ return function(mod, opts)
     game = game or activeGame
     if not R.available(game) then return false, "unavailable" end
     local s, changed = state(true), false
+    local destinations=routePool(game)
     for _, species in ipairs(R.order) do
-      if owned(game, species) then
+      local owned,historyError=R.priorOwnership(game,species)
+      if owned then
         if not s.caught[species] then
           s.caught[species] = { adopted=true }
           changed = true
         end
         if s.roamers[species] then s.roamers[species], changed = nil, true end
-      elseif not s.caught[species] and not s.roamers[species] then
+      elseif not historyError and not s.caught[species] and not s.roamers[species] then
         local map = chooseMap(game, nil, occupiedRoutes(s, species))
         if map then
           s.roamers[species] = {
             map=map, dvs=nil, hp=nil, status=nil, recovery=0, lastVisit=nil,
           }
           changed = true
+        end
+      elseif not historyError and not s.caught[species] and s.roamers[species] then
+        local row=s.roamers[species];local valid=false
+        for _,destination in ipairs(destinations)do if sameRoute(row.map,destination)then valid=true;break end end
+        if not valid then
+          local destination=chooseMap(game,row.map,occupiedRoutes(s,species))
+          if destination then row.map=destination;changed=true end
         end
       end
     end
@@ -215,22 +250,49 @@ return function(mod, opts)
     return true, s.caught[species]
   end
 
-  local function proposal(game, mapId, rng)
+  local function proposal(game, mapId, rng, expanded)
     if not R.available(game) then return end
     R.initialize(game)
     local s = state(false)
+    local candidates={}
     for _, species in ipairs(R.order) do
       local row = s and s.roamers[species]
-      if row and row.recovery <= 0 and row.map == mapId
-          and rng(1, R.ENCOUNTER_DENOMINATOR) == 1 then
-        return {species=species, map=mapId, level=R.LEVEL, save=game.save}
+      if row and row.recovery <= 0 and sameRoute(row.map,mapId)
+          and eligible(game,species) and(not expanded or expansion.readyFor(game,species))then
+        candidates[#candidates+1]=species
       end
     end
+    -- One roll for the whole pool, not an independent 5% roll per identity.
+    if #candidates==0 or rng(1,expanded and expansion.DENOMINATOR or R.ENCOUNTER_DENOMINATOR)~=1 then return end
+    local species=candidates[#candidates==1 and 1 or rng(1,#candidates)]
+    return {species=species,map=mapId,level=R.LEVEL,save=game.save,expanded=expanded==true}
   end
 
   local function encounter(row)
     return {species=row.species, level=row.level, kaProtected=true,
       kaEncounterSource="hoenn_roamer"}
+  end
+
+  function R.rollExpansion(game,mapId,rng)
+    pending,pendingExpansion=nil,nil
+    if not expansion or not expansion.accepts(game,mapId)then return end
+    pending=proposal(game,mapId,rng,true)
+    if pending then pendingExpansion=encounter(pending);return pendingExpansion end
+  end
+  function R.acceptsExpansionEncounter(game,record,ctx)
+    return pendingExpansion~=nil and record==pendingExpansion and pending and game.save==pending.save
+      and ctx.mapId==pending.map and expansion and expansion.accepts(game,ctx.mapId)
+      and R.available(game)and eligible(game,pending.species)or false
+  end
+  function R.canCaptureExpansion(game,battle,species)
+    if not(battle and battleSaves[battle]and battleSaves[battle]==game.save
+        and battle.game==game and battle.kaHoennRoamer==species and battle.kind=='wild'
+        and not battle.result and battle.enemy and battle.enemy.mon.species==species
+        and game.overworld.map.id==battle.kaHoennRoamerMap and expansion
+        and expansion.accepts(game,battle.kaHoennRoamerMap)and expansion.readyFor(game,species)
+        and R.available(game)and eligible(game,species))then return false end
+    for _,screen in ipairs(game.stack.states or{})do if screen==battle then return true end end
+    return false
   end
 
   function R.proposeVisible(game, record, surface)
@@ -239,7 +301,7 @@ return function(mod, opts)
         or not surface or surface.surface ~= "GRASS"
         or not game.overworld or not game.overworld.map
         or record.mapId ~= game.overworld.map.id then return end
-    local row = proposal(game, record.mapId, randomInt)
+    local row = proposal(game, record.mapId, randomInt, expansion and expansion.accepts(game,record.mapId))
     if row then return encounter(row), row end
   end
 
@@ -247,15 +309,16 @@ return function(mod, opts)
 
   if mod.hooks and type(mod.hooks.wrap) == "function" then
     mod.hooks:wrap("encounter.roll", function(nextRoll, encDef, ctx)
-      pending = nil
+      pending,pendingExpansion = nil,nil
       local native = nextRoll(encDef, ctx)
-      if not (native and ctx and ctx.terrain == "grass")
-          or native.kaProtected or native.kaEncounterSource
+      if not (ctx and ctx.terrain == "grass")
+          or native and(native.kaProtected or native.kaEncounterSource)
           or ctx.kaProtected or ctx.kaEncounterSource
           or ctx.opts and (ctx.opts.hooked or ctx.opts.scriptedEncounter
             or ctx.opts.randomizerProtected) then
         return native
       end
+      if expansion and expansion.accepts(activeGame,ctx.mapId)then return native end
       pending = proposal(activeGame, ctx.mapId, ctx.rng)
       if pending then return encounter(pending) end
       return native
@@ -277,12 +340,12 @@ return function(mod, opts)
       local battle = ev and ev.battle
       local proposal = battle and visibleBattles[battle] or pending
       if battle then visibleBattles[battle] = nil end
-      pending = nil
+      pending,pendingExpansion = nil,nil
       if not (proposal and battle and battle.kind == "wild"
           and battle.game and battle.game.save == proposal.save
-          and R.available(battle.game)
+          and R.available(battle.game) and eligible(battle.game,proposal.species)
           and not battle.scriptedEncounter and not battle.noCatch
-          and not battle.demo and not battle.safari and not battle.ghost
+          and not battle.demo and(not battle.safari or proposal.expanded)and not battle.ghost
           and battle.enemy and battle.enemy.mon
           and battle.enemy.mon.species == proposal.species
           and battle.enemy.mon.level == proposal.level) then return end
@@ -294,9 +357,20 @@ return function(mod, opts)
           and battle.encounterSource ~= "hoenn_roamer" then return end
       local s = state(false)
       local row = s and s.roamers[proposal.species]
-      if not row or row.map ~= proposal.map or row.recovery > 0 then return end
+      if not row or row.recovery > 0 or not sameRoute(row.map,proposal.map)or not(proposal.expanded and expansion
+          and expansion.accepts(battle.game,proposal.map)and expansion.readyFor(battle.game,proposal.species)
+          or not proposal.expanded and sameRoute(row.map,proposal.map))then return end
       local mon = battle.enemy.mon
-      if row.dvs then mon.dvs = copy(row.dvs) end
+      if row.dvs then
+        mon.dvs = copy(row.dvs)
+        local def=battle.game.data and battle.game.data.pokemon and battle.game.data.pokemon[mon.species]
+        if def then
+          -- The constructor rolled fresh DVs before this existing identity
+          -- was rebound. Its derived stats must follow the restored DVs too.
+          mon.stats=require('src.pokemon.Stats').calc(def,mon.level,mon.dvs,mon.statExp,mon)
+          battle.enemy.curStats=copy(mon.stats)
+        end
+      end
       if not row.dvs then
         row.dvs = copy(mon.dvs or {})
         persist(s)
@@ -305,6 +379,7 @@ return function(mod, opts)
       mon.hp = row.hp and math.max(1, math.min(maximum, row.hp)) or maximum
       mon.status = copy(row.status)
       battle.enemy.shownHP = mon.hp
+      battleSaves[battle] = battle.game.save
       battle.kaHoennRoamer = proposal.species
       battle.kaHoennRoamerMap = proposal.map
       mon.kaHoennRoamer = proposal.species
@@ -313,7 +388,8 @@ return function(mod, opts)
     mod.events:on("pokemon.caught", function(ev)
       local battle, mon = ev and ev.battle, ev and ev.mon
       local species = battle and battle.kaHoennRoamer
-      if not (species and mon and mon.species == species) then return end
+      if not (species and mon and mon.species == species
+          and battleSaves[battle]==battle.game.save) then return end
       local ok = markCaught(ev.game or battle.game, species, mon,
         battle.kaHoennRoamerMap)
       battle.kaHoennRoamerStored = ok == true
@@ -322,7 +398,10 @@ return function(mod, opts)
     mod.events:on("battle.ended", function(ev)
       local battle = ev and ev.battle
       local species = battle and battle.kaHoennRoamer
-      if not species then return end
+      local save=battle and battleSaves[battle]
+      if battle then battleSaves[battle]=nil end
+      if not species or not save or battle.game.save~=save
+          or not activeGame or activeGame.save~=save then return end
       local s = state(false)
       local row = s and s.roamers[species]
       if not row then return end
@@ -349,12 +428,15 @@ return function(mod, opts)
       R.initialize(activeGame)
       local mapId = ev and ev.mapId
       local s, changed = state(false), false
+      local area=expansion and expansion.accepts(activeGame,mapId)and expansion.area(mapId)or nil
+      if area and s.lastExpansionArea==area then return end
+      if s.lastExpansionArea~=area then s.lastExpansionArea=area;changed=true end
       for species, row in pairs(s and s.roamers or {}) do
-        if row.recovery > 0 and mapId and row.lastVisit ~= mapId then
+        if eligible(activeGame,species)and row.recovery > 0 and mapId and row.lastVisit ~= mapId then
           row.recovery = row.recovery - 1
           row.lastVisit, changed = mapId, true
           if row.recovery <= 0 then row.hp, row.status = nil, nil end
-        elseif row.recovery <= 0 and randomInt(1, 4) == 1 then
+        elseif row.recovery <= 0 and eligible(activeGame,species)and randomInt(1, 4) == 1 then
           row.map = chooseMap(activeGame, mapId,
             occupiedRoutes(s, species)) or row.map
           changed = true
@@ -363,12 +445,13 @@ return function(mod, opts)
       if changed then persist(s) end
     end, R.EVENT_PRIORITY)
 
-    mod.events:on("world.stepped", function() pending = nil end,
+    mod.events:on("world.stepped", function() pending,pendingExpansion = nil,nil end,
       R.EVENT_PRIORITY)
     for _, event in ipairs({ "save.loaded", "save.created", "game.ready" }) do
       mod.events:on(event, function(ev)
-        pending = nil
+        pending,pendingExpansion = nil,nil
         visibleBattles = setmetatable({}, {__mode="k"})
+        battleSaves = setmetatable({}, {__mode="k"})
         activeGame = ev and ev.game or activeGame
         if activeGame then R.initialize(activeGame) end
       end, R.EVENT_PRIORITY)
@@ -376,8 +459,9 @@ return function(mod, opts)
   end
 
   function R.install(game, deps)
-    pending = nil
+    pending,pendingExpansion = nil,nil
     visibleBattles = setmetatable({}, {__mode="k"})
+    battleSaves = setmetatable({}, {__mode="k"})
     activeGame = game or activeGame
     deps = deps or {}
     local BattleState = deps.battleState or require("src.battle.BattleState")

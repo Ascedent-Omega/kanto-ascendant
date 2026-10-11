@@ -121,9 +121,13 @@ return function(mod,opts)
         end})
     end
     if not regis.eventComplete(game,"REGIROCK")then
+      local sevii=mod.exports and mod.exports.seviiExpedition
+      local moved=sevii and sevii.available==true
       return show(game,tr(
-        "RESEARCHER: I still have equipment on the volcanic island. Return there?",
-        "FORSCHER: Auf der Vulkaninsel steht noch meine Ausrüstung. Sollen wir zurückkehren?")..A.researchHint(game),nil,
+        moved and "RESEARCHER: The stone signal now comes from TANOBY on Sevii. The old passage is sealed. I can still take you back to the volcano. Go?"
+          or "RESEARCHER: I still have equipment on the volcanic island. Return there?",
+        moved and "FORSCHER: Das Steinsignal kommt jetzt aus TANOBY auf Sevii. Der alte Zugang ist versiegelt. Ich kann dich trotzdem zum Vulkan bringen. Möchtest du hin?"
+          or "FORSCHER: Auf der Vulkaninsel steht noch meine Ausrüstung. Sollen wir zurückkehren?")..A.researchHint(game),nil,
         {defaultNo=true,choice=function(yes)
           if yes then moltres.openExpedition(game)elseif done then done()end
         end})

@@ -27,11 +27,15 @@ return function(mod,opts)
     if not resolved or resolved.mode=='off' or (tonumber(resolved.activeEpoch) or 1)<2 then return nil end
     return resolved.activeEpoch
   end
-  local function calc(base,mon)
+  local function calc(base,mon,training,epoch)
     -- Preserve cartridge DV/stat-exp training; do not invent IVs, EVs or
     -- natures in an existing Gen-I save. Gen2 uses the same Special DV/exp.
     local dv=mon.dvs and mon.dvs.special or 0
     local exp=mon.statExp and mon.statExp.special or 0
+    if epoch>=3 and training=='specialDefense'and mon.statExp
+        and type(mon.statExp.specialDefense)=='number'then
+      exp=mon.statExp.specialDefense
+    end
     local ev=math.floor(math.min(255,math.ceil(math.sqrt(math.max(0,exp))))/4)
     return math.floor(((base+dv)*2+ev)*(mon.level or 1)/100)+5
   end
@@ -54,8 +58,8 @@ return function(mod,opts)
     end
     local base=facts.baseStats(key,epoch);if not base then return false end
     local stats=copy(who.curStats)
-    stats.specialAttack=calc(base.spa,who.mon)
-    stats.specialDefense=calc(base.spd,who.mon)
+    stats.specialAttack=calc(base.spa,who.mon,'specialAttack',epoch)
+    stats.specialDefense=calc(base.spd,who.mon,'specialDefense',epoch)
     if profile then
       local gain=profile.bonuses and profile.bonuses.special or 0
       local level=who.mon.level or 1

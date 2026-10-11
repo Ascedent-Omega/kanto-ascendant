@@ -205,7 +205,12 @@ return function(mod, opts)
         if type(bond)=='number' and bond==math.floor(bond) and bond>=0 and bond<=255
             and type(steps)=='number' and steps==math.floor(steps) and steps>=0 and steps<64 then
           mon._kascBabyBondSteps=(steps+1)%64
-          if steps==63 then mon.johtoBond=math.min(255,bond+1) end
+          if steps==63 then
+            local balls=mod.exports and mod.exports.seviiBalls
+            if not(balls and balls.gainFriendship and balls.gainFriendship(game,mon,1))then
+              mon.johtoBond=math.min(255,bond+1)
+            end
+          end
         end
       end
     end

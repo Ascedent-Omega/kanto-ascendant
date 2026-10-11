@@ -148,10 +148,13 @@ return function(mod, opts)
     for id,value in pairs(localPersistent and localPersistent.secretUnlocks or{})do
       if value==true then receipts[id]=true end
     end
-    local portalCaptures={};local allPortalCaptures=true
+    local portalCaptures,portalWitnesses,portalResearch={},{},{};local allPortalCaptures,allPortalResearch=true,true
     for species,id in pairs(D.portalLegends)do
       portalCaptures[species]=receipts[id]==true
       if not portalCaptures[species]then allPortalCaptures=false end
+      portalWitnesses[species]=receipts['KA_LEGEND_WITNESS_'..species]==true
+      portalResearch[species]=portalCaptures[species]or portalWitnesses[species]
+      if not portalResearch[species]then allPortalResearch=false end
     end
     local readyGeneration=generationReady(game)
     local foundationComplete=#foundationMissing==0
@@ -164,10 +167,11 @@ return function(mod, opts)
       foundationComplete=foundationComplete,
       portalReady=foundationComplete and readyGeneration,
       portalCaptures=portalCaptures,
-      allPortalCaptures=allPortalCaptures,
+      allPortalCaptures=allPortalCaptures,portalWitnesses=portalWitnesses,
+      portalResearch=portalResearch,allPortalResearch=allPortalResearch,
       birthIslandReady=foundationComplete and readyGeneration
-        and profilesComplete and allPortalCaptures,
-      jirachiDexReady=complete and profilesComplete and allPortalCaptures,
+        and profilesComplete and allPortalResearch,
+      jirachiDexReady=complete and profilesComplete and allPortalResearch,
       deoxysOwned=owned.DEOXYS==true,jirachiExcluded=true,
     }
   end

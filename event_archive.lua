@@ -400,6 +400,10 @@ return function(mod, opts)
   end
 
   local function storeGift(game, profile, origin, receipt, deliveryOpts)
+    if opts.acquisitionAllowed then
+      local allowed,why=opts.acquisitionAllowed(game,profile)
+      if not allowed then return nil,why or 'acquisition_blocked'end
+    end
     local resolved,reason=profileForGame(game,profile)
     if not resolved then return nil,reason or 'profile' end
     profile=resolved
@@ -493,6 +497,7 @@ return function(mod, opts)
     local mon
     mon, destination, box = storeGift(game, profile, origin, clean, deliveryOpts)
     if not mon then return nil, destination or "full" end
+    if opts.giftDelivered then opts.giftDelivered(game,mon)end
     markOwned(game, profile)
     return mon, destination, box
   end
@@ -518,6 +523,10 @@ return function(mod, opts)
     local profile = profiles[id]
     local s = state()
     if not (profile and profileEnabled(profile)) then return nil, "disabled" end
+    if opts.acquisitionAllowed then
+      local allowed,why=opts.acquisitionAllowed(game,profile)
+      if not allowed then return nil,why or 'acquisition_blocked'end
+    end
     if s.claimed[id] then return nil, "claimed" end
     if s.pending and s.pending.id ~= id then
       return tr(
@@ -532,6 +541,7 @@ return function(mod, opts)
         "Every PARTY and PC\nslot is full.\fYour event prize is\nreserved in EVENTS.",
         "TEAM und PC sind\nvoll.\fDein Event-Preis ist\nunter EVENTS reserviert."), "full"
     end
+    if opts.giftDelivered then opts.giftDelivered(game,mon)end
     markOwned(game, profile)
     s.claimed[id] = {
       origin = origin or "KANTO HERITAGE",
@@ -1120,6 +1130,12 @@ return function(mod, opts)
   C.persist = persist
   C.profile = function(id) return profiles[id] end
   C.profileForGame = profileForGame
+  function C.acquisitionAllowed(game,profile)
+    if type(profile)=='string'then profile=profiles[profile]end
+    if not profile then return false,'profile'end
+    if opts.acquisitionAllowed then return opts.acquisitionAllowed(game,profile)end
+    return true
+  end
   C.registerGiftProfiles = function(rows)
     local added = 0
     for _, profile in ipairs(type(rows) == "table" and rows or {}) do

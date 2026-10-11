@@ -1,0 +1,1952 @@
+{
+  "rows": [
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_sleeping_giant.lua",
+        "access": "Alternative only: completed Tanoby quest AND original sanctuary available AND this guardian original puzzle solved in current run; original site retained; shared lifetime ownership.",
+        "captureOwner": "sevii_special_encounters.lua",
+        "map": "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_LIPTOO_CHAMBER",
+        "history": "hevo_persistent.seviiLegendOwned: canonical lifetime ownership"
+      },
+      "runtime": "REGIROCK",
+      "giftProfiles": [
+        {
+          "key": "dex:377",
+          "status": "active",
+          "profile": "backend_base_0377",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:377",
+          "status": "active",
+          "profile": "backend_egg_0377",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:377",
+          "status": "active",
+          "profile": "backend_shiny_egg_0377",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "REGIROCK",
+      "forms": [
+        "dex:377"
+      ],
+      "additionalCatchOwners": [
+        {
+          "owner": "hoenn_research_sanctums_67.lua",
+          "map": "KA_HOENN_DESERT_RUINS",
+          "history": "canonical lifetime ownership; separate kaHoennEndgameRunEvents67.completed per-run puzzle/capture/witness"
+        }
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/crystal_animated/back/normal/377/001.png",
+        "assets/crystal_animated/back/shiny/377/001.png",
+        "assets/crystal_animated/front/normal/377/001.png",
+        "assets/crystal_animated/front/shiny/377/001.png",
+        "assets/hoenn_species_67/cries/0377.ogg",
+        "assets/hoenn_species_67/followers/normal/follower_REGIROCK.png",
+        "assets/hoenn_species_67/followers/shiny/follower_REGIROCK.png",
+        "assets/hoenn_species_67/icons/normal/0377.png",
+        "assets/hoenn_species_67/icons/shiny/0377.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/377.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/377.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/377.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/377.png"
+      ],
+      "dex": 377,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked",
+      "nativeCaptureEvidence": "regi-return-native7.log (exit 0): refusal without original access/puzzle, native original puzzle before alternative Tanoby catch/reload, old-site memory, physical returns and actual Legacy transaction. Fixtures and limits in SEVII_LEGEND_AUDIT_DE.md."
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_sleeping_giant.lua",
+        "access": "Alternative only: completed Tanoby quest AND original sanctuary available AND this guardian original puzzle solved in current run; original site retained; shared lifetime ownership.",
+        "captureOwner": "sevii_special_encounters.lua",
+        "map": "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_WEEPTH_CHAMBER",
+        "history": "hevo_persistent.seviiLegendOwned: canonical lifetime ownership"
+      },
+      "runtime": "REGICE",
+      "giftProfiles": [
+        {
+          "key": "dex:378",
+          "status": "active",
+          "profile": "backend_base_0378",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:378",
+          "status": "active",
+          "profile": "backend_egg_0378",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:378",
+          "status": "active",
+          "profile": "backend_shiny_egg_0378",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "REGICE",
+      "forms": [
+        "dex:378"
+      ],
+      "additionalCatchOwners": [
+        {
+          "owner": "hoenn_research_sanctums_67.lua",
+          "map": "KA_HOENN_ISLAND_CAVE",
+          "history": "canonical lifetime ownership; separate kaHoennEndgameRunEvents67.completed per-run puzzle/capture/witness"
+        }
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/crystal_animated/back/normal/378/001.png",
+        "assets/crystal_animated/back/shiny/378/001.png",
+        "assets/crystal_animated/front/normal/378/001.png",
+        "assets/crystal_animated/front/shiny/378/001.png",
+        "assets/hoenn_species_67/cries/0378.ogg",
+        "assets/hoenn_species_67/followers/normal/follower_REGICE.png",
+        "assets/hoenn_species_67/followers/shiny/follower_REGICE.png",
+        "assets/hoenn_species_67/icons/normal/0378.png",
+        "assets/hoenn_species_67/icons/shiny/0378.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/378.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/378.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/378.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/378.png"
+      ],
+      "dex": 378,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked",
+      "nativeCaptureEvidence": "regi-return-native7.log (exit 0): refusal without original access/puzzle, native original puzzle before alternative Tanoby catch/reload, old-site memory, physical returns and actual Legacy transaction. Fixtures and limits in SEVII_LEGEND_AUDIT_DE.md."
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_sleeping_giant.lua",
+        "access": "Alternative only: completed Tanoby quest AND original sanctuary available AND this guardian original puzzle solved in current run; original site retained; shared lifetime ownership.",
+        "captureOwner": "sevii_special_encounters.lua",
+        "map": "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_SCUFIB_CHAMBER",
+        "history": "hevo_persistent.seviiLegendOwned: canonical lifetime ownership"
+      },
+      "runtime": "REGISTEEL",
+      "giftProfiles": [
+        {
+          "key": "dex:379",
+          "status": "active",
+          "profile": "backend_base_0379",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:379",
+          "status": "active",
+          "profile": "backend_egg_0379",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:379",
+          "status": "active",
+          "profile": "backend_shiny_egg_0379",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "REGISTEEL",
+      "forms": [
+        "dex:379"
+      ],
+      "additionalCatchOwners": [
+        {
+          "owner": "hoenn_research_sanctums_67.lua",
+          "map": "KA_HOENN_ANCIENT_TOMB",
+          "history": "canonical lifetime ownership; separate kaHoennEndgameRunEvents67.completed per-run puzzle/capture/witness"
+        }
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/crystal_animated/back/normal/379/001.png",
+        "assets/crystal_animated/back/shiny/379/001.png",
+        "assets/crystal_animated/front/normal/379/001.png",
+        "assets/crystal_animated/front/shiny/379/001.png",
+        "assets/hoenn_species_67/cries/0379.ogg",
+        "assets/hoenn_species_67/followers/normal/follower_REGISTEEL.png",
+        "assets/hoenn_species_67/followers/shiny/follower_REGISTEEL.png",
+        "assets/hoenn_species_67/icons/normal/0379.png",
+        "assets/hoenn_species_67/icons/shiny/0379.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/379.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/379.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/379.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/379.png"
+      ],
+      "dex": 379,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked",
+      "nativeCaptureEvidence": "regi-return-native7.log (exit 0): refusal without original access/puzzle, native original puzzle before alternative Tanoby catch/reload, old-site memory, physical returns and actual Legacy transaction. Fixtures and limits in SEVII_LEGEND_AUDIT_DE.md."
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "hoenn_roamers_67.lua",
+        "history": "Canonical lifetime ownership including old hoenn_roamers_67.caught receipts and Legacy lineage; same original roaming identity.",
+        "access": "Original Hoenn access; expansion after sealed Sevii finale. Persistent current location; 5 percent only in that area; caves and interiors excluded.",
+        "maps": [
+          "ROUTE_1",
+          "ROUTE_2",
+          "ROUTE_3",
+          "ROUTE_4",
+          "ROUTE_5",
+          "ROUTE_6",
+          "ROUTE_7",
+          "ROUTE_8",
+          "ROUTE_9",
+          "ROUTE_10",
+          "ROUTE_11",
+          "ROUTE_12",
+          "ROUTE_13",
+          "ROUTE_14",
+          "ROUTE_15",
+          "ROUTE_16",
+          "ROUTE_17",
+          "ROUTE_18",
+          "ROUTE_22",
+          "ROUTE_24",
+          "ROUTE_25"
+        ],
+        "customKantoOutdoorMaps": [
+          "KA_BLAINE_VOLCANO_FOOT",
+          "KA_HEVO_RAYQUAZA_CHAMBER"
+        ],
+        "expansion": "sevii_eon_roaming.lua",
+        "expandedMaps": [
+          "CELADON_CITY",
+          "CELADON_MANSION_ROOF",
+          "CELADON_MART_ROOF",
+          "CERULEAN_CITY",
+          "CINNABAR_ISLAND",
+          "FUCHSIA_CITY",
+          "INDIGO_PLATEAU",
+          "KA_BLAINE_VOLCANO_FOOT",
+          "KA_HEVO_RAYQUAZA_CHAMBER",
+          "KA_SEVII_FIVE",
+          "KA_SEVII_FIVE_ISLAND_MEADOW",
+          "KA_SEVII_FIVE_ISLAND_MEADOW_X0_Y10",
+          "KA_SEVII_FIVE_ISLAND_MEADOW_X0_Y20",
+          "KA_SEVII_FIVE_ISLAND_MEADOW_X0_Y30",
+          "KA_SEVII_FIVE_ISLAND_MEMORIAL_PILLAR",
+          "KA_SEVII_FIVE_ISLAND_MEMORIAL_PILLAR_X0_Y10",
+          "KA_SEVII_FIVE_ISLAND_MEMORIAL_PILLAR_X0_Y20",
+          "KA_SEVII_FIVE_ISLAND_MEMORIAL_PILLAR_X0_Y30",
+          "KA_SEVII_FIVE_ISLAND_MEMORIAL_PILLAR_X0_Y40",
+          "KA_SEVII_FIVE_ISLAND_MEMORIAL_PILLAR_X0_Y50",
+          "KA_SEVII_FIVE_ISLAND_RESORT_GORGEOUS",
+          "KA_SEVII_FIVE_ISLAND_RESORT_GORGEOUS_X0_Y10",
+          "KA_SEVII_FIVE_ISLAND_RESORT_GORGEOUS_X24_Y0",
+          "KA_SEVII_FIVE_ISLAND_RESORT_GORGEOUS_X24_Y10",
+          "KA_SEVII_FIVE_ISLAND_RESORT_GORGEOUS_X48_Y0",
+          "KA_SEVII_FIVE_ISLAND_RESORT_GORGEOUS_X48_Y10",
+          "KA_SEVII_FIVE_ISLAND_WATER_LABYRINTH",
+          "KA_SEVII_FIVE_ISLAND_WATER_LABYRINTH_X0_Y10",
+          "KA_SEVII_FIVE_ISLAND_WATER_LABYRINTH_X24_Y0",
+          "KA_SEVII_FIVE_ISLAND_WATER_LABYRINTH_X24_Y10",
+          "KA_SEVII_FIVE_ISLAND_WATER_LABYRINTH_X48_Y0",
+          "KA_SEVII_FIVE_ISLAND_WATER_LABYRINTH_X48_Y10",
+          "KA_SEVII_FIVE_X0_Y10",
+          "KA_SEVII_FOUR",
+          "KA_SEVII_KINDLE",
+          "KA_SEVII_KINDLE_NORTH",
+          "KA_SEVII_MT_EMBER_EXTERIOR",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X0_Y20",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X0_Y40",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X24_Y0",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X24_Y20",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X24_Y40",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X48_Y0",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X48_Y20",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X48_Y40",
+          "KA_SEVII_MT_EMBER_SUMMIT",
+          "KA_SEVII_ONE",
+          "KA_SEVII_SEVEN",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE_X0_Y10",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE_X0_Y20",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE_X0_Y30",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_X0_Y10",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_X0_Y20",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_X0_Y30",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_X0_Y40",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_X0_Y50",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_X0_Y60",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_X0_Y70",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X0_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X120_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X120_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X24_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X24_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X48_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X48_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X72_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X72_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X96_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X96_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X0_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X0_Y20",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X0_Y30",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X24_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X24_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X24_Y20",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X24_Y30",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X48_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X48_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X48_Y20",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X48_Y30",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X72_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X72_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X72_Y20",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X72_Y30",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X96_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X96_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X96_Y20",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X96_Y30",
+          "KA_SEVII_SEVEN_X0_Y10",
+          "KA_SEVII_SIX",
+          "KA_SEVII_SIX_ISLAND_GREEN_PATH",
+          "KA_SEVII_SIX_ISLAND_GREEN_PATH_X0_Y10",
+          "KA_SEVII_SIX_ISLAND_GREEN_PATH_X24_Y0",
+          "KA_SEVII_SIX_ISLAND_GREEN_PATH_X24_Y10",
+          "KA_SEVII_SIX_ISLAND_GREEN_PATH_X48_Y0",
+          "KA_SEVII_SIX_ISLAND_GREEN_PATH_X48_Y10",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND_X0_Y10",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND_X0_Y20",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND_X0_Y30",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND_X0_Y40",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND_X0_Y50",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND_X0_Y60",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND_X0_Y70",
+          "KA_SEVII_SIX_ISLAND_PATTERN_BUSH",
+          "KA_SEVII_SIX_ISLAND_PATTERN_BUSH_X0_Y16",
+          "KA_SEVII_SIX_ISLAND_PATTERN_BUSH_X20_Y0",
+          "KA_SEVII_SIX_ISLAND_PATTERN_BUSH_X20_Y16",
+          "KA_SEVII_SIX_ISLAND_PATTERN_BUSH_X40_Y0",
+          "KA_SEVII_SIX_ISLAND_PATTERN_BUSH_X40_Y16",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY_X0_Y10",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY_X0_Y20",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY_X0_Y30",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY_X24_Y0",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY_X24_Y10",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY_X24_Y20",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY_X24_Y30",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y10",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y20",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y30",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y40",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y50",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y60",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y70",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y80",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y90",
+          "KA_SEVII_SIX_X0_Y10",
+          "KA_SEVII_SIX_X0_Y20",
+          "KA_SEVII_THREE",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X0_Y20",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X0_Y40",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X24_Y0",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X24_Y20",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X24_Y40",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X48_Y0",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X48_Y20",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X48_Y40",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE_X0_Y10",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE_X24_Y0",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE_X24_Y10",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE_X48_Y0",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE_X48_Y10",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE_X72_Y0",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE_X72_Y10",
+          "KA_SEVII_THREE_ISLAND_PORT",
+          "KA_SEVII_THREE_ISLAND_PORT_X0_Y10",
+          "KA_SEVII_THREE_ISLAND_PORT_X24_Y0",
+          "KA_SEVII_THREE_ISLAND_PORT_X24_Y10",
+          "KA_SEVII_THREE_X0_Y10",
+          "KA_SEVII_THREE_X0_Y20",
+          "KA_SEVII_THREE_X0_Y30",
+          "KA_SEVII_TRAINER_TOWER_ROOF",
+          "KA_SEVII_TREASURE",
+          "KA_SEVII_TWO",
+          "KA_SEVII_TWO_ISLAND_CAPE_BRINK",
+          "KA_SEVII_TWO_ISLAND_CAPE_BRINK_X0_Y10",
+          "KA_SEVII_TWO_ISLAND_CAPE_BRINK_X0_Y20",
+          "KA_SEVII_TWO_ISLAND_CAPE_BRINK_X0_Y30",
+          "KA_SEVII_TWO_X0_Y10",
+          "KA_SEVII_TWO_X24_Y0",
+          "KA_SEVII_TWO_X24_Y10",
+          "LAVENDER_TOWN",
+          "PALLET_TOWN",
+          "PEWTER_CITY",
+          "ROUTE_1",
+          "ROUTE_10",
+          "ROUTE_11",
+          "ROUTE_12",
+          "ROUTE_13",
+          "ROUTE_14",
+          "ROUTE_15",
+          "ROUTE_16",
+          "ROUTE_17",
+          "ROUTE_18",
+          "ROUTE_19",
+          "ROUTE_2",
+          "ROUTE_20",
+          "ROUTE_21",
+          "ROUTE_22",
+          "ROUTE_23",
+          "ROUTE_24",
+          "ROUTE_25",
+          "ROUTE_3",
+          "ROUTE_4",
+          "ROUTE_5",
+          "ROUTE_6",
+          "ROUTE_7",
+          "ROUTE_8",
+          "ROUTE_9",
+          "SAFARI_ZONE_CENTER",
+          "SAFARI_ZONE_EAST",
+          "SAFARI_ZONE_NORTH",
+          "SAFARI_ZONE_WEST",
+          "SAFFRON_CITY",
+          "SS_ANNE_BOW",
+          "VERMILION_CITY",
+          "VERMILION_DOCK",
+          "VIRIDIAN_CITY",
+          "VIRIDIAN_FOREST"
+        ],
+        "kantoOutdoorMaps": 45
+      },
+      "runtime": "LATIAS",
+      "giftProfiles": [
+        {
+          "key": "dex:380",
+          "status": "active",
+          "profile": "backend_base_0380",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:380",
+          "status": "active",
+          "profile": "backend_egg_0380",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:380",
+          "status": "active",
+          "profile": "backend_mega_10062",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:380",
+          "status": "active",
+          "profile": "backend_mega_egg_10062",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:380",
+          "status": "active",
+          "profile": "backend_shiny_egg_0380",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:380",
+          "status": "active",
+          "profile": "backend_mega_shiny_egg_10062",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "LATIAS",
+      "forms": [
+        "dex:380",
+        "form:10062"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/crystal_animated/back/normal/380/001.png",
+        "assets/crystal_animated/back/shiny/380/001.png",
+        "assets/crystal_animated/front/normal/380/001.png",
+        "assets/crystal_animated/front/shiny/380/001.png",
+        "assets/hoenn_species_67/cries/0380.ogg",
+        "assets/hoenn_species_67/followers/normal/follower_LATIAS.png",
+        "assets/hoenn_species_67/followers/shiny/follower_LATIAS.png",
+        "assets/hoenn_species_67/icons/normal/0380.png",
+        "assets/hoenn_species_67/icons/shiny/0380.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/380.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/380.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/380.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/380.png"
+      ],
+      "dex": 380,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked",
+      "nativeCaptureEvidence": "eon-native5.log (exit 0): 45 base plus 2 reviewed KASC outdoor maps, native step/escape, stable DVs/stats, Sevii land/water catch/reload, wrong-location and Repel checks, actual Legacy. Sky access is a controlled original-provider fixture; no new portal unlock."
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "hoenn_roamers_67.lua",
+        "history": "Canonical lifetime ownership including old hoenn_roamers_67.caught receipts and Legacy lineage; same original roaming identity.",
+        "access": "Original Hoenn access; expansion after sealed Sevii finale. Persistent current location; 5 percent only in that area; caves and interiors excluded.",
+        "maps": [
+          "ROUTE_1",
+          "ROUTE_2",
+          "ROUTE_3",
+          "ROUTE_4",
+          "ROUTE_5",
+          "ROUTE_6",
+          "ROUTE_7",
+          "ROUTE_8",
+          "ROUTE_9",
+          "ROUTE_10",
+          "ROUTE_11",
+          "ROUTE_12",
+          "ROUTE_13",
+          "ROUTE_14",
+          "ROUTE_15",
+          "ROUTE_16",
+          "ROUTE_17",
+          "ROUTE_18",
+          "ROUTE_22",
+          "ROUTE_24",
+          "ROUTE_25"
+        ],
+        "customKantoOutdoorMaps": [
+          "KA_BLAINE_VOLCANO_FOOT",
+          "KA_HEVO_RAYQUAZA_CHAMBER"
+        ],
+        "expansion": "sevii_eon_roaming.lua",
+        "expandedMaps": [
+          "CELADON_CITY",
+          "CELADON_MANSION_ROOF",
+          "CELADON_MART_ROOF",
+          "CERULEAN_CITY",
+          "CINNABAR_ISLAND",
+          "FUCHSIA_CITY",
+          "INDIGO_PLATEAU",
+          "KA_BLAINE_VOLCANO_FOOT",
+          "KA_HEVO_RAYQUAZA_CHAMBER",
+          "KA_SEVII_FIVE",
+          "KA_SEVII_FIVE_ISLAND_MEADOW",
+          "KA_SEVII_FIVE_ISLAND_MEADOW_X0_Y10",
+          "KA_SEVII_FIVE_ISLAND_MEADOW_X0_Y20",
+          "KA_SEVII_FIVE_ISLAND_MEADOW_X0_Y30",
+          "KA_SEVII_FIVE_ISLAND_MEMORIAL_PILLAR",
+          "KA_SEVII_FIVE_ISLAND_MEMORIAL_PILLAR_X0_Y10",
+          "KA_SEVII_FIVE_ISLAND_MEMORIAL_PILLAR_X0_Y20",
+          "KA_SEVII_FIVE_ISLAND_MEMORIAL_PILLAR_X0_Y30",
+          "KA_SEVII_FIVE_ISLAND_MEMORIAL_PILLAR_X0_Y40",
+          "KA_SEVII_FIVE_ISLAND_MEMORIAL_PILLAR_X0_Y50",
+          "KA_SEVII_FIVE_ISLAND_RESORT_GORGEOUS",
+          "KA_SEVII_FIVE_ISLAND_RESORT_GORGEOUS_X0_Y10",
+          "KA_SEVII_FIVE_ISLAND_RESORT_GORGEOUS_X24_Y0",
+          "KA_SEVII_FIVE_ISLAND_RESORT_GORGEOUS_X24_Y10",
+          "KA_SEVII_FIVE_ISLAND_RESORT_GORGEOUS_X48_Y0",
+          "KA_SEVII_FIVE_ISLAND_RESORT_GORGEOUS_X48_Y10",
+          "KA_SEVII_FIVE_ISLAND_WATER_LABYRINTH",
+          "KA_SEVII_FIVE_ISLAND_WATER_LABYRINTH_X0_Y10",
+          "KA_SEVII_FIVE_ISLAND_WATER_LABYRINTH_X24_Y0",
+          "KA_SEVII_FIVE_ISLAND_WATER_LABYRINTH_X24_Y10",
+          "KA_SEVII_FIVE_ISLAND_WATER_LABYRINTH_X48_Y0",
+          "KA_SEVII_FIVE_ISLAND_WATER_LABYRINTH_X48_Y10",
+          "KA_SEVII_FIVE_X0_Y10",
+          "KA_SEVII_FOUR",
+          "KA_SEVII_KINDLE",
+          "KA_SEVII_KINDLE_NORTH",
+          "KA_SEVII_MT_EMBER_EXTERIOR",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X0_Y20",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X0_Y40",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X24_Y0",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X24_Y20",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X24_Y40",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X48_Y0",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X48_Y20",
+          "KA_SEVII_MT_EMBER_EXTERIOR_X48_Y40",
+          "KA_SEVII_MT_EMBER_SUMMIT",
+          "KA_SEVII_ONE",
+          "KA_SEVII_SEVEN",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE_X0_Y10",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE_X0_Y20",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE_X0_Y30",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_X0_Y10",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_X0_Y20",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_X0_Y30",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_X0_Y40",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_X0_Y50",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_X0_Y60",
+          "KA_SEVII_SEVEN_ISLAND_SEVAULT_CANYON_X0_Y70",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X0_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X120_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X120_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X24_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X24_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X48_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X48_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X72_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X72_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X96_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_X96_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X0_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X0_Y20",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X0_Y30",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X24_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X24_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X24_Y20",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X24_Y30",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X48_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X48_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X48_Y20",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X48_Y30",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X72_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X72_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X72_Y20",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X72_Y30",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X96_Y0",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X96_Y10",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X96_Y20",
+          "KA_SEVII_SEVEN_ISLAND_TRAINER_TOWER_X96_Y30",
+          "KA_SEVII_SEVEN_X0_Y10",
+          "KA_SEVII_SIX",
+          "KA_SEVII_SIX_ISLAND_GREEN_PATH",
+          "KA_SEVII_SIX_ISLAND_GREEN_PATH_X0_Y10",
+          "KA_SEVII_SIX_ISLAND_GREEN_PATH_X24_Y0",
+          "KA_SEVII_SIX_ISLAND_GREEN_PATH_X24_Y10",
+          "KA_SEVII_SIX_ISLAND_GREEN_PATH_X48_Y0",
+          "KA_SEVII_SIX_ISLAND_GREEN_PATH_X48_Y10",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND_X0_Y10",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND_X0_Y20",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND_X0_Y30",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND_X0_Y40",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND_X0_Y50",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND_X0_Y60",
+          "KA_SEVII_SIX_ISLAND_OUTCAST_ISLAND_X0_Y70",
+          "KA_SEVII_SIX_ISLAND_PATTERN_BUSH",
+          "KA_SEVII_SIX_ISLAND_PATTERN_BUSH_X0_Y16",
+          "KA_SEVII_SIX_ISLAND_PATTERN_BUSH_X20_Y0",
+          "KA_SEVII_SIX_ISLAND_PATTERN_BUSH_X20_Y16",
+          "KA_SEVII_SIX_ISLAND_PATTERN_BUSH_X40_Y0",
+          "KA_SEVII_SIX_ISLAND_PATTERN_BUSH_X40_Y16",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY_X0_Y10",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY_X0_Y20",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY_X0_Y30",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY_X24_Y0",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY_X24_Y10",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY_X24_Y20",
+          "KA_SEVII_SIX_ISLAND_RUIN_VALLEY_X24_Y30",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y10",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y20",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y30",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y40",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y50",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y60",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y70",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y80",
+          "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y90",
+          "KA_SEVII_SIX_X0_Y10",
+          "KA_SEVII_SIX_X0_Y20",
+          "KA_SEVII_THREE",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X0_Y20",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X0_Y40",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X24_Y0",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X24_Y20",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X24_Y40",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X48_Y0",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X48_Y20",
+          "KA_SEVII_THREE_ISLAND_BERRY_FOREST_X48_Y40",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE_X0_Y10",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE_X24_Y0",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE_X24_Y10",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE_X48_Y0",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE_X48_Y10",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE_X72_Y0",
+          "KA_SEVII_THREE_ISLAND_BOND_BRIDGE_X72_Y10",
+          "KA_SEVII_THREE_ISLAND_PORT",
+          "KA_SEVII_THREE_ISLAND_PORT_X0_Y10",
+          "KA_SEVII_THREE_ISLAND_PORT_X24_Y0",
+          "KA_SEVII_THREE_ISLAND_PORT_X24_Y10",
+          "KA_SEVII_THREE_X0_Y10",
+          "KA_SEVII_THREE_X0_Y20",
+          "KA_SEVII_THREE_X0_Y30",
+          "KA_SEVII_TRAINER_TOWER_ROOF",
+          "KA_SEVII_TREASURE",
+          "KA_SEVII_TWO",
+          "KA_SEVII_TWO_ISLAND_CAPE_BRINK",
+          "KA_SEVII_TWO_ISLAND_CAPE_BRINK_X0_Y10",
+          "KA_SEVII_TWO_ISLAND_CAPE_BRINK_X0_Y20",
+          "KA_SEVII_TWO_ISLAND_CAPE_BRINK_X0_Y30",
+          "KA_SEVII_TWO_X0_Y10",
+          "KA_SEVII_TWO_X24_Y0",
+          "KA_SEVII_TWO_X24_Y10",
+          "LAVENDER_TOWN",
+          "PALLET_TOWN",
+          "PEWTER_CITY",
+          "ROUTE_1",
+          "ROUTE_10",
+          "ROUTE_11",
+          "ROUTE_12",
+          "ROUTE_13",
+          "ROUTE_14",
+          "ROUTE_15",
+          "ROUTE_16",
+          "ROUTE_17",
+          "ROUTE_18",
+          "ROUTE_19",
+          "ROUTE_2",
+          "ROUTE_20",
+          "ROUTE_21",
+          "ROUTE_22",
+          "ROUTE_23",
+          "ROUTE_24",
+          "ROUTE_25",
+          "ROUTE_3",
+          "ROUTE_4",
+          "ROUTE_5",
+          "ROUTE_6",
+          "ROUTE_7",
+          "ROUTE_8",
+          "ROUTE_9",
+          "SAFARI_ZONE_CENTER",
+          "SAFARI_ZONE_EAST",
+          "SAFARI_ZONE_NORTH",
+          "SAFARI_ZONE_WEST",
+          "SAFFRON_CITY",
+          "SS_ANNE_BOW",
+          "VERMILION_CITY",
+          "VERMILION_DOCK",
+          "VIRIDIAN_CITY",
+          "VIRIDIAN_FOREST"
+        ],
+        "kantoOutdoorMaps": 45
+      },
+      "runtime": "LATIOS",
+      "giftProfiles": [
+        {
+          "key": "dex:381",
+          "status": "active",
+          "profile": "backend_base_0381",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:381",
+          "status": "active",
+          "profile": "backend_egg_0381",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:381",
+          "status": "active",
+          "profile": "backend_mega_10063",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:381",
+          "status": "active",
+          "profile": "backend_mega_egg_10063",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:381",
+          "status": "active",
+          "profile": "backend_shiny_egg_0381",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:381",
+          "status": "active",
+          "profile": "backend_mega_shiny_egg_10063",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "LATIOS",
+      "forms": [
+        "dex:381",
+        "form:10063"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/crystal_animated/back/normal/381/001.png",
+        "assets/crystal_animated/back/shiny/381/001.png",
+        "assets/crystal_animated/front/normal/381/001.png",
+        "assets/crystal_animated/front/shiny/381/001.png",
+        "assets/hoenn_species_67/cries/0381.ogg",
+        "assets/hoenn_species_67/followers/normal/follower_LATIOS.png",
+        "assets/hoenn_species_67/followers/shiny/follower_LATIOS.png",
+        "assets/hoenn_species_67/icons/normal/0381.png",
+        "assets/hoenn_species_67/icons/shiny/0381.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/381.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/381.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/381.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/381.png"
+      ],
+      "dex": 381,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked",
+      "nativeCaptureEvidence": "eon-native5.log (exit 0): 45 base plus 2 reviewed KASC outdoor maps, native step/escape, stable DVs/stats, Sevii land/water catch/reload, wrong-location and Repel checks, actual Legacy. Sky access is a controlled original-provider fixture; no new portal unlock."
+    },
+    {
+      "missingAssets": [
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/382.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/382.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/382.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/382.png"
+      ],
+      "authoredCatchOwner": {
+        "owner": "hoenn_legend_portals_67.lua",
+        "character": "BLUE",
+        "access": "Original character HEVO seal and Hoenn foundation; no additional Sevii access.",
+        "map": "KA_HEVO_KYOGRE_CHAMBER",
+        "history": "Canonical lifetime ownership including old KA_LEGEND_CAPTURE_KYOGRE; separate KA_LEGEND_WITNESS_KYOGRE for research without a duplicate capture."
+      },
+      "runtime": "KYOGRE",
+      "giftProfiles": [
+        {
+          "key": "dex:382",
+          "status": "active",
+          "profile": "backend_base_0382",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:382",
+          "status": "active",
+          "profile": "backend_egg_0382",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:382",
+          "status": "active",
+          "profile": "backend_shiny_egg_0382",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "KYOGRE",
+      "forms": [
+        "dex:382",
+        "form:10077"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/crystal_animated/back/normal/382/001.png",
+        "assets/crystal_animated/back/shiny/382/001.png",
+        "assets/crystal_animated/front/normal/382/001.png",
+        "assets/crystal_animated/front/shiny/382/001.png",
+        "assets/hoenn_species_67/cries/0382.ogg",
+        "assets/hoenn_species_67/followers/normal/follower_KYOGRE.png",
+        "assets/hoenn_species_67/followers/shiny/follower_KYOGRE.png",
+        "assets/hoenn_species_67/icons/normal/0382.png",
+        "assets/hoenn_species_67/icons/shiny/0382.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/382.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/382.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/382.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/382.png"
+      ],
+      "dex": 382,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/383.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/383.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/383.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/383.png"
+      ],
+      "authoredCatchOwner": {
+        "owner": "hoenn_legend_portals_67.lua",
+        "character": "RED",
+        "access": "Original character HEVO seal and Hoenn foundation; no additional Sevii access.",
+        "map": "KA_HEVO_GROUDON_CHAMBER",
+        "history": "Canonical lifetime ownership including old KA_LEGEND_CAPTURE_GROUDON; separate KA_LEGEND_WITNESS_GROUDON for research without a duplicate capture."
+      },
+      "runtime": "GROUDON",
+      "giftProfiles": [
+        {
+          "key": "dex:383",
+          "status": "active",
+          "profile": "backend_base_0383",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:383",
+          "status": "active",
+          "profile": "backend_egg_0383",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:383",
+          "status": "active",
+          "profile": "backend_shiny_egg_0383",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "GROUDON",
+      "forms": [
+        "dex:383",
+        "form:10078"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/crystal_animated/back/normal/383/001.png",
+        "assets/crystal_animated/back/shiny/383/001.png",
+        "assets/crystal_animated/front/normal/383/001.png",
+        "assets/crystal_animated/front/shiny/383/001.png",
+        "assets/hoenn_species_67/cries/0383.ogg",
+        "assets/hoenn_species_67/followers/normal/follower_GROUDON.png",
+        "assets/hoenn_species_67/followers/shiny/follower_GROUDON.png",
+        "assets/hoenn_species_67/icons/normal/0383.png",
+        "assets/hoenn_species_67/icons/shiny/0383.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/383.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/383.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/383.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/383.png"
+      ],
+      "dex": 383,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/384.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/384.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/384.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/384.png"
+      ],
+      "authoredCatchOwner": {
+        "owner": "hoenn_legend_portals_67.lua",
+        "character": "GREEN",
+        "access": "Original character HEVO seal and Hoenn foundation; no additional Sevii access.",
+        "map": "KA_HEVO_RAYQUAZA_CHAMBER",
+        "history": "Canonical lifetime ownership including old KA_LEGEND_CAPTURE_RAYQUAZA; separate KA_LEGEND_WITNESS_RAYQUAZA for research without a duplicate capture."
+      },
+      "runtime": "RAYQUAZA",
+      "giftProfiles": [
+        {
+          "key": "dex:384",
+          "status": "active",
+          "profile": "backend_base_0384",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:384",
+          "status": "active",
+          "profile": "backend_egg_0384",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:384",
+          "status": "active",
+          "profile": "backend_mega_10079",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:384",
+          "status": "active",
+          "profile": "backend_mega_egg_10079",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:384",
+          "status": "active",
+          "profile": "backend_shiny_egg_0384",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:384",
+          "status": "active",
+          "profile": "backend_mega_shiny_egg_10079",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "RAYQUAZA",
+      "forms": [
+        "dex:384",
+        "form:10079"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/crystal_animated/back/normal/384/001.png",
+        "assets/crystal_animated/back/shiny/384/001.png",
+        "assets/crystal_animated/front/normal/384/001.png",
+        "assets/crystal_animated/front/shiny/384/001.png",
+        "assets/hoenn_species_67/cries/0384.ogg",
+        "assets/hoenn_species_67/followers/normal/follower_RAYQUAZA.png",
+        "assets/hoenn_species_67/followers/shiny/follower_RAYQUAZA.png",
+        "assets/hoenn_species_67/icons/normal/0384.png",
+        "assets/hoenn_species_67/icons/shiny/0384.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/384.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/384.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/384.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/384.png"
+      ],
+      "dex": 384,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/385.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/385.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/385.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/385.png"
+      ],
+      "authoredCatchOwner": {
+        "owner": "hoenn_jirachi_finale_67.lua",
+        "access": "Original 134 other Hoenn species, all three character paths and three weather research seals.",
+        "map": "KA_HOENN_WISH_CHAMBER",
+        "history": "Canonical lifetime ownership including old capture seals/receipts; separate KA_LEGEND_WITNESS_JIRACHI allows certificate without another Pokemon."
+      },
+      "runtime": "JIRACHI",
+      "giftProfiles": [
+        {
+          "key": "dex:385",
+          "status": "active",
+          "profile": "backend_base_0385",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:385",
+          "status": "active",
+          "profile": "backend_egg_0385",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:385",
+          "status": "active",
+          "profile": "backend_shiny_egg_0385",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "JIRACHI",
+      "forms": [
+        "dex:385"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/crystal_animated/back/normal/385/001.png",
+        "assets/crystal_animated/back/shiny/385/001.png",
+        "assets/crystal_animated/front/normal/385/001.png",
+        "assets/crystal_animated/front/shiny/385/001.png",
+        "assets/hoenn_species_67/cries/0385.ogg",
+        "assets/hoenn_species_67/followers/normal/follower_JIRACHI.png",
+        "assets/hoenn_species_67/followers/shiny/follower_JIRACHI.png",
+        "assets/hoenn_species_67/icons/normal/0385.png",
+        "assets/hoenn_species_67/icons/shiny/0385.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/385.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/385.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/385.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/385.png"
+      ],
+      "dex": 385,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/386.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/386.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/386.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/386.png"
+      ],
+      "authoredCatchOwner": {
+        "owner": "hoenn_birth_island_67.lua",
+        "access": "Original Hoenn/three-path research plus current-run Moltres and Regirock completion and full triangle puzzle.",
+        "map": "KA_HOENN_BIRTH_ISLAND",
+        "history": "Canonical lifetime ownership including old stored-catch receipts; kaHoennEndgameRunEvents67.completed stays per-run with separate caught/witnessed result."
+      },
+      "runtime": "DEOXYS",
+      "giftProfiles": [
+        {
+          "key": "dex:386",
+          "status": "active",
+          "profile": "backend_base_0386",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:386",
+          "status": "active",
+          "profile": "backend_egg_0386",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10001",
+          "status": "active",
+          "profile": "backend_form_10001",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10002",
+          "status": "active",
+          "profile": "backend_form_10002",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10003",
+          "status": "active",
+          "profile": "backend_form_10003",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10001",
+          "status": "active",
+          "profile": "backend_form_egg_10001",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10002",
+          "status": "active",
+          "profile": "backend_form_egg_10002",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10003",
+          "status": "active",
+          "profile": "backend_form_egg_10003",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:386",
+          "status": "active",
+          "profile": "backend_shiny_egg_0386",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10001",
+          "status": "active",
+          "profile": "backend_form_shiny_egg_10001",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10002",
+          "status": "active",
+          "profile": "backend_form_shiny_egg_10002",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10003",
+          "status": "active",
+          "profile": "backend_form_shiny_egg_10003",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "DEOXYS",
+      "forms": [
+        "dex:386",
+        "form:10001",
+        "form:10002",
+        "form:10003"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/crystal_animated/back/normal/386/001.png",
+        "assets/crystal_animated/back/shiny/386/001.png",
+        "assets/crystal_animated/front/normal/386/001.png",
+        "assets/crystal_animated/front/shiny/386/001.png",
+        "assets/hoenn_species_67/cries/0386.ogg",
+        "assets/hoenn_species_67/followers/normal/follower_DEOXYS.png",
+        "assets/hoenn_species_67/followers/shiny/follower_DEOXYS.png",
+        "assets/hoenn_species_67/icons/normal/0386.png",
+        "assets/hoenn_species_67/icons/shiny/0386.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/386.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/386.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/386.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/386.png"
+      ],
+      "dex": 386,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_lake_guardians.lua",
+        "captureOwner": "sevii_special_encounters.lua",
+        "map": "KA_SEVII_TWO_ISLAND_CAPE_BRINK_X0_Y10",
+        "history": "hevo_persistent.seviiLegendOwned: canonical lifetime ownership"
+      },
+      "runtime": "KA_GIFT_NAT_480",
+      "giftProfiles": [
+        {
+          "key": "dex:480",
+          "status": "active",
+          "profile": "backend_base_0480",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:480",
+          "status": "active",
+          "profile": "backend_egg_0480",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:480",
+          "status": "active",
+          "profile": "backend_shiny_egg_0480",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "UXIE",
+      "forms": [
+        "dex:480"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/backend_national_catalog_67/battle/480/back.png",
+        "assets/backend_national_catalog_67/battle/480/backShiny.png",
+        "assets/backend_national_catalog_67/battle/480/front.png",
+        "assets/backend_national_catalog_67/battle/480/frontShiny.png",
+        "assets/backend_national_catalog_67/battle/480/icon-normal.png",
+        "assets/backend_national_catalog_67/battle/480/icon-shiny.png",
+        "assets/backend_national_catalog_67/battle/480/voxel-front.png",
+        "assets/backend_national_catalog_67/battle/480/voxel-frontShiny.png"
+      ],
+      "dex": 480,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_lake_guardians.lua",
+        "captureOwner": "sevii_special_encounters.lua",
+        "map": "KA_SEVII_FIVE_ISLAND_MEMORIAL_PILLAR_X0_Y40",
+        "history": "hevo_persistent.seviiLegendOwned: canonical lifetime ownership"
+      },
+      "runtime": "KA_GIFT_NAT_481",
+      "giftProfiles": [
+        {
+          "key": "dex:481",
+          "status": "active",
+          "profile": "backend_base_0481",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:481",
+          "status": "active",
+          "profile": "backend_egg_0481",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:481",
+          "status": "active",
+          "profile": "backend_shiny_egg_0481",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "MESPRIT",
+      "forms": [
+        "dex:481"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/backend_national_catalog_67/battle/481/back.png",
+        "assets/backend_national_catalog_67/battle/481/backShiny.png",
+        "assets/backend_national_catalog_67/battle/481/front.png",
+        "assets/backend_national_catalog_67/battle/481/frontShiny.png",
+        "assets/backend_national_catalog_67/battle/481/icon-normal.png",
+        "assets/backend_national_catalog_67/battle/481/icon-shiny.png",
+        "assets/backend_national_catalog_67/battle/481/voxel-front.png",
+        "assets/backend_national_catalog_67/battle/481/voxel-frontShiny.png"
+      ],
+      "dex": 481,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_lake_guardians.lua",
+        "captureOwner": "sevii_special_encounters.lua",
+        "map": "KA_SEVII_TRAINER_TOWER_ROOF",
+        "history": "hevo_persistent.seviiLegendOwned: canonical lifetime ownership"
+      },
+      "runtime": "KA_GIFT_NAT_482",
+      "giftProfiles": [
+        {
+          "key": "dex:482",
+          "status": "active",
+          "profile": "backend_base_0482",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:482",
+          "status": "active",
+          "profile": "backend_egg_0482",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:482",
+          "status": "active",
+          "profile": "backend_shiny_egg_0482",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "AZELF",
+      "forms": [
+        "dex:482"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/backend_national_catalog_67/battle/482/back.png",
+        "assets/backend_national_catalog_67/battle/482/backShiny.png",
+        "assets/backend_national_catalog_67/battle/482/front.png",
+        "assets/backend_national_catalog_67/battle/482/frontShiny.png",
+        "assets/backend_national_catalog_67/battle/482/icon-normal.png",
+        "assets/backend_national_catalog_67/battle/482/icon-shiny.png",
+        "assets/backend_national_catalog_67/battle/482/voxel-front.png",
+        "assets/backend_national_catalog_67/battle/482/voxel-frontShiny.png"
+      ],
+      "dex": 482,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_time_space.lua",
+        "captureOwner": "sevii_special_encounters.lua",
+        "map": "KA_SEVII_SIX_ISLAND_DOTTED_HOLE_SAPPHIRE_ROOM",
+        "history": "hevo_persistent.seviiLegendOwned: canonical lifetime ownership"
+      },
+      "runtime": "KA_GIFT_NAT_483",
+      "giftProfiles": [
+        {
+          "key": "dex:483",
+          "status": "active",
+          "profile": "backend_base_0483",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:483",
+          "status": "active",
+          "profile": "backend_egg_0483",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10245",
+          "status": "active",
+          "profile": "backend_form_10245",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10245",
+          "status": "active",
+          "profile": "backend_form_egg_10245",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:483",
+          "status": "active",
+          "profile": "backend_shiny_egg_0483",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10245",
+          "status": "active",
+          "profile": "backend_form_shiny_egg_10245",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "DIALGA",
+      "forms": [
+        "dex:483",
+        "form:10245"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/backend_national_catalog_67/battle/483/back.png",
+        "assets/backend_national_catalog_67/battle/483/backShiny.png",
+        "assets/backend_national_catalog_67/battle/483/front.png",
+        "assets/backend_national_catalog_67/battle/483/frontShiny.png",
+        "assets/backend_national_catalog_67/battle/483/icon-normal.png",
+        "assets/backend_national_catalog_67/battle/483/icon-shiny.png",
+        "assets/backend_national_catalog_67/battle/483/voxel-front.png",
+        "assets/backend_national_catalog_67/battle/483/voxel-frontShiny.png"
+      ],
+      "dex": 483,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_time_space.lua",
+        "captureOwner": "sevii_special_encounters.lua",
+        "map": "KA_SEVII_SIX_ISLAND_ALTERING_CAVE",
+        "history": "hevo_persistent.seviiLegendOwned: canonical lifetime ownership"
+      },
+      "runtime": "KA_GIFT_NAT_484",
+      "giftProfiles": [
+        {
+          "key": "dex:484",
+          "status": "active",
+          "profile": "backend_base_0484",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:484",
+          "status": "active",
+          "profile": "backend_egg_0484",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10246",
+          "status": "active",
+          "profile": "backend_form_10246",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10246",
+          "status": "active",
+          "profile": "backend_form_egg_10246",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:484",
+          "status": "active",
+          "profile": "backend_shiny_egg_0484",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10246",
+          "status": "active",
+          "profile": "backend_form_shiny_egg_10246",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "PALKIA",
+      "forms": [
+        "dex:484",
+        "form:10246"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/backend_national_catalog_67/battle/484/back.png",
+        "assets/backend_national_catalog_67/battle/484/backShiny.png",
+        "assets/backend_national_catalog_67/battle/484/front.png",
+        "assets/backend_national_catalog_67/battle/484/frontShiny.png",
+        "assets/backend_national_catalog_67/battle/484/icon-normal.png",
+        "assets/backend_national_catalog_67/battle/484/icon-shiny.png",
+        "assets/backend_national_catalog_67/battle/484/voxel-front.png",
+        "assets/backend_national_catalog_67/battle/484/voxel-frontShiny.png"
+      ],
+      "dex": 484,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_mysteries.lua",
+        "map": "KA_SEVII_MT_EMBER_RUBY_PATH_B5_F",
+        "history": "hevo_persistent.seviiLegendOwned: canonical Gen4 lifetime ownership"
+      },
+      "runtime": "KA_GIFT_NAT_485",
+      "giftProfiles": [
+        {
+          "key": "dex:485",
+          "status": "active",
+          "profile": "backend_base_0485",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:485",
+          "status": "active",
+          "profile": "backend_egg_0485",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:485",
+          "status": "active",
+          "profile": "backend_mega_10311",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:485",
+          "status": "active",
+          "profile": "backend_mega_egg_10311",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:485",
+          "status": "active",
+          "profile": "backend_shiny_egg_0485",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:485",
+          "status": "active",
+          "profile": "backend_mega_shiny_egg_10311",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "HEATRAN",
+      "forms": [
+        "dex:485",
+        "form:10311"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/backend_national_catalog_67/battle/485/back.png",
+        "assets/backend_national_catalog_67/battle/485/backShiny.png",
+        "assets/backend_national_catalog_67/battle/485/front.png",
+        "assets/backend_national_catalog_67/battle/485/frontShiny.png",
+        "assets/backend_national_catalog_67/battle/485/icon-normal.png",
+        "assets/backend_national_catalog_67/battle/485/icon-shiny.png",
+        "assets/backend_national_catalog_67/battle/485/voxel-front.png",
+        "assets/backend_national_catalog_67/battle/485/voxel-frontShiny.png"
+      ],
+      "dex": 485,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_sleeping_giant.lua",
+        "captureOwner": "sevii_special_encounters.lua",
+        "map": "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_RIXY_CHAMBER",
+        "history": "hevo_persistent.seviiLegendOwned: canonical lifetime ownership"
+      },
+      "runtime": "REGIGIGAS",
+      "giftProfiles": [
+        {
+          "key": "dex:486",
+          "status": "active",
+          "profile": "backend_base_0486",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:486",
+          "status": "active",
+          "profile": "backend_egg_0486",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:486",
+          "status": "active",
+          "profile": "backend_shiny_egg_0486",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "REGIGIGAS",
+      "forms": [
+        "dex:486"
+      ],
+      "formerCatchOwners": [
+        {
+          "owner": "rocket_recovery_raids_67.lua",
+          "instance": "viridian_command",
+          "status": "retired after authored Sevii relocation",
+          "lead": "regigigas_power",
+          "runtimeOwner": "rocket_recovery_raids_67_runtime.lua",
+          "history": "captureReceipts plus canonical Gen4 lifetime ownership"
+        }
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/late_species_67/battle/normal/back/0486.png",
+        "assets/late_species_67/battle/normal/front/0486.png",
+        "assets/late_species_67/battle/shiny/back/0486.png",
+        "assets/late_species_67/battle/shiny/front/0486.png",
+        "assets/late_species_67/cries/486.ogg",
+        "assets/late_species_67/followers/normal/REGIGIGAS.png",
+        "assets/late_species_67/followers/shiny/REGIGIGAS.png",
+        "assets/late_species_67/icons/normal/0486.png",
+        "assets/late_species_67/icons/shiny/0486.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/486.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/486.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/486.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/486.png"
+      ],
+      "dex": 486,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_dreams.lua",
+        "captureOwner": "sevii_special_encounters.lua",
+        "map": "KA_SEVII_FIVE_ISLAND_WATER_LABYRINTH_X0_Y10",
+        "history": "hevo_persistent.seviiLegendOwned: canonical lifetime ownership"
+      },
+      "runtime": "KA_GIFT_NAT_488",
+      "giftProfiles": [
+        {
+          "key": "dex:488",
+          "status": "active",
+          "profile": "backend_base_0488",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:488",
+          "status": "active",
+          "profile": "backend_egg_0488",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:488",
+          "status": "active",
+          "profile": "backend_shiny_egg_0488",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "CRESSELIA",
+      "forms": [
+        "dex:488"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/backend_national_catalog_67/battle/488/back.png",
+        "assets/backend_national_catalog_67/battle/488/backShiny.png",
+        "assets/backend_national_catalog_67/battle/488/front.png",
+        "assets/backend_national_catalog_67/battle/488/frontShiny.png",
+        "assets/backend_national_catalog_67/battle/488/icon-normal.png",
+        "assets/backend_national_catalog_67/battle/488/icon-shiny.png",
+        "assets/backend_national_catalog_67/battle/488/voxel-front.png",
+        "assets/backend_national_catalog_67/battle/488/voxel-frontShiny.png"
+      ],
+      "dex": 488,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_tidal_return.lua",
+        "captureOwner": "sevii_special_encounters.lua",
+        "map": "KA_SEVII_SIX_ISLAND_GREEN_PATH_X0_Y10",
+        "history": "hevo_persistent.seviiLegendOwned: canonical lifetime ownership"
+      },
+      "runtime": "KA_GIFT_NAT_489",
+      "giftProfiles": [
+        {
+          "key": "dex:489",
+          "status": "active",
+          "profile": "backend_base_0489",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:489",
+          "status": "active",
+          "profile": "backend_egg_0489",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:489",
+          "status": "active",
+          "profile": "backend_shiny_egg_0489",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "PHIONE",
+      "forms": [
+        "dex:489"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/backend_national_catalog_67/battle/489/back.png",
+        "assets/backend_national_catalog_67/battle/489/backShiny.png",
+        "assets/backend_national_catalog_67/battle/489/front.png",
+        "assets/backend_national_catalog_67/battle/489/frontShiny.png",
+        "assets/backend_national_catalog_67/battle/489/icon-normal.png",
+        "assets/backend_national_catalog_67/battle/489/icon-shiny.png",
+        "assets/backend_national_catalog_67/battle/489/voxel-front.png",
+        "assets/backend_national_catalog_67/battle/489/voxel-frontShiny.png"
+      ],
+      "dex": 489,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_tidal_return.lua",
+        "captureOwner": "sevii_special_encounters.lua",
+        "map": "KA_SEVII_SIX_ISLAND_WATER_PATH_X0_Y60",
+        "history": "hevo_persistent.seviiLegendOwned: canonical lifetime ownership"
+      },
+      "runtime": "KA_GIFT_NAT_490",
+      "giftProfiles": [
+        {
+          "key": "dex:490",
+          "status": "active",
+          "profile": "backend_base_0490",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:490",
+          "status": "active",
+          "profile": "backend_egg_0490",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:490",
+          "status": "active",
+          "profile": "backend_shiny_egg_0490",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "MANAPHY",
+      "forms": [
+        "dex:490"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/backend_national_catalog_67/battle/490/back.png",
+        "assets/backend_national_catalog_67/battle/490/backShiny.png",
+        "assets/backend_national_catalog_67/battle/490/front.png",
+        "assets/backend_national_catalog_67/battle/490/frontShiny.png",
+        "assets/backend_national_catalog_67/battle/490/icon-normal.png",
+        "assets/backend_national_catalog_67/battle/490/icon-shiny.png",
+        "assets/backend_national_catalog_67/battle/490/voxel-front.png",
+        "assets/backend_national_catalog_67/battle/490/voxel-frontShiny.png"
+      ],
+      "dex": 490,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_dreams.lua",
+        "captureOwner": "sevii_special_encounters.lua",
+        "map": "KA_SEVII_FIVE_ISLAND_LOST_CAVE_ROOM10",
+        "history": "hevo_persistent.seviiLegendOwned: canonical lifetime ownership"
+      },
+      "runtime": "DARKRAI",
+      "giftProfiles": [
+        {
+          "key": "dex:491",
+          "status": "active",
+          "profile": "backend_base_0491",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:491",
+          "status": "active",
+          "profile": "backend_egg_0491",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:491",
+          "status": "active",
+          "profile": "backend_mega_10312",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:491",
+          "status": "active",
+          "profile": "backend_mega_egg_10312",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:491",
+          "status": "active",
+          "profile": "backend_shiny_egg_0491",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:491",
+          "status": "active",
+          "profile": "backend_mega_shiny_egg_10312",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "DARKRAI",
+      "forms": [
+        "dex:491",
+        "form:10312"
+      ],
+      "formerCatchOwners": [
+        {
+          "owner": "rocket_recovery_raids_67.lua",
+          "instance": "lavender_relay",
+          "status": "retired after authored Sevii relocation",
+          "lead": "darkrai_dream",
+          "runtimeOwner": "rocket_recovery_raids_67_runtime.lua",
+          "history": "captureReceipts plus canonical Gen4 lifetime ownership"
+        }
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/late_species_67/battle/normal/back/0491.png",
+        "assets/late_species_67/battle/normal/front/0491.png",
+        "assets/late_species_67/battle/shiny/back/0491.png",
+        "assets/late_species_67/battle/shiny/front/0491.png",
+        "assets/late_species_67/cries/491.ogg",
+        "assets/late_species_67/followers/normal/DARKRAI.png",
+        "assets/late_species_67/followers/shiny/DARKRAI.png",
+        "assets/late_species_67/icons/normal/0491.png",
+        "assets/late_species_67/icons/shiny/0491.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/back/491.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/backShiny/491.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/front/491.png",
+        "assets/non_crystal_pixel_2d_67/gen2ified/frontShiny/491.png"
+      ],
+      "dex": 491,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_garden.lua",
+        "captureOwner": "sevii_special_encounters.lua",
+        "map": "KA_SEVII_THREE_ISLAND_BERRY_FOREST",
+        "history": "hevo_persistent.seviiLegendOwned: canonical lifetime ownership"
+      },
+      "runtime": "KA_GIFT_NAT_492",
+      "giftProfiles": [
+        {
+          "key": "dex:492",
+          "status": "active",
+          "profile": "backend_base_0492",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:492",
+          "status": "active",
+          "profile": "backend_egg_0492",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10006",
+          "status": "active",
+          "profile": "backend_form_10006",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10006",
+          "status": "active",
+          "profile": "backend_form_egg_10006",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:492",
+          "status": "active",
+          "profile": "backend_shiny_egg_0492",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "form:10006",
+          "status": "active",
+          "profile": "backend_form_shiny_egg_10006",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "SHAYMIN",
+      "forms": [
+        "dex:492",
+        "form:10006"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/backend_national_catalog_67/battle/492/back.png",
+        "assets/backend_national_catalog_67/battle/492/backShiny.png",
+        "assets/backend_national_catalog_67/battle/492/front.png",
+        "assets/backend_national_catalog_67/battle/492/frontShiny.png",
+        "assets/backend_national_catalog_67/battle/492/icon-normal.png",
+        "assets/backend_national_catalog_67/battle/492/icon-shiny.png",
+        "assets/backend_national_catalog_67/battle/492/voxel-front.png",
+        "assets/backend_national_catalog_67/battle/492/voxel-frontShiny.png"
+      ],
+      "dex": 492,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    },
+    {
+      "missingAssets": [],
+      "authoredCatchOwner": {
+        "owner": "sevii_seven_testimonies.lua",
+        "captureOwner": "sevii_special_encounters.lua",
+        "map": "KA_SEVII_SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER",
+        "history": "hevo_persistent.seviiLegendOwned: canonical lifetime ownership"
+      },
+      "runtime": "KA_GIFT_NAT_493",
+      "giftProfiles": [
+        {
+          "key": "dex:493",
+          "status": "active",
+          "profile": "backend_base_0493",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:493",
+          "status": "active",
+          "profile": "backend_egg_0493",
+          "campaign": "backend_national_67"
+        },
+        {
+          "key": "dex:493",
+          "status": "active",
+          "profile": "backend_shiny_egg_0493",
+          "campaign": "backend_national_67"
+        }
+      ],
+      "id": "ARCEUS",
+      "forms": [
+        "dex:493"
+      ],
+      "seviiCaptureBlocked": true,
+      "requiredAssets": [
+        "assets/backend_national_catalog_67/battle/493/back.png",
+        "assets/backend_national_catalog_67/battle/493/backShiny.png",
+        "assets/backend_national_catalog_67/battle/493/front.png",
+        "assets/backend_national_catalog_67/battle/493/frontShiny.png",
+        "assets/backend_national_catalog_67/battle/493/icon-normal.png",
+        "assets/backend_national_catalog_67/battle/493/icon-shiny.png",
+        "assets/backend_national_catalog_67/battle/493/voxel-front.png",
+        "assets/backend_national_catalog_67/battle/493/voxel-frontShiny.png"
+      ],
+      "dex": 493,
+      "scope": "Known authored catch owner plus catalogued gifts; ordinary island source remains blocked"
+    }
+  ],
+  "passed": true,
+  "perRunResetObserved": true,
+  "gen4SeviiOwners": 13,
+  "hoennSeviiOwners": 3,
+  "eonSeviiExtensions": 2,
+  "originalHistoryOwnersBound": 6,
+  "scope": "Live canonical identities, forms, catalogued gift profiles, authored Hoenn/Sevii/Rocket owners and current art paths. All 23 excluded from ordinary Sevii capture. Registry/art inspection is not a substitute for native quest/capture proofs or global older-legend uniqueness.",
+  "eonRoamingFollowup": {
+    "evidence": "eon-native5.log (exit 0), eon-roaming.json; package-dev1-qa/legend-catalog-native12.log (exit 0)",
+    "rule": "Persistent current area; 5 percent only when player shares that area. Never a global per-step or map-entry spawn chance. One roll even if both identities share the area.",
+    "scope": "45 base Kanto outdoor maps plus volcano foothills and existing sky platform; post-finale Sevii outdoor source areas and seas. Sky remains gated by original GREEN portal access.",
+    "history": "Canonical lineage ownership includes old Eon catch receipts; current-save capture/reload and actual Legacy transaction without carried legends verified.",
+    "tests": {
+      "continuity": 55,
+      "surfaces": 24,
+      "history": 99,
+      "integration": 78497
+    },
+    "snapshotNote": "Current registry/art snapshot from catalog native11; ordinary island captures remain blocked, live roaming battle proposals have runtime-bound authorization."
+  },
+  "hoennContinuityFollowup": {
+    "evidence": [
+      "hoenn-continuity-capture3.log (exit 0)",
+      "hoenn-continuity-witness2.log (exit 0)",
+      "legend-catalog-native13.log (exit 0)"
+    ],
+    "species": [
+      "KYOGRE",
+      "GROUDON",
+      "RAYQUAZA",
+      "JIRACHI",
+      "DEOXYS"
+    ],
+    "rule": "Original locations, character paths and research prerequisites retained. Lifetime ownership across gifts, releases, storage and Legacy; separate research witnesses never fabricate capture seals.",
+    "native": "Five actual original-room catches and five original-room witness completions after actual gift delivery; Deoxys triangle played in both; save/reload, unspent duplicate Master Balls and actual beginJourney/seedNewSave verified.",
+    "fixtures": "Post-League/team, 130-species foundation, Hoenn Honey/Dex, three completed paths/current character seals, travel; exact-object release and current-run Moltres/Regirock completion. Not a full HEVO or NG+ menu playthrough.",
+    "tests": {
+      "hoennContinuity": 53,
+      "history": 132,
+      "regiContinuity": 51,
+      "moltresContinuity": 20,
+      "eonContinuity": 55,
+      "integration": 78497
+    },
+    "packageNote": "Source/isolated QA only; frozen package-dev1 predates this change."
+  }
+}
